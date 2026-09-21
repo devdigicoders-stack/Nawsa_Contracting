@@ -1,0 +1,212 @@
+/* Hero Section */
+.hard-hero {
+  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&q=80');
+}
+
+/* 2. Hard Intro */
+.hard-intro-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hard-intro-container {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* 3. Categories Grid 4 */
+.categories-grid-4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .categories-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 6. PPM Section */
+.ppm-section {
+  background-color: var(--color-black);
+  background-image: linear-gradient(135deg, var(--color-black) 0%, #1a1a1a 100%);
+}
+
+.ppm-points {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ppm-points span {
+  background-color: rgba(255,255,255,0.1);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 7. CR Grid */
+.cr-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cr-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cr-card {
+  background-color: var(--color-white);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+/* Flow for CR */
+.cr-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cr-flow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.cr-step {
+  font-weight: 600;
+  color: var(--color-charcoal);
+  padding: 0.5rem 1rem;
+}
+
+.cr-arrow {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .cr-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.cr-final {
+  background-color: var(--color-bg-light);
+  border-radius: 4px;
+  color: var(--color-primary);
+}
+
+/* 8. Asset Grid */
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .asset-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.asset-card {
+  padding: 1.5rem;
+  background-color: var(--color-bg-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.asset-card:hover {
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* 10. Safety & Quality */
+.safety-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .safety-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.safety-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .safety-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.safety-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.safety-list .icon {
+  color: var(--color-primary);
+}
+
+.safety-image {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.safety-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CTA Technical */
+.technical-cta {
+  background-image: linear-gradient(135deg, #111 0%, #2a2a2a 100%), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}

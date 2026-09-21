@@ -1,0 +1,33 @@
+.topbar {
+  background-color: var(--color-black);
+  color: var(--color-gray-soft);
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+}
+
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-left {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .d-none-mobile {
+    display: none;
+  }
+  .topbar-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Primary Colors */
+  --color-primary: #B20D17;
+  --color-primary-dark: #9A0B14;
+  --color-charcoal: #4A4B50;
+  --color-black: #111111;
+  --color-white: #FFFFFF;
+
+  /* Secondary / Utility Colors */
+  --color-bg-light: #F5F5F5;
+  --color-gray-soft: #EAEAEA;
+  --color-border: #D9D9D9;
+  --color-text-gray: #6B7280;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Base Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+/* Typography Utilities */
+.h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.1; color: var(--color-black); }
+.h2 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; color: var(--color-black); margin-bottom: 1rem; }
+.h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; color: var(--color-black); }
+.text-body { font-size: 1rem; color: var(--color-text-gray); }
+
+/* Components */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(178, 13, 23, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(178, 13, 23, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Base link transitions */
+a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Premium Card Global Hover */
+.premium-card,
+.service-card,
+.pop-service-card,
+.industry-card,
+.proj-card,
+.value-card,
+.challenge-card,
+.ind-service-card,
+.ss-card,
+.cr-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--color-border);
+}
+
+.premium-card:hover,
+.service-card:hover,
+.pop-service-card:hover,
+.industry-card:hover,
+.proj-card:hover,
+.value-card:hover,
+.challenge-card:hover,
+.ind-service-card:hover,
+.ss-card:hover,
+.cr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--tw-shadow-premium-hover);
+  border-color: var(--color-primary);
+}
