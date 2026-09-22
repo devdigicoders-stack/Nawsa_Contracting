@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, Building2, ShieldCheck, 
-  Settings, Clock, Activity, ArrowRight, Target, Users
+  Settings, Clock, Activity, ArrowRight, Target, Users, Wrench
 } from 'lucide-react';
 import './Industries.css';
 import '../pages/SoftFM.css'; // Reusing some process flow and layout styles

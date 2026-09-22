@@ -1,22 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, Settings, Users, Target, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
 import './AboutUs.css';
 
 const AboutUs = () => {
+  const heroImages = [
+    'https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1570126618953-d437176e8c79?auto=format&fit=crop&q=80'
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="about-page">
       
       {/* 1. Inner Page Hero */}
-      <section className="page-hero">
+      <section className="page-hero" style={{ backgroundImage: `url(${heroImages[currentImage]})` }}>
         <div className="page-hero-overlay"></div>
         <div className="container page-hero-content text-center">
-          <h1 className="h1 text-white mb-4">About NCFM</h1>
-          <p className="hero-subtitle mx-auto">
+          <div className="breadcrumb animate-fade-in-up mb-4">
+            <Link to="/">Home</Link> <span className="mx-2">/</span> <span className="current">About Us</span>
+          </div>
+          <h1 className="page-hero-title animate-fade-in-up-delay-1">About NCFM</h1>
+          <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1">
             Professional Facilities Management Solutions Built Around Reliability, Quality and Performance.
           </p>
-          <div className="breadcrumb">
-            <Link to="/">Home</Link> <span className="mx-2">/</span> <span className="current">About Us</span>
+          <div className="page-hero-actions animate-fade-in-up-delay-2">
+            <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">View Our Work</Link>
+            <Link to="/contact" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Get in Touch</Link>
+          </div>
+          <div className="page-hero-highlights animate-fade-in-up-delay-2">
+            <span>Excellence</span>
+            <span className="dot">•</span>
+            <span>Reliability</span>
+            <span className="dot">•</span>
+            <span>Quality</span>
+            <span className="dot">•</span>
+            <span>Safety</span>
           </div>
         </div>
       </section>

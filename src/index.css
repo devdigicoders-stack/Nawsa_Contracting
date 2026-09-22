@@ -38,6 +38,13 @@ body {
   background-color: var(--color-white);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  max-width: 100vw;
+}
+
+.app-container {
+  overflow-x: clip;
+  width: 100%;
 }
 
 a {
@@ -66,7 +73,13 @@ button {
 }
 
 .section-padding {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
 }
 
 .bg-light {
@@ -134,7 +147,9 @@ a {
 .ss-card,
 .cr-card {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid var(--color-border);
+  border: none;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
 .premium-card:hover,
@@ -148,6 +163,5 @@ a {
 .ss-card:hover,
 .cr-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--tw-shadow-premium-hover);
-  border-color: var(--color-primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }

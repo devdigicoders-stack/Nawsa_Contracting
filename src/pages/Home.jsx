@@ -49,7 +49,7 @@ const Home = () => {
       <section className="section-padding about-section">
         <div className="container about-container">
           <div className="about-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Modern Building" className="about-image" />
+            <img src="/images/about_ncfm.jpg" alt="Modern Building" className="about-image" />
           </div>
           <div className="about-content">
             <span className="section-label">ABOUT NCFM</span>
@@ -82,7 +82,7 @@ const Home = () => {
             {/* Soft FM Card */}
             <div className="solution-card">
               <div className="solution-image-container">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" alt="Soft FM" />
+                <img src="/images/soft_fm.jpg" alt="Soft FM" />
               </div>
               <div className="solution-content">
                 <h3 className="h3">Soft FM Services</h3>
@@ -100,7 +100,7 @@ const Home = () => {
             {/* Hard FM Card */}
             <div className="solution-card">
               <div className="solution-image-container">
-                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80" alt="Hard FM" />
+                <img src="/images/hard_fm.jpg" alt="Hard FM" />
               </div>
               <div className="solution-content">
                 <h3 className="h3">Hard FM Services</h3>
@@ -112,6 +112,24 @@ const Home = () => {
                   <span>Civil</span><span>Painting</span><span>Waterproofing</span><span>PPM</span>
                 </div>
                 <Link to="/services/hard-fm" className="btn btn-outline mt-4 w-full">Explore Hard FM</Link>
+              </div>
+            </div>
+            
+            {/* Preventive Maintenance Card */}
+            <div className="solution-card">
+              <div className="solution-image-container">
+                <img src="/images/preventive_maintenance.jpg" alt="Preventive Maintenance" />
+              </div>
+              <div className="solution-content">
+                <h3 className="h3">Preventive Maintenance</h3>
+                <p className="text-body mb-4">
+                  Scheduled care and regular facility inspections to prevent costly breakdowns.
+                </p>
+                <div className="solution-tags">
+                  <span>PPM</span><span>Asset Care</span><span>Inspections</span>
+                  <span>Safety</span><span>Compliance</span>
+                </div>
+                <Link to="/services/hard-fm" className="btn btn-outline mt-4 w-full">Explore PPM</Link>
               </div>
             </div>
           </div>
@@ -211,56 +229,56 @@ const Home = () => {
       </section>
 
       {/* 7. Industries We Serve */}
-      <section className="section-padding">
+      <section className="section-padding" style={{ paddingBottom: '2rem' }}>
         <div className="container">
           <div className="section-header text-center">
             <h2 className="h2">Industries We Serve</h2>
           </div>
           <div className="industries-grid">
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Commercial" />
+              <img src="/images/commercial.jpg" alt="Commercial" />
               <div className="industry-overlay">
                 <h4>Commercial Buildings</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80" alt="Residential" />
+              <img src="/images/residential.jpg" alt="Residential" />
               <div className="industry-overlay">
                 <h4>Residential Properties</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80" alt="Hospitality" />
+              <img src="/images/hospitality.jpg" alt="Hospitality" />
               <div className="industry-overlay">
                 <h4>Hospitality</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&q=80" alt="Retail" />
+              <img src="/images/retail.jpg" alt="Retail" />
               <div className="industry-overlay">
                 <h4>Retail</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Industrial" />
+              <img src="/images/industrial.jpg" alt="Industrial" />
               <div className="industry-overlay">
                 <h4>Industrial Facilities</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80" alt="Warehouses" />
+              <img src="/images/warehouses.jpg" alt="Warehouses" />
               <div className="industry-overlay">
                 <h4>Warehouses</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" alt="Healthcare" />
+              <img src="/images/healthcare.jpg" alt="Healthcare" />
               <div className="industry-overlay">
                 <h4>Healthcare</h4>
               </div>
             </div>
             <div className="industry-card">
-              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80" alt="Educational" />
+              <img src="/images/educational.jpg" alt="Educational" />
               <div className="industry-overlay">
                 <h4>Educational Facilities</h4>
               </div>
@@ -273,7 +291,7 @@ const Home = () => {
       </section>
 
       {/* 8. Why Choose NCFM */}
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
           <div className="section-header text-center">
             <h2 className="h2">Built Around Reliability, Quality & Service</h2>
@@ -359,7 +377,7 @@ const Home = () => {
           </div>
           <div className="projects-grid">
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Project 1" />
+              <img src="/images/commercial.jpg" alt="Project 1" />
               <div className="project-info">
                 <span className="project-category">Commercial Facility</span>
                 <h4>Corporate Tower Maintenance</h4>
@@ -368,7 +386,7 @@ const Home = () => {
               </div>
             </div>
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80" alt="Project 2" />
+              <img src="/images/residential.jpg" alt="Project 2" />
               <div className="project-info">
                 <span className="project-category">Residential Facility</span>
                 <h4>Luxury Apartment Complex</h4>
@@ -377,7 +395,7 @@ const Home = () => {
               </div>
             </div>
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Project 3" />
+              <img src="/images/industrial.jpg" alt="Project 3" />
               <div className="project-info">
                 <span className="project-category">Industrial Facility</span>
                 <h4>Logistics Warehouse</h4>
