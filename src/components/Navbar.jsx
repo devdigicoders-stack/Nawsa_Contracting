@@ -34,13 +34,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <Link to="/" className="mobile-link" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About</Link>
-          <Link to="/services/soft-fm" className="mobile-link" onClick={() => setIsOpen(false)}>Soft FM</Link>
-          <Link to="/services/hard-fm" className="mobile-link" onClick={() => setIsOpen(false)}>Hard FM</Link>
-          <Link to="/industries" className="mobile-link" onClick={() => setIsOpen(false)}>Industries</Link>
-          <Link to="/projects" className="mobile-link" onClick={() => setIsOpen(false)}>Projects</Link>
-          <Link to="/contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact</Link>
+          <NavLink to="/" className="mobile-link" end onClick={() => setIsOpen(false)}>Home</NavLink>
+          <NavLink to="/about" className="mobile-link" onClick={() => setIsOpen(false)}>About</NavLink>
+          <NavLink to="/services/soft-fm" className="mobile-link" onClick={() => setIsOpen(false)}>Soft FM</NavLink>
+          <NavLink to="/services/hard-fm" className="mobile-link" onClick={() => setIsOpen(false)}>Hard FM</NavLink>
+          <NavLink to="/industries" className="mobile-link" onClick={() => setIsOpen(false)}>Industries</NavLink>
+          <NavLink to="/projects" className="mobile-link" onClick={() => setIsOpen(false)}>Projects</NavLink>
+          <NavLink to="/contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact</NavLink>
           <Link to="/contact" className="mobile-link highlight-link" onClick={() => setIsOpen(false)}>Request a Quote</Link>
         </div>
       )}

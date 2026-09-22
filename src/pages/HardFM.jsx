@@ -145,7 +145,7 @@ const HardFM = () => {
               <div className="featured-overlay"><h4>Plumbing & Drainage</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&q=80" alt="Civil Maintenance" />
+              <img src="/images/about/about_story_1790079206968.jpg" alt="Civil Maintenance" />
               <div className="featured-overlay"><h4>Civil Maintenance</h4></div>
             </div>
             <div className="featured-card">
@@ -289,7 +289,7 @@ const HardFM = () => {
             </ul>
           </div>
           <div className="safety-image">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Technical Quality & Safety" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="Technical Quality & Safety" />
           </div>
         </div>
       </section>

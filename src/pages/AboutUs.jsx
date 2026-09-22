@@ -5,9 +5,9 @@ import './AboutUs.css';
 
 const AboutUs = () => {
   const heroImages = [
-    'https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1570126618953-d437176e8c79?auto=format&fit=crop&q=80'
+    '/images/about/about_hero_1_1790079145368.jpg',
+    '/images/about/about_hero_2_1790079161270.jpg',
+    '/images/about/about_hero_3_1790079175328.jpg'
   ];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -52,7 +52,7 @@ const AboutUs = () => {
       <section className="section-padding">
         <div className="container about-overview-container">
           <div className="overview-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Company Overview" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="Company Overview" />
           </div>
           <div className="overview-content">
             <span className="section-label">WHO WE ARE</span>
@@ -77,13 +77,13 @@ const AboutUs = () => {
           <div className="story-content">
             <h2 className="h2">Built to Support Better Facilities</h2>
             <p className="text-body mb-4">
-              [Company Background Placeholder]
+              {/* [Company Background Placeholder] */}
               <br/><br/>
               NCFM was established with the purpose of delivering high-quality facility management services. Operating across key target markets, we leverage our extensive experience to provide customized, reliable, and professional FM solutions that keep your buildings operating efficiently.
             </p>
           </div>
           <div className="story-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Our Story" />
+            <img src="/images/about/about_story_1790079206968.jpg" alt="Our Story" />
           </div>
         </div>
       </section>
@@ -131,39 +131,39 @@ const AboutUs = () => {
       </section>
 
       {/* 6. Our Core Values */}
-      <section className="section-padding bg-light">
+      <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
           <div className="section-header text-center">
             <h2 className="h2">The Values Behind Our Service</h2>
           </div>
-          <div className="values-grid">
-            <div className="value-card">
-              <span className="value-number">01</span>
+          <div className="why-choose-grid">
+            <div className="why-card">
+              <span className="why-number">01</span>
               <h4>Reliability</h4>
               <p>Consistent service delivery and dependable facility support.</p>
             </div>
-            <div className="value-card">
-              <span className="value-number">02</span>
+            <div className="why-card">
+              <span className="why-number">02</span>
               <h4>Quality</h4>
               <p>High standards in every task, from cleaning to complex repairs.</p>
             </div>
-            <div className="value-card">
-              <span className="value-number">03</span>
+            <div className="why-card">
+              <span className="why-number">03</span>
               <h4>Safety</h4>
               <p>Safe working practices across cleaning, maintenance and technical operations.</p>
             </div>
-            <div className="value-card">
-              <span className="value-number">04</span>
+            <div className="why-card">
+              <span className="why-number">04</span>
               <h4>Professionalism</h4>
               <p>Trained, vetted, and respectful teams handling your facility.</p>
             </div>
-            <div className="value-card">
-              <span className="value-number">05</span>
+            <div className="why-card">
+              <span className="why-number">05</span>
               <h4>Responsiveness</h4>
               <p>Quick action for both planned schedules and emergency calls.</p>
             </div>
-            <div className="value-card">
-              <span className="value-number">06</span>
+            <div className="why-card">
+              <span className="why-number">06</span>
               <h4>Continuous Improvement</h4>
               <p>Always refining our processes to serve you better.</p>
             </div>
@@ -221,7 +221,7 @@ const AboutUs = () => {
             </ul>
           </div>
           <div className="why-ncfm-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&q=80" alt="Why Choose Us" />
+            <img src="/images/about/about_why_us_1790079241863.jpg" alt="Why Choose Us" />
           </div>
         </div>
       </section>

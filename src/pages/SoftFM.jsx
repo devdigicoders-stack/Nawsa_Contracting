@@ -32,7 +32,7 @@ const SoftFM = () => {
       <section className="section-padding">
         <div className="container soft-intro-container">
           <div className="intro-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" alt="Soft FM Introduction" />
+            <img src="/images/softfm/soft_intro_1790080591465.jpg" alt="Soft FM Introduction" />
           </div>
           <div className="intro-content">
             <span className="section-label">SOFT FM SOLUTIONS</span>
@@ -137,23 +137,23 @@ const SoftFM = () => {
           </div>
           <div className="featured-services-grid">
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" alt="Cleaning & Housekeeping" />
+              <img src="/images/softfm/soft_feat_1_1790080607501.jpg" alt="Cleaning & Housekeeping" />
               <div className="featured-overlay"><h4>Cleaning & Housekeeping</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80" alt="Deep Cleaning" />
+              <img src="/images/softfm/soft_feat_2_1790080638671.jpg" alt="Deep Cleaning" />
               <div className="featured-overlay"><h4>Deep Cleaning</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1527334134460-f21a05befcd6?auto=format&fit=crop&q=80" alt="Floor & Carpet Care" />
+              <img src="/images/softfm/soft_feat_3_1790080650341.jpg" alt="Floor & Carpet Care" />
               <div className="featured-overlay"><h4>Floor & Carpet Care</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1542157585-ef20bfc74b04?auto=format&fit=crop&q=80" alt="Façade Cleaning" />
+              <img src="/images/softfm/soft_feat_4_1790080663413.jpg" alt="Façade Cleaning" />
               <div className="featured-overlay"><h4>Façade Cleaning</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1558904541-efa843a96f0f?auto=format&fit=crop&q=80" alt="Landscaping" />
+              <img src="/images/softfm/soft_feat_5_1790080685965.jpg" alt="Landscaping" />
               <div className="featured-overlay"><h4>Landscaping</h4></div>
             </div>
             <div className="featured-card">
@@ -219,7 +219,7 @@ const SoftFM = () => {
             </ul>
           </div>
           <div className="hygiene-image">
-            <img src="https://images.unsplash.com/photo-1584820927498-cafe8c9978bf?auto=format&fit=crop&q=80" alt="Quality Control" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="Quality Control" />
           </div>
         </div>
       </section>

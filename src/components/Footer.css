@@ -76,3 +76,22 @@
   font-size: 0.9rem;
   color: var(--color-text-gray);
 }
+
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-desc {
+    margin: 0 auto;
+  }
+  .footer-contact ul li {
+    justify-content: center;
+  }
+  .footer-contact .flex {
+    justify-content: center;
+  }
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+}
