@@ -22,7 +22,7 @@ const Navbar = () => {
           <NavLink to="/industries" className="nav-link">Industries</NavLink>
           <NavLink to="/projects" className="nav-link">Projects</NavLink>
           <NavLink to="/contact" className="nav-link">Contact</NavLink>
-          <Link to="/contact" className="btn btn-primary !px-5 !py-2.5 !text-[0.9rem]">Request a Quote</Link>
+          <Link to="/contact" className="btn btn-primary !px-4 !py-2 !text-[0.85rem]">Request a Quote</Link>
         </nav>
 
         {/* Mobile Toggle */}

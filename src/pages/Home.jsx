@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Building2, Wrench, Sprout, Wind, Droplet, Paintbrush, ShieldCheck, Phone, MapPin } from 'lucide-react';
 import './Home.css';
 
 const Home = () => {
+  const heroImages = [
+    '/hero/hero1.jpg',
+    '/hero/hero2.jpg',
+    '/hero/hero3.jpg'
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home-page">
       
       {/* 2. Hero Section */}
-      <section className="hero">
+      <section className="hero" style={{ backgroundImage: `url(${heroImages[currentImage]})` }}>
         <div className="hero-overlay"></div>
         <div className="container hero-content text-center">
           <h1 className="hero-title animate-fade-in-up">Complete Facilities Management Solutions</h1>
@@ -16,8 +30,8 @@ const Home = () => {
             Professional Soft & Hard FM services for commercial, residential and industrial facilities.
           </p>
           <div className="hero-actions justify-center animate-fade-in-up-delay-2">
-            <Link to="/services/soft-fm" className="btn btn-primary">Explore Our Services</Link>
-            <Link to="/contact" className="btn btn-outline hero-btn-outline">Request a Quote</Link>
+            <Link to="/services/soft-fm" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
+            <Link to="/contact" className="btn btn-outline hero-btn-outline !px-5 !py-2.5 !text-[0.95rem]">Request a Quote</Link>
           </div>
           <div className="hero-highlights animate-fade-in-up-delay-2">
             <span>Soft FM</span>
