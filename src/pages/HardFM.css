@@ -1,6 +1,6 @@
 /* Hero Section */
 .hard-hero {
-  background-image: url('/images/about/about_hero_2_1790079161270.jpg');
+  background-image: url('/images/hardfm/hardfm_hero_1790150275900.jpg');
 }
 
 /* 2. Hard Intro */
@@ -59,6 +59,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -70,10 +72,17 @@
 .cr-card {
   background-color: var(--color-white);
   padding: 3rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: rgba(200,200,200,0.2);
 }
 
 /* Flow for CR */
@@ -205,8 +214,91 @@
 
 /* CTA Technical */
 .technical-cta {
-  background-image: linear-gradient(135deg, #111 0%, #2a2a2a 100%), url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80');
+  background-image: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(42, 42, 42, 0.8) 100%), url('/images/hardfm/hardfm_cta_bg_1790150433668.jpg');
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
+  position: relative;
+}
+
+/* Premium Enhancements */
+.category-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(25, 25, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+}
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary);
+}
+
+.service-item-card {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+  padding: 2rem;
+}
+.service-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  border-color: rgba(200,200,200,0.2);
+}
+
+.featured-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.featured-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.featured-card:hover img {
+  transform: scale(1.08);
+}
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+.featured-overlay h4 {
+  color: white;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+.featured-card:hover .featured-overlay h4 {
+  transform: translateY(0);
+}
+
+.ind-pill {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.ind-pill:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }

@@ -132,7 +132,7 @@ const Contact = () => {
               <div className="form-grid">
                 <div className="form-group">
                   <label>Full Name *</label>
-                  <input type="text" placeholder="John Doe" required />
+                  <input type="text" placeholder="Enter Your Name" required />
                 </div>
                 <div className="form-group">
                   <label>Company Name</label>
@@ -140,11 +140,11 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label>Phone Number *</label>
-                  <input type="tel" placeholder="+971 50 000 0000" required />
+                  <input type="tel" placeholder="Enter Your Phone Number" required />
                 </div>
                 <div className="form-group">
                   <label>Email Address *</label>
-                  <input type="email" placeholder="john@example.com" required />
+                  <input type="email" placeholder="Enter Your Email" required />
                 </div>
               </div>
 

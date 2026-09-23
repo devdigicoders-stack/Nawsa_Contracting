@@ -10,7 +10,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo flex items-center">
-          <img src="/logo.png" alt="NCFM Logo" style={{ height: '45px', width: 'auto', maxWidth: '200px', objectFit: 'contain' }} />
+          <img src="/logo.png" alt="NCFM Logo" style={{ height: '70px', width: 'auto', maxWidth: '300px', objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Menu */}

@@ -33,7 +33,7 @@ const Industries = () => {
       <section className="section-padding">
         <div className="container industries-intro-container">
           <div className="intro-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Sectors Expertise" />
+            <img src="/images/industries/ind_commercial_1790151322652.jpg" alt="Sectors Expertise" />
           </div>
           <div className="intro-content">
             <span className="section-label">SECTOR EXPERTISE</span>
@@ -62,7 +62,7 @@ const Industries = () => {
             {/* 01. Commercial */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Commercial Offices" />
+                <img src="/images/industries/ind_commercial_1790151322652.jpg" alt="Commercial Offices" />
                 <div className="ind-num">01</div>
               </div>
               <div className="ind-content">
@@ -77,7 +77,7 @@ const Industries = () => {
             {/* 02. Residential */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80" alt="Residential Properties" />
+                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=600" alt="Residential Properties" />
                 <div className="ind-num">02</div>
               </div>
               <div className="ind-content">
@@ -92,7 +92,7 @@ const Industries = () => {
             {/* 03. Hospitality */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80" alt="Hospitality" />
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=600" alt="Hospitality" />
                 <div className="ind-num">03</div>
               </div>
               <div className="ind-content">
@@ -107,7 +107,7 @@ const Industries = () => {
             {/* 04. Retail */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&q=80" alt="Retail & Shopping" />
+                <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&q=80&w=600" alt="Retail & Shopping" />
                 <div className="ind-num">04</div>
               </div>
               <div className="ind-content">
@@ -122,7 +122,7 @@ const Industries = () => {
             {/* 05. Industrial */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Industrial Facilities" />
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Industrial Facilities" />
                 <div className="ind-num">05</div>
               </div>
               <div className="ind-content">
@@ -137,7 +137,7 @@ const Industries = () => {
             {/* 06. Warehouses */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80" alt="Warehouses & Logistics" />
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600" alt="Warehouses & Logistics" />
                 <div className="ind-num">06</div>
               </div>
               <div className="ind-content">
@@ -152,7 +152,7 @@ const Industries = () => {
             {/* 07. Healthcare */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80" alt="Healthcare Facilities" />
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600" alt="Healthcare Facilities" />
                 <div className="ind-num">07</div>
               </div>
               <div className="ind-content">
@@ -167,7 +167,7 @@ const Industries = () => {
             {/* 08. Educational */}
             <div className="ind-service-card">
               <div className="ind-img">
-                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80" alt="Educational Facilities" />
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600" alt="Educational Facilities" />
                 <div className="ind-num">08</div>
               </div>
               <div className="ind-content">
@@ -391,7 +391,7 @@ const Industries = () => {
           
           <div className="projects-grid">
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Commercial" />
+              <img src="/images/industries/ind_commercial_1790151322652.jpg" alt="Commercial" />
               <div className="project-info">
                 <span className="project-category">Commercial Facility</span>
                 <h4>Corporate Tower HQ</h4>
@@ -402,7 +402,7 @@ const Industries = () => {
             </div>
             
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80" alt="Residential" />
+              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=600" alt="Residential" />
               <div className="project-info">
                 <span className="project-category">Residential Property</span>
                 <h4>Luxury Apartment Complex</h4>
@@ -413,7 +413,7 @@ const Industries = () => {
             </div>
             
             <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Industrial" />
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600" alt="Industrial" />
               <div className="project-info">
                 <span className="project-category">Industrial Facility</span>
                 <h4>Logistics Hub</h4>
@@ -483,7 +483,7 @@ const Industries = () => {
             <Link to="/contact" className="btn btn-primary">Request a Customized Proposal</Link>
           </div>
           <div className="custom-fm-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80" alt="Customized FM Solutions" />
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="Customized FM Solutions" />
           </div>
         </div>
       </section>

@@ -33,7 +33,7 @@ const HardFM = () => {
       <section className="section-padding">
         <div className="container hard-intro-container">
           <div className="intro-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356f58?auto=format&fit=crop&q=80" alt="Hard FM Introduction" />
+            <img src="/images/hardfm/hardfm_intro_1790150291840.jpg" alt="Hard FM Introduction" />
           </div>
           <div className="intro-content">
             <span className="section-label">HARD FM SOLUTIONS</span>
@@ -133,27 +133,27 @@ const HardFM = () => {
           </div>
           <div className="featured-services-grid">
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1599304313271-e730704445bb?auto=format&fit=crop&q=80" alt="HVAC Maintenance" />
+              <img src="/images/hardfm/hardfm_hvac_1790150306567.jpg" alt="HVAC Maintenance" />
               <div className="featured-overlay"><h4>HVAC Maintenance</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80" alt="Electrical Systems" />
+              <img src="/images/hardfm/hardfm_electrical_1790150318694.jpg" alt="Electrical Systems" />
               <div className="featured-overlay"><h4>Electrical Systems</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1505798577917-a65157d3320a?auto=format&fit=crop&q=80" alt="Plumbing & Drainage" />
+              <img src="/images/hardfm/hardfm_plumbing_1790150335497.jpg" alt="Plumbing & Drainage" />
               <div className="featured-overlay"><h4>Plumbing & Drainage</h4></div>
             </div>
             <div className="featured-card">
-              <img src="/images/about/about_story_1790079206968.jpg" alt="Civil Maintenance" />
+              <img src="/images/hardfm/hardfm_civil_1790150358441.jpg" alt="Civil Maintenance" />
               <div className="featured-overlay"><h4>Civil Maintenance</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1541888001691-8dc941323380?auto=format&fit=crop&q=80" alt="Fire & Life Safety" />
+              <img src="/images/hardfm/hardfm_firesafety_1790150373428.jpg" alt="Fire & Life Safety" />
               <div className="featured-overlay"><h4>Fire & Life Safety</h4></div>
             </div>
             <div className="featured-card">
-              <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80" alt="Preventive Maintenance" />
+              <img src="/images/hardfm/hardfm_preventive_1790150406400.jpg" alt="Preventive Maintenance" />
               <div className="featured-overlay"><h4>Preventive Maintenance</h4></div>
             </div>
           </div>
@@ -289,7 +289,7 @@ const HardFM = () => {
             </ul>
           </div>
           <div className="safety-image">
-            <img src="/images/about/about_overview_1790079192293.jpg" alt="Technical Quality & Safety" />
+            <img src="/images/hardfm/hardfm_safety_quality_1790150418979.jpg" alt="Technical Quality & Safety" />
           </div>
         </div>
       </section>

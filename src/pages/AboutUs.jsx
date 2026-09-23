@@ -77,9 +77,10 @@ const AboutUs = () => {
           <div className="story-content">
             <h2 className="h2">Built to Support Better Facilities</h2>
             <p className="text-body mb-4">
-              {/* [Company Background Placeholder] */}
-              <br/><br/>
-              NCFM was established with the purpose of delivering high-quality facility management services. Operating across key target markets, we leverage our extensive experience to provide customized, reliable, and professional FM solutions that keep your buildings operating efficiently.
+              Founded on the principles of trust, transparency, and technical excellence, Nawsa Contracting Facilities Management (NCFM) has rapidly grown into a preferred partner for comprehensive facility support. We understand that every building is a living ecosystem that requires dedicated care to function at its best.
+            </p>
+            <p className="text-body mb-4">
+              NCFM was established with the purpose of delivering high-quality facility management services. Operating across key target markets, we leverage our extensive experience to provide customized, reliable, and professional FM solutions that keep your buildings operating efficiently, safely, and sustainably.
             </p>
           </div>
           <div className="story-image-wrapper">
@@ -278,15 +279,33 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* 11 & 12. Placeholder for Numbers & Leadership (Hidden until actual data is provided) */}
-      {/* 
-      <section className="section-padding">
+      {/* 11. Impact & Leadership */}
+      <section className="section-padding bg-light">
         <div className="container text-center">
-          <h2 className="h2">Company Numbers & Leadership</h2>
-          <p>[Placeholder for actual statistics and team members]</p>
+          <h2 className="h2">Our Impact & Leadership</h2>
+          <p className="text-body max-w-2xl mx-auto mb-5">
+            Driven by a team of industry veterans, our leadership ensures that every project meets the highest standards of quality, safety, and operational efficiency across the region.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
+            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+              <h3 className="h1 text-primary mb-2">50+</h3>
+              <p className="text-body font-medium">Projects Completed</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+              <h3 className="h1 text-primary mb-2">100%</h3>
+              <p className="text-body font-medium">Client Satisfaction</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+              <h3 className="h1 text-primary mb-2">24/7</h3>
+              <p className="text-body font-medium">Support Available</p>
+            </div>
+            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
+              <h3 className="h1 text-primary mb-2">10+</h3>
+              <p className="text-body font-medium">Years of Expertise</p>
+            </div>
+          </div>
         </div>
       </section>
-      */}
 
       {/* 13. Final CTA */}
       <section className="section-padding final-cta-section text-center">

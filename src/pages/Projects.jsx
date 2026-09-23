@@ -41,7 +41,7 @@ const Projects = () => {
       <section className="section-padding">
         <div className="container projects-intro-container">
           <div className="intro-image-wrapper">
-            <img src="https://images.unsplash.com/photo-1541888001691-8dc941323380?auto=format&fit=crop&q=80" alt="Projects Experience" />
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800" alt="Projects Experience" />
           </div>
           <div className="intro-content">
             <span className="section-label">OUR EXPERIENCE</span>
@@ -84,7 +84,7 @@ const Projects = () => {
             {/* Project Card 1 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Project 1" />
+                <img src="/images/commercial.jpg" alt="Project 1" />
                 <div className="proj-category">Commercial</div>
               </div>
               <div className="proj-content">
@@ -108,7 +108,7 @@ const Projects = () => {
             {/* Project Card 2 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80" alt="Project 2" />
+                <img src="/images/residential.jpg" alt="Project 2" />
                 <div className="proj-category">Residential</div>
               </div>
               <div className="proj-content">
@@ -132,7 +132,7 @@ const Projects = () => {
             {/* Project Card 3 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" alt="Project 3" />
+                <img src="/images/industrial.jpg" alt="Project 3" />
                 <div className="proj-category">Industrial</div>
               </div>
               <div className="proj-content">
@@ -161,7 +161,7 @@ const Projects = () => {
       <section className="section-padding">
         <div className="container featured-project-wrapper">
           <div className="feat-proj-img">
-            <img src="https://images.unsplash.com/photo-1542744094-24638ea0b3b5?auto=format&fit=crop&q=80" alt="Featured Project" />
+            <img src="/images/hardfm/hardfm_intro_1790150291840.jpg" alt="Featured Project" />
           </div>
           <div className="feat-proj-content">
             <span className="section-label">FEATURED PROJECT</span>
@@ -205,11 +205,11 @@ const Projects = () => {
           <div className="showcase-grid">
             <div className="showcase-item">
               <div className="showcase-label bg-gray">BEFORE</div>
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80" alt="Before Deep Cleaning" />
+              <img src="/images/hardfm/hardfm_civil_1790150358441.jpg" alt="Before Deep Cleaning" />
             </div>
             <div className="showcase-item">
               <div className="showcase-label">AFTER</div>
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" alt="After Deep Cleaning" />
+              <img src="/images/softfm/soft_feat_1_1790080607501.jpg" alt="After Deep Cleaning" />
             </div>
           </div>
         </div>
@@ -290,15 +290,29 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* 9 & 12. Placeholder for Stats & Testimonials */}
-      {/* 
+      {/* 9. Client Testimonials */}
       <section className="section-padding bg-black text-white text-center">
         <div className="container">
-          <h2 className="h2 text-white">Project Stats & Testimonials</h2>
-          <p>[Placeholder for real project numbers and client quotes]</p>
+          <h2 className="h2 text-white mb-5">What Our Clients Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 bg-zinc-900 rounded-lg text-left border border-zinc-800">
+              <div className="text-primary text-2xl mb-3">★★★★★</div>
+              <p className="text-gray-300 italic mb-4">"NCFM transformed how we handle our building maintenance. Their team is incredibly responsive and highly professional. Outstanding service quality!"</p>
+              <h4 className="font-bold text-white">- Commercial Property Manager, Doha</h4>
+            </div>
+            <div className="p-6 bg-zinc-900 rounded-lg text-left border border-zinc-800">
+              <div className="text-primary text-2xl mb-3">★★★★★</div>
+              <p className="text-gray-300 italic mb-4">"Having a single partner for both Soft and Hard FM has saved us immense time and money. Their preventive maintenance programs are top-tier."</p>
+              <h4 className="font-bold text-white">- Logistics Hub Director</h4>
+            </div>
+            <div className="p-6 bg-zinc-900 rounded-lg text-left border border-zinc-800">
+              <div className="text-primary text-2xl mb-3">★★★★★</div>
+              <p className="text-gray-300 italic mb-4">"The deep cleaning and hygiene standards maintained by NCFM at our residential tower have significantly elevated the living experience for our tenants."</p>
+              <h4 className="font-bold text-white">- Residential Tower Association</h4>
+            </div>
+          </div>
         </div>
       </section>
-      */}
 
       {/* 10. Client Sectors */}
       <section className="section-padding bg-light">
@@ -336,7 +350,7 @@ const Projects = () => {
             </ul>
           </div>
           <div className="quality-image">
-            <img src="https://images.unsplash.com/photo-1584820927498-cafe8c9978bf?auto=format&fit=crop&q=80" alt="Quality & Project Control" />
+            <img src="/images/hardfm/hardfm_safety_quality_1790150418979.jpg" alt="Quality & Project Control" />
           </div>
         </div>
       </section>
