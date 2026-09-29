@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import FloatingButtons from './components/FloatingButtons';
 
 // Pages
 import Home from './pages/Home';
@@ -35,6 +36,7 @@ function App() {
 
         </main>
         <Footer />
+        <FloatingButtons />
       </div>
     </Router>
   );

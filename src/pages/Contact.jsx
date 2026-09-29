@@ -40,6 +40,118 @@ const Contact = () => {
     }
   ];
 
+  const [formData, setFormData] = useState({
+    fullName: '',
+    companyName: '',
+    phone: '',
+    email: '',
+    facilityType: '',
+    serviceRequired: '',
+    location: '',
+    preferredContactMethod: 'Call',
+    message: ''
+  });
+  
+  const [loading, setLoading] = useState(false);
+  const [successMsg, setSuccessMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const [qqFormData, setQqFormData] = useState({
+    fullName: '',
+    phone: '',
+    serviceRequired: '',
+    email: '',
+  });
+  
+  const [qqLoading, setQqLoading] = useState(false);
+  const [qqSuccessMsg, setQqSuccessMsg] = useState('');
+  const [qqErrorMsg, setQqErrorMsg] = useState('');
+
+  const handleQqInputChange = (e) => {
+    const { name, value } = e.target;
+    setQqFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleQqSubmit = async (e) => {
+    e.preventDefault();
+    setQqLoading(true);
+    setQqErrorMsg('');
+    setQqSuccessMsg('');
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/enquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...qqFormData,
+          facilityType: 'Unspecified',
+          message: 'Quick Quote Request from Website',
+          preferredContactMethod: 'Call'
+        })
+      });
+      const data = await response.json();
+      if (response.ok && data.success) {
+        setQqSuccessMsg('Quote request sent!');
+        setQqFormData({ fullName: '', phone: '', serviceRequired: '', email: '' });
+        // Clear message after 3 seconds
+        setTimeout(() => setQqSuccessMsg(''), 3000);
+      } else {
+        setQqErrorMsg(data.message || 'Failed to send.');
+        setTimeout(() => setQqErrorMsg(''), 3000);
+      }
+    } catch (err) {
+      setQqErrorMsg('An error occurred.');
+      setTimeout(() => setQqErrorMsg(''), 3000);
+    } finally {
+      setQqLoading(false);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/enquiries`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSuccessMsg(data.message || 'Your enquiry has been submitted successfully.');
+        setFormData({
+          fullName: '',
+          companyName: '',
+          phone: '',
+          email: '',
+          facilityType: '',
+          serviceRequired: '',
+          location: '',
+          preferredContactMethod: 'Call',
+          message: ''
+        });
+      } else {
+        setErrorMsg(data.message || 'Failed to submit enquiry. Please try again.');
+      }
+    } catch (err) {
+      setErrorMsg('An error occurred. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="contact-page">
       
@@ -128,30 +240,33 @@ const Contact = () => {
           </div>
           
           <div className="form-wrapper">
-            <form className="enquiry-form">
+            <form className="enquiry-form" onSubmit={handleSubmit}>
+              {successMsg && <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">{successMsg}</div>}
+              {errorMsg && <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">{errorMsg}</div>}
+
               <div className="form-grid">
                 <div className="form-group">
                   <label>Full Name *</label>
-                  <input type="text" placeholder="Enter Your Name" required />
+                  <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Enter Your Name" required />
                 </div>
                 <div className="form-group">
                   <label>Company Name</label>
-                  <input type="text" placeholder="Company LLC" />
+                  <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} placeholder="Company LLC" />
                 </div>
                 <div className="form-group">
                   <label>Phone Number *</label>
-                  <input type="tel" placeholder="Enter Your Phone Number" required />
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Enter Your Phone Number" required />
                 </div>
                 <div className="form-group">
                   <label>Email Address *</label>
-                  <input type="email" placeholder="Enter Your Email" required />
+                  <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Enter Your Email" required />
                 </div>
               </div>
 
               <div className="form-grid mt-4">
                 <div className="form-group">
                   <label>Facility Type *</label>
-                  <select required>
+                  <select name="facilityType" value={formData.facilityType} onChange={handleInputChange} required>
                     <option value="">Select Facility Type</option>
                     <option value="Commercial">Commercial</option>
                     <option value="Residential">Residential</option>
@@ -164,7 +279,7 @@ const Contact = () => {
                 </div>
                 <div className="form-group">
                   <label>Service Required *</label>
-                  <select required>
+                  <select name="serviceRequired" value={formData.serviceRequired} onChange={handleInputChange} required>
                     <option value="">Select Service</option>
                     <option value="Soft FM">Soft FM</option>
                     <option value="Hard FM">Hard FM</option>
@@ -180,11 +295,11 @@ const Contact = () => {
               <div className="form-grid mt-4">
                 <div className="form-group">
                   <label>Location</label>
-                  <input type="text" placeholder="e.g., Business Bay, Dubai" />
+                  <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="e.g., Business Bay, Dubai" />
                 </div>
                 <div className="form-group">
                   <label>Preferred Contact Method</label>
-                  <select>
+                  <select name="preferredContactMethod" value={formData.preferredContactMethod} onChange={handleInputChange}>
                     <option value="Call">Call</option>
                     <option value="Email">Email</option>
                     <option value="WhatsApp">WhatsApp</option>
@@ -194,10 +309,17 @@ const Contact = () => {
 
               <div className="form-group mt-4">
                 <label>Message / Requirement *</label>
-                <textarea rows="4" placeholder="Tell us more about your facility and requirements..." required></textarea>
+                <textarea name="message" value={formData.message} onChange={handleInputChange} rows="4" placeholder="Tell us more about your facility and requirements..." required></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary w-full mt-4">Submit Enquiry</button>
+              <button type="submit" disabled={loading} className="btn btn-primary w-full mt-4 relative">
+                {loading ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                    Submitting...
+                  </span>
+                ) : 'Submit Enquiry'}
+              </button>
             </form>
           </div>
         </div>
@@ -208,12 +330,16 @@ const Contact = () => {
         <div className="container">
           <div className="quick-quote-bar">
             <h3 className="h3 text-white mb-3 mb-lg-0 whitespace-nowrap mr-4">Need a Quick Service Quote?</h3>
-            <form className="quick-quote-form w-full flex-grow">
-              <input type="text" placeholder="Name" required />
-              <input type="tel" placeholder="Phone" required />
-              <input type="text" placeholder="Service" required />
-              <input type="text" placeholder="Location" required />
-              <button type="submit" className="btn btn-outline border-white text-white hover:bg-white hover:text-primary whitespace-nowrap">Get a Quote</button>
+            <form className="quick-quote-form w-full flex-grow relative" onSubmit={handleQqSubmit}>
+              <input type="text" name="fullName" value={qqFormData.fullName} onChange={handleQqInputChange} placeholder="Name" required />
+              <input type="tel" name="phone" value={qqFormData.phone} onChange={handleQqInputChange} placeholder="Phone" required />
+              <input type="email" name="email" value={qqFormData.email} onChange={handleQqInputChange} placeholder="Email" required />
+              <input type="text" name="serviceRequired" value={qqFormData.serviceRequired} onChange={handleQqInputChange} placeholder="Service" required />
+              <button type="submit" disabled={qqLoading} className="btn btn-outline border-white text-white hover:bg-white hover:text-primary whitespace-nowrap min-w-[140px]">
+                {qqLoading ? 'Sending...' : 'Get a Quote'}
+              </button>
+              {qqSuccessMsg && <div className="absolute -bottom-8 left-0 text-green-300 text-sm">{qqSuccessMsg}</div>}
+              {qqErrorMsg && <div className="absolute -bottom-8 left-0 text-red-300 text-sm">{qqErrorMsg}</div>}
             </form>
           </div>
         </div>
