@@ -72,9 +72,27 @@
 .footer-bottom {
   background-color: #0a0a0a;
   padding: 1.5rem 0;
-  text-align: center;
   font-size: 0.9rem;
   color: var(--color-text-gray);
+}
+
+.footer-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.developed-by a {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.developed-by a:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 767px) {
@@ -93,5 +111,10 @@
   .footer-logo {
     display: flex;
     justify-content: center;
+  }
+  .footer-bottom-container {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
   }
 }

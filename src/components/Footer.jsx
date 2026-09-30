@@ -63,8 +63,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="container">
+        <div className="container footer-bottom-container">
           <p>&copy; {new Date().getFullYear()} Nawsa Contracting Facilities Management. All rights reserved.</p>
+          <p className="developed-by">
+            Designed and Developed by <a href="https://www.worknestconnect.com/" target="_blank" rel="noreferrer">Worknest Connect</a>
+          </p>
         </div>
       </div>
     </footer>
