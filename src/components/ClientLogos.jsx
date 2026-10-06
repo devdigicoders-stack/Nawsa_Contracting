@@ -24,12 +24,14 @@ const ClientLogos = () => {
             Trusted by leading organizations across Qatar for our premium facilities management and contracting services.
           </p>
         </div>
-        <div className="logos-grid">
-          {logos.map((logo, index) => (
-            <div key={index} className="logo-card">
-              <img src={logo} alt={`Client Logo ${index + 1}`} className="client-logo-img" />
-            </div>
-          ))}
+        <div className="logos-marquee-container">
+          <div className="logos-marquee-track">
+            {[...logos, ...logos].map((logo, index) => (
+              <div key={index} className="logo-card flex-shrink-0">
+                <img src={logo} alt={`Client Logo ${index + 1}`} className="client-logo-img" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

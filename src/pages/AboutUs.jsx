@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, Settings, Users, Target, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
 import gmImage from '../assets/Hasan Nazmul GM.png';
+import ClientLogos from '../components/ClientLogos';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -340,6 +341,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* 12.5 Client Logos */}
+      <ClientLogos />
 
       {/* 13. Final CTA */}
       <section className="section-padding final-cta-section text-center">

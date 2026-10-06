@@ -4,12 +4,27 @@
   border-top: 1px solid var(--color-border);
 }
 
-.logos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.logos-marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.logos-marquee-track {
+  display: inline-flex;
   gap: 2rem;
+  padding-right: 2rem; /* Add gap at the end to make loop seamless */
+  animation: scrollMarquee 25s linear infinite;
+}
+
+.logos-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .logo-card {
