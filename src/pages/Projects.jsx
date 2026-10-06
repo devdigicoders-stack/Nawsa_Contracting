@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ArrowRight, ShieldCheck, 
@@ -6,10 +6,8 @@ import {
 } from 'lucide-react';
 import ClientLogos from '../components/ClientLogos';
 import GovSchools from '../components/GovSchools';
+import FeaturedWorks from '../components/FeaturedWorks';
 
-import imgPainting from '../assets/painting/WhatsApp Image 2026-10-06 at 14.00.16.jpeg';
-import imgParking from '../assets/parking/WhatsApp Image 2026-10-06 at 14.09.48.jpeg';
-import imgPuFlooring from '../assets/pu flooring works/WhatsApp Image 2026-10-06 at 14.10.02.jpeg';
 import imgFeatProj from '../assets/Perforated Aluminium Cladding Panel Works1.jpeg';
 import imgBefore from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.53.jpeg';
 import imgAfter from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.54.jpeg';
@@ -19,37 +17,6 @@ import '../pages/SoftFM.css'; // Reusing process flow and layout styles
 import '../pages/Industries.css'; // Reusing some pill/tag styles
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [galleryFilter, setGalleryFilter] = useState('All');
-
-  // Dynamically import all images from assets folder
-  const imageModules = import.meta.glob('../assets/**/*.{png,jpg,jpeg}', { eager: true });
-  
-  const allProjectImages = Object.keys(imageModules)
-    .map(path => {
-      const parts = path.split('/');
-      const fileName = parts.pop();
-      const folderName = parts[parts.length - 1] === 'assets' ? 'Other' : parts[parts.length - 1];
-      return {
-        src: imageModules[path].default,
-        category: folderName,
-        fileName
-      };
-    })
-    .filter(img => 
-      !img.fileName.includes('Hasan Nazmul GM') &&
-      !img.fileName.includes('IMG-20261006-WA')
-    );
-
-  const galleryCategories = ['All', ...new Set(allProjectImages.map(img => img.category))];
-  const filteredGallery = galleryFilter === 'All' 
-    ? allProjectImages 
-    : allProjectImages.filter(img => img.category === galleryFilter);
-
-  const filters = [
-    'All', 'Soft FM', 'Hard FM', 'Commercial', 
-    'Residential', 'Industrial', 'Hospitality', 'Maintenance'
-  ];
 
   return (
     <div className="projects-page">
@@ -94,139 +61,7 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* 3. Project Filters */}
-      <section className="bg-light py-4 border-b border-gray-200">
-        <div className="container">
-          <div className="project-filters">
-            {filters.map(filter => (
-              <button 
-                key={filter}
-                className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
-                onClick={() => setActiveFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Main Projects Grid */}
-      <section className="section-padding bg-light pt-5">
-        <div className="container">
-          <div className="projects-grid-3">
-            
-            {/* Project Card 1 */}
-            <div className="proj-card">
-              <div className="proj-img">
-                <img src={imgParking} alt="Project 1" />
-                <div className="proj-category">Commercial</div>
-              </div>
-              <div className="proj-content">
-                <h3 className="h3">Corporate HQ Maintenance</h3>
-                <p className="proj-location"><MapPin size={16} className="text-primary" /> Business Bay, Dubai</p>
-                <div className="proj-services">
-                  <strong>Services Provided:</strong>
-                  <ul>
-                    <li>• HVAC Maintenance</li>
-                    <li>• Daily Cleaning</li>
-                    <li>• Electrical Support</li>
-                    <li>• PPM Schedule</li>
-                  </ul>
-                </div>
-                <div className="proj-link mt-4">
-                  <span className="text-primary font-bold">View Project →</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Card 2 */}
-            <div className="proj-card">
-              <div className="proj-img">
-                <img src={imgPainting} alt="Project 2" />
-                <div className="proj-category">Residential</div>
-              </div>
-              <div className="proj-content">
-                <h3 className="h3">Luxury Tower FM</h3>
-                <p className="proj-location"><MapPin size={16} className="text-primary" /> Dubai Marina</p>
-                <div className="proj-services">
-                  <strong>Services Provided:</strong>
-                  <ul>
-                    <li>• Common Area Cleaning</li>
-                    <li>• Plumbing & Drainage</li>
-                    <li>• Pool Maintenance Support</li>
-                    <li>• Emergency Repairs</li>
-                  </ul>
-                </div>
-                <div className="proj-link mt-4">
-                  <span className="text-primary font-bold">View Project →</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project Card 3 */}
-            <div className="proj-card">
-              <div className="proj-img">
-                <img src={imgPuFlooring} alt="Project 3" />
-                <div className="proj-category">Industrial</div>
-              </div>
-              <div className="proj-content">
-                <h3 className="h3">Logistics Hub Operations</h3>
-                <p className="proj-location"><MapPin size={16} className="text-primary" /> JAFZA</p>
-                <div className="proj-services">
-                  <strong>Services Provided:</strong>
-                  <ul>
-                    <li>• Industrial Floor Epoxy</li>
-                    <li>• High-Bay Lighting</li>
-                    <li>• Preventive Maintenance</li>
-                    <li>• Technical Support</li>
-                  </ul>
-                </div>
-                <div className="proj-link mt-4">
-                  <span className="text-primary font-bold">View Project →</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* 4.5 Dynamic Project Photo Gallery */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2">Project Photo Gallery</h2>
-            <p className="text-body max-w-2xl mx-auto mt-2">
-              A showcase of our recent works across various service categories.
-            </p>
-          </div>
-          
-          <div className="project-filters mb-5">
-            {galleryCategories.map(category => (
-              <button 
-                key={category}
-                className={`filter-btn ${galleryFilter === category ? 'active' : ''}`}
-                onClick={() => setGalleryFilter(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
-          <div className="photo-gallery-grid">
-            {filteredGallery.map((img, index) => (
-              <div key={index} className="gallery-item">
-                <img src={img.src} alt={img.fileName} />
-                <div className="gallery-overlay">
-                  <span className="gallery-category">{img.category}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <FeaturedWorks />
       {/* 5. Featured Project */}
       <section className="section-padding">
         <div className="container featured-project-wrapper">
