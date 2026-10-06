@@ -571,6 +571,39 @@
   color: var(--color-primary);
 }
 
+/* 10.5 Our Valued Clients */
+.clients-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.client-card {
+  background-color: var(--color-white);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-left: 4px solid var(--color-primary);
+}
+
+.client-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  min-width: 30px;
+}
+
+.client-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0;
+}
+
 /* 11. Final CTA */
 .final-cta-section {
   background-color: var(--color-black);

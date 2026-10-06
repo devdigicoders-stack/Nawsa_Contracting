@@ -4,12 +4,47 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, 
   MapPin, Wrench, Settings, Building2, Paintbrush
 } from 'lucide-react';
+import ClientLogos from '../components/ClientLogos';
+import GovSchools from '../components/GovSchools';
+
+import imgPainting from '../assets/painting/WhatsApp Image 2026-10-06 at 14.00.16.jpeg';
+import imgParking from '../assets/parking/WhatsApp Image 2026-10-06 at 14.09.48.jpeg';
+import imgPuFlooring from '../assets/pu flooring works/WhatsApp Image 2026-10-06 at 14.10.02.jpeg';
+import imgFeatProj from '../assets/Perforated Aluminium Cladding Panel Works1.jpeg';
+import imgBefore from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.53.jpeg';
+import imgAfter from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.54.jpeg';
+
 import './Projects.css';
 import '../pages/SoftFM.css'; // Reusing process flow and layout styles
 import '../pages/Industries.css'; // Reusing some pill/tag styles
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [galleryFilter, setGalleryFilter] = useState('All');
+
+  // Dynamically import all images from assets folder
+  const imageModules = import.meta.glob('../assets/**/*.{png,jpg,jpeg}', { eager: true });
+  
+  const allProjectImages = Object.keys(imageModules)
+    .map(path => {
+      const parts = path.split('/');
+      const fileName = parts.pop();
+      const folderName = parts[parts.length - 1] === 'assets' ? 'Other' : parts[parts.length - 1];
+      return {
+        src: imageModules[path].default,
+        category: folderName,
+        fileName
+      };
+    })
+    .filter(img => 
+      !img.fileName.includes('Hasan Nazmul GM') &&
+      !img.fileName.includes('IMG-20261006-WA')
+    );
+
+  const galleryCategories = ['All', ...new Set(allProjectImages.map(img => img.category))];
+  const filteredGallery = galleryFilter === 'All' 
+    ? allProjectImages 
+    : allProjectImages.filter(img => img.category === galleryFilter);
 
   const filters = [
     'All', 'Soft FM', 'Hard FM', 'Commercial', 
@@ -84,7 +119,7 @@ const Projects = () => {
             {/* Project Card 1 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="/images/commercial.jpg" alt="Project 1" />
+                <img src={imgParking} alt="Project 1" />
                 <div className="proj-category">Commercial</div>
               </div>
               <div className="proj-content">
@@ -108,7 +143,7 @@ const Projects = () => {
             {/* Project Card 2 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="/images/residential.jpg" alt="Project 2" />
+                <img src={imgPainting} alt="Project 2" />
                 <div className="proj-category">Residential</div>
               </div>
               <div className="proj-content">
@@ -132,7 +167,7 @@ const Projects = () => {
             {/* Project Card 3 */}
             <div className="proj-card">
               <div className="proj-img">
-                <img src="/images/industrial.jpg" alt="Project 3" />
+                <img src={imgPuFlooring} alt="Project 3" />
                 <div className="proj-category">Industrial</div>
               </div>
               <div className="proj-content">
@@ -157,11 +192,46 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* 4.5 Dynamic Project Photo Gallery */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2 className="h2">Project Photo Gallery</h2>
+            <p className="text-body max-w-2xl mx-auto mt-2">
+              A showcase of our recent works across various service categories.
+            </p>
+          </div>
+          
+          <div className="project-filters mb-5">
+            {galleryCategories.map(category => (
+              <button 
+                key={category}
+                className={`filter-btn ${galleryFilter === category ? 'active' : ''}`}
+                onClick={() => setGalleryFilter(category)}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <div className="photo-gallery-grid">
+            {filteredGallery.map((img, index) => (
+              <div key={index} className="gallery-item">
+                <img src={img.src} alt={img.fileName} />
+                <div className="gallery-overlay">
+                  <span className="gallery-category">{img.category}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 5. Featured Project */}
       <section className="section-padding">
         <div className="container featured-project-wrapper">
           <div className="feat-proj-img">
-            <img src="/images/hardfm/hardfm_intro_1790150291840.jpg" alt="Featured Project" />
+            <img src={imgFeatProj} alt="Featured Project" />
           </div>
           <div className="feat-proj-content">
             <span className="section-label">FEATURED PROJECT</span>
@@ -204,12 +274,12 @@ const Projects = () => {
           </div>
           <div className="showcase-grid">
             <div className="showcase-item">
-              <div className="showcase-label bg-gray">BEFORE</div>
-              <img src="/images/hardfm/hardfm_civil_1790150358441.jpg" alt="Before Deep Cleaning" />
+              <div className="showcase-label bg-gray">DOOR (BEFORE)</div>
+              <img src={imgBefore} alt="Before Deep Cleaning" />
             </div>
             <div className="showcase-item">
-              <div className="showcase-label">AFTER</div>
-              <img src="/images/softfm/soft_feat_1_1790080607501.jpg" alt="After Deep Cleaning" />
+              <div className="showcase-label">DOOR (AFTER)</div>
+              <img src={imgAfter} alt="After Deep Cleaning" />
             </div>
           </div>
         </div>
@@ -333,6 +403,9 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* 10.5 Government Schools Projects */}
+      <GovSchools />
+
       {/* 11. Quality & Project Control */}
       <section className="section-padding">
         <div className="container quality-container">
@@ -354,6 +427,9 @@ const Projects = () => {
           </div>
         </div>
       </section>
+
+      {/* 12. Client Logos */}
+      <ClientLogos />
 
       {/* 13. Project Enquiry CTA */}
       <section className="section-padding final-cta-section projects-cta text-center">

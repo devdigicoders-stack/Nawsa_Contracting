@@ -1,0 +1,61 @@
+.gov-schools-section {
+  border-top: 1px solid var(--color-border);
+}
+
+.icon-wrapper {
+  background-color: var(--color-primary);
+  display: inline-flex;
+}
+
+.schools-container {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.schools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .schools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .schools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.school-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: var(--color-bg-light);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.school-item:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.school-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  line-height: 1.4;
+}

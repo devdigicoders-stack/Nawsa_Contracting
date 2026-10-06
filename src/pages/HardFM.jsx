@@ -4,6 +4,7 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, 
   Wrench, Hammer, Factory, Settings, AlertTriangle, Activity
 } from 'lucide-react';
+import FeaturedWorks from '../components/FeaturedWorks';
 import './HardFM.css';
 import '../pages/SoftFM.css'; // Reusing some common layout styles like process-flow
 
@@ -125,40 +126,8 @@ const HardFM = () => {
         </div>
       </section>
 
-      {/* 5. Featured Technical Services */}
-      <section className="section-padding">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2">Featured Technical Services</h2>
-          </div>
-          <div className="featured-services-grid">
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_hvac_1790150306567.jpg" alt="HVAC Maintenance" />
-              <div className="featured-overlay"><h4>HVAC Maintenance</h4></div>
-            </div>
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_electrical_1790150318694.jpg" alt="Electrical Systems" />
-              <div className="featured-overlay"><h4>Electrical Systems</h4></div>
-            </div>
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_plumbing_1790150335497.jpg" alt="Plumbing & Drainage" />
-              <div className="featured-overlay"><h4>Plumbing & Drainage</h4></div>
-            </div>
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_civil_1790150358441.jpg" alt="Civil Maintenance" />
-              <div className="featured-overlay"><h4>Civil Maintenance</h4></div>
-            </div>
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_firesafety_1790150373428.jpg" alt="Fire & Life Safety" />
-              <div className="featured-overlay"><h4>Fire & Life Safety</h4></div>
-            </div>
-            <div className="featured-card">
-              <img src="/images/hardfm/hardfm_preventive_1790150406400.jpg" alt="Preventive Maintenance" />
-              <div className="featured-overlay"><h4>Preventive Maintenance</h4></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 5. Featured Technical Services (Replaced with Real Photos) */}
+      <FeaturedWorks />
 
       {/* 6. Preventive Maintenance Section */}
       <section className="section-padding ppm-section">

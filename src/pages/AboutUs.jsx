@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, Settings, Users, Target, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
+import gmImage from '../assets/Hasan Nazmul GM.png';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -67,6 +68,39 @@ const AboutUs = () => {
               <div className="highlight-item"><CheckCircle2 className="icon" /> Reactive Maintenance</div>
             </div>
             <Link to="/services/soft-fm" className="btn btn-primary mt-5">Explore Our Services</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 2.5 Message from General Manager */}
+      <section className="section-padding bg-white">
+        <div className="container gm-message-container">
+          <div className="gm-image-wrapper">
+            <img src={gmImage} alt="Eng. Hasan Nazmul" className="gm-image" />
+          </div>
+          <div className="gm-content">
+            <span className="section-label">MESSAGE FROM OUR LEADERSHIP</span>
+            <h2 className="h2">Eng. Hasan Nazmul</h2>
+            <h4 className="h4 text-primary mb-2">General Manager</h4>
+            <p className="text-black font-semibold mb-4">Nawsa Contracting Facilities Management</p>
+            
+            <div className="gm-quote">
+              <p className="text-body mb-4">
+                "At Nawsa Contracting Facilities Management, we believe that successful facilities are built on more than just infrastructure — they depend on reliability, professionalism, and consistent care."
+              </p>
+              <p className="text-body mb-4">
+                "Our commitment is to provide dependable contracting, facilities management, maintenance, and support services that help our clients operate their properties safely, efficiently, and without unnecessary disruption. We understand that every facility has different requirements, which is why we focus on practical, responsive, and tailored solutions."
+              </p>
+              <p className="text-body mb-4">
+                "Our team brings together skilled professionals, strong operational standards, and a customer-focused approach to ensure that every service we deliver meets the expectations of our clients. From routine maintenance and technical support to comprehensive facilities management and contracting solutions, we strive to maintain the highest standards of quality and service."
+              </p>
+              <p className="text-body mb-4">
+                "As General Manager, my priority is to build long-term relationships based on trust, transparency, and performance. We continuously work to improve our processes, develop our people, and adopt better ways of delivering services."
+              </p>
+              <p className="text-body">
+                "I would like to thank our clients, partners, and dedicated team for their continued trust and support. We look forward to growing together and setting higher standards in the contracting and facilities management industry."
+              </p>
+            </div>
           </div>
         </div>
       </section>

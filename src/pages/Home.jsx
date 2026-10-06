@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Building2, Wrench, Sprout, Wind, Droplet, Paintbrush, ShieldCheck, Phone, MapPin } from 'lucide-react';
+import ClientLogos from '../components/ClientLogos';
+import FeaturedWorks from '../components/FeaturedWorks';
 import './Home.css';
 
 const Home = () => {
@@ -423,46 +425,43 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 10. Projects / Work Showcase */}
-      <section className="section-padding bg-light">
+      {/* 10. Featured Works (Real Photos) */}
+      <FeaturedWorks />
+
+      {/* 10.5 Our Valued Clients */}
+      <section className="section-padding bg-white">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">Our Work in Action</h2>
+            <h2 className="h2">Our Valued Clients</h2>
+            <p className="text-body max-w-2xl mx-auto mt-2">
+              Trusted by leading organizations across Qatar for facilities management, renovation, maintenance, and contracting services.
+            </p>
           </div>
-          <div className="projects-grid">
-            <div className="project-card">
-              <img src="/images/commercial.jpg" alt="Project 1" />
-              <div className="project-info">
-                <span className="project-category">Commercial Facility</span>
-                <h4>Corporate Tower Maintenance</h4>
-                <p className="project-location"><MapPin size={14} /> Downtown Dubai</p>
-                <Link to="/projects" className="project-link">View Project <ArrowRight size={14} /></Link>
+          <div className="clients-grid mt-5">
+            {[
+              "Darwish Interserve",
+              "Qatari Diar",
+              "Elegancia Facilities Management",
+              "Evaluation for Project",
+              "Al Aalia Agriculture & Maintenance",
+              "Qualified Facilities Management",
+              "A to Z Group",
+              "Al Aali International",
+              "Al Asmakh Real Estate",
+              "Lusail Real Estate Company",
+              "Arab International School"
+            ].map((client, index) => (
+              <div key={index} className="client-card">
+                <span className="client-number">{index + 1}</span>
+                <h4 className="client-name">{client}</h4>
               </div>
-            </div>
-            <div className="project-card">
-              <img src="/images/residential.jpg" alt="Project 2" />
-              <div className="project-info">
-                <span className="project-category">Residential Facility</span>
-                <h4>Luxury Apartment Complex</h4>
-                <p className="project-location"><MapPin size={14} /> Dubai Marina</p>
-                <Link to="/projects" className="project-link">View Project <ArrowRight size={14} /></Link>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="/images/industrial.jpg" alt="Project 3" />
-              <div className="project-info">
-                <span className="project-category">Industrial Facility</span>
-                <h4>Logistics Warehouse</h4>
-                <p className="project-location"><MapPin size={14} /> JAFZA</p>
-                <Link to="/projects" className="project-link">View Project <ArrowRight size={14} /></Link>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-5">
-            <Link to="/projects" className="btn btn-outline">View All Projects</Link>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* 10.6 Client Logos */}
+      <ClientLogos />
 
       {/* 11. Final CTA + Contact */}
       <section className="section-padding final-cta-section">

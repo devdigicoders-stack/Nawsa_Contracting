@@ -37,6 +37,17 @@ const FloatingButtons = () => {
         <ArrowUp size={24} />
       </button>
 
+      {/* WhatsApp/Message Button */}
+      <a 
+        href="https://wa.me/97431310436" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="floating-btn btn-msg"
+        title="WhatsApp Us"
+      >
+        <MessageCircle size={24} />
+      </a>
+
       {/* Call Button */}
       <a 
         href="tel:+97431310436" 
