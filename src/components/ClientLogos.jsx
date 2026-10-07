@@ -6,14 +6,16 @@ import logo1 from '../assets/IMG-20261006-WA0042.jpg.jpeg';
 import logo2 from '../assets/IMG-20261006-WA0043.jpg.jpeg';
 import logo3 from '../assets/IMG-20261006-WA0044.jpg.jpeg';
 import logo4 from '../assets/IMG-20261006-WA0045.jpg.jpeg';
-import logo5 from '../assets/IMG-20261006-WA0046.jpg.jpeg';
-import logo6 from '../assets/IMG-20261006-WA0047.jpg.jpeg';
+import logo5 from '../assets/Al Aali International Logo.png';
+import logo6 from '../assets/Al Alia Sun, Water & Agriculture Logo.png';
 import logo7 from '../assets/IMG-20261006-WA0048.jpg.jpeg';
 import logo8 from '../assets/IMG-20261006-WA0049.jpg.jpeg';
 import logo9 from '../assets/IMG-20261006-WA0050.jpg.jpeg';
+import logo10 from '../assets/Evolution Projects Logo.png';
+import logo11 from '../assets/QFMS Corporate Facility Logo.png';
 
 const ClientLogos = () => {
-  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9];
+  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11];
 
   return (
     <section className="section-padding bg-light client-logos-section">

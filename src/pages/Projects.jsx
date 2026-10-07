@@ -9,8 +9,6 @@ import GovSchools from '../components/GovSchools';
 import FeaturedWorks from '../components/FeaturedWorks';
 
 import imgFeatProj from '../assets/Perforated Aluminium Cladding Panel Works1.jpeg';
-import imgBefore from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.53.jpeg';
-import imgAfter from '../assets/Door/WhatsApp Image 2026-10-06 at 14.09.54.jpeg';
 
 import './Projects.css';
 import '../pages/SoftFM.css'; // Reusing process flow and layout styles
@@ -100,25 +98,6 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* 6. Before & After Showcase */}
-      <section className="section-padding bg-black text-white">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2 text-white">Visible Results. Professional Finish.</h2>
-            <p className="text-gray-soft mx-auto max-w-2xl">Showcasing the impact of our deep cleaning and technical repair works.</p>
-          </div>
-          <div className="showcase-grid">
-            <div className="showcase-item">
-              <div className="showcase-label bg-gray">DOOR (BEFORE)</div>
-              <img src={imgBefore} alt="Before Deep Cleaning" />
-            </div>
-            <div className="showcase-item">
-              <div className="showcase-label">DOOR (AFTER)</div>
-              <img src={imgAfter} alt="After Deep Cleaning" />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 7. Project Categories */}
       <section className="section-padding bg-light">
