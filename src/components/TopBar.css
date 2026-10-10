@@ -15,6 +15,7 @@
 
 .topbar-left {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -22,14 +23,51 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.topbar-item:hover {
+  color: var(--color-white);
+}
+
+.topbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 768px) {
-  .d-none-mobile {
-    display: none;
+  .topbar {
+    padding: 0.45rem 0;
+    font-size: 0.72rem;
   }
+
+  .d-none-mobile {
+    display: none !important;
+  }
+
+  .topbar-container {
+    justify-content: center;
+  }
+
   .topbar-left {
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .topbar-left {
+    gap: 0.4rem 0.6rem;
+    font-size: 0.68rem;
+  }
+
+  .topbar-item svg {
+    width: 12px;
+    height: 12px;
   }
 }

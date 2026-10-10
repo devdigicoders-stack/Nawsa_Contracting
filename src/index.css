@@ -293,3 +293,45 @@ a {
 .breadcrumb .current {
   color: var(--color-primary);
 }
+
+@media (max-width: 991px) {
+  .page-hero {
+    margin-top: -100px;
+    padding-top: 130px;
+    min-height: 70vh;
+  }
+
+  .page-hero-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    margin-top: -85px;
+    padding-top: 120px;
+    padding-bottom: 3rem;
+    min-height: auto;
+  }
+
+  .page-hero-title {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    margin-top: -80px;
+    padding-top: 115px;
+  }
+
+  .page-hero-title {
+    font-size: 1.85rem;
+  }
+}
