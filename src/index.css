@@ -50,6 +50,7 @@ body {
 .app-container {
   overflow-x: clip;
   width: 100%;
+  background-color: var(--color-charcoal);
 }
 
 a {
@@ -296,8 +297,8 @@ a {
 
 @media (max-width: 991px) {
   .page-hero {
-    margin-top: -100px;
-    padding-top: 130px;
+    margin-top: -128px;
+    padding-top: 150px;
     min-height: 70vh;
   }
 
@@ -308,8 +309,8 @@ a {
 
 @media (max-width: 768px) {
   .page-hero {
-    margin-top: -85px;
-    padding-top: 120px;
+    margin-top: -128px;
+    padding-top: 155px;
     padding-bottom: 3rem;
     min-height: auto;
   }
@@ -327,8 +328,8 @@ a {
 
 @media (max-width: 480px) {
   .page-hero {
-    margin-top: -80px;
-    padding-top: 115px;
+    margin-top: -128px;
+    padding-top: 150px;
   }
 
   .page-hero-title {

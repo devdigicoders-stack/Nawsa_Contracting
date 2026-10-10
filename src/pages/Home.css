@@ -667,8 +667,8 @@
 /* Responsive Hero Styles */
 @media (max-width: 991px) {
   .hero {
-    margin-top: -100px;
-    padding-top: 130px;
+    margin-top: -128px;
+    padding-top: 150px;
     padding-bottom: 3.5rem;
     min-height: 80vh;
   }
@@ -680,8 +680,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    margin-top: -85px;
-    padding-top: 125px;
+    margin-top: -128px;
+    padding-top: 155px;
     padding-bottom: 3rem;
     min-height: auto;
   }
@@ -715,12 +715,13 @@
 
 @media (max-width: 480px) {
   .hero {
-    margin-top: -80px;
-    padding-top: 115px;
+    margin-top: -128px;
+    padding-top: 150px;
   }
 
   .hero-title {
     font-size: 1.85rem;
   }
 }
+
 
