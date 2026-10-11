@@ -50,7 +50,7 @@ body {
 .app-container {
   overflow-x: clip;
   width: 100%;
-  background-color: var(--color-charcoal);
+  background-color: var(--color-white);
 }
 
 a {

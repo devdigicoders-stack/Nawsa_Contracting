@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #e3e0e0;
+  background-color: var(--color-white);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0.75rem;

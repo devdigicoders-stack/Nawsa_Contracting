@@ -108,6 +108,10 @@
 }
 
 /* 3. About Section */
+.about-section {
+  background-color: var(--color-white);
+}
+
 .about-container {
   display: grid;
   grid-template-columns: 1fr;
