@@ -10,17 +10,17 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-brand">
           <Link to="/" className="footer-logo mb-4 inline-block">
-            <img src="/logo.png" alt="NCFM Logo" style={{ height: '55px', width: 'auto', maxWidth: '250px', objectFit: 'contain' }} />
+            <img src="/logo.png" alt="MBA Contracting Logo" style={{ height: '55px', width: 'auto', maxWidth: '250px', objectFit: 'contain' }} />
           </Link>
           <p className="footer-desc">
-            Providing comprehensive Soft and Hard Facilities Management services to maintain clean, safe, and professionally managed environments.
+            MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, and commercial properties.
           </p>
         </div>
 
         <div className="footer-links-col">
           <h4>Company</h4>
           <ul>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
@@ -29,10 +29,10 @@ const Footer = () => {
         <div className="footer-links-col">
           <h4>Services</h4>
           <ul>
-            <li><Link to="/services/soft-fm">Soft FM</Link></li>
-            <li><Link to="/services/hard-fm">Hard FM</Link></li>
-            <li><Link to="/services/hard-fm">PPM</Link></li>
-            <li><Link to="/services/hard-fm">Emergency Maintenance</Link></li>
+            <li><Link to="/contact">Building Maintenance</Link></li>
+            <li><Link to="/contact">Villa Construction</Link></li>
+            <li><Link to="/contact">Building Construction</Link></li>
+            <li><Link to="/contact">General Finishing Works</Link></li>
           </ul>
         </div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="container footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} Nawsa Contracting Facilities Management. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} MBA Contracting. All rights reserved.</p>
           <p className="developed-by">
             Designed and Developed by <a href="https://www.worknestconnect.com/" target="_blank" rel="noreferrer">Worknest Connect</a>
           </p>

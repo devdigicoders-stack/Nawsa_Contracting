@@ -81,206 +81,200 @@ const Home = () => {
       <section className="hero" style={{ backgroundImage: `url(${heroImages[currentImage]})` }}>
         <div className="hero-overlay"></div>
         <div className="container hero-content text-center">
-          <h1 className="hero-title animate-fade-in-up">Complete Facilities Management Solutions</h1>
-          <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1">
-            Professional Soft & Hard FM services for commercial, residential and industrial facilities.
+          <h1 className="hero-title animate-fade-in-up">Building Construction, Maintenance & Renovation in Qatar</h1>
+          <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
+            MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, extensions, majlis, and commercial properties. Our services include general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
           </p>
           <div className="hero-actions justify-center animate-fade-in-up-delay-2">
-            <Link to="/services/soft-fm" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
-            <Link to="/contact" className="btn btn-outline hero-btn-outline !px-5 !py-2.5 !text-[0.95rem]">Request a Quote</Link>
+            <a href="tel:+97431310436" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Call us now</a>
+            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline !px-5 !py-2.5 !text-[0.95rem]">Or chat with us on WhatsApp</a>
           </div>
           <div className="hero-highlights animate-fade-in-up-delay-2">
-            <span>Soft FM</span>
+            <span>General Finishing Works</span>
             <span className="dot">•</span>
-            <span>Hard FM</span>
+            <span>Villa Construction</span>
             <span className="dot">•</span>
-            <span>PPM</span>
+            <span>Building Construction</span>
             <span className="dot">•</span>
-            <span>Emergency Support</span>
+            <span>Extension Construction</span>
+            <span className="dot">•</span>
+            <span>Majlis Construction</span>
+            <span className="dot">•</span>
+            <span>Building Maintenance</span>
           </div>
         </div>
       </section>
 
-      {/* 3. About NCFM */}
+      {/* 3. Experience the Difference of MBA */}
       <section className="section-padding about-section">
         <div className="container about-container">
           <div className="about-image-wrapper">
-            <img src="/images/about_ncfm.jpg" alt="Modern Building" className="about-image" />
+            <img src="/images/about_ncfm.jpg" alt="Dedicated Engineers" className="about-image" />
+            <div className="floating-tags-container">
+              <span className="floating-tag">Experts in Qatar construction</span>
+              <span className="floating-tag">Consistent site supervision</span>
+            </div>
           </div>
           <div className="about-content">
-            <span className="section-label">ABOUT NCFM</span>
-            <h2 className="h2">One Partner for Complete Facility Care</h2>
+            <span className="section-label">SUPERIOR QUALITY</span>
+            <h2 className="h2">Dedicated Engineers Who Know Your Project</h2>
             <p className="text-body mb-4">
-              We provide comprehensive Soft and Hard Facilities Management services to maintain clean, hygienic, safe, comfortable, and professionally managed environments across all facility types.
+              Our experienced engineers understand the unique needs of every project, from villa and building construction to finishing, electrical and plumbing works. Through detailed site inspections and clear project records, every stage is planned, precise, and efficient. Your property is never just another job. It is a carefully managed project built around quality and reliability.
             </p>
             <ul className="about-features">
-              <li><CheckCircle2 className="feature-icon" /> Integrated FM Solutions</li>
-              <li><CheckCircle2 className="feature-icon" /> Skilled & Professional Teams</li>
-              <li><CheckCircle2 className="feature-icon" /> Preventive & Corrective Maintenance</li>
-              <li><CheckCircle2 className="feature-icon" /> Customized Service Plans</li>
+              <li><CheckCircle2 className="feature-icon" /> Experts in Qatar construction</li>
+              <li><CheckCircle2 className="feature-icon" /> Consistent site supervision</li>
+              <li><CheckCircle2 className="feature-icon" /> Detailed site inspections & clear project records</li>
+              <li><CheckCircle2 className="feature-icon" /> Planned, precise, and efficient execution</li>
             </ul>
-            <Link to="/about" className="btn btn-primary mt-4">Learn More About Us</Link>
+            <Link to="/contact" className="btn btn-primary mt-4">Request Consultation</Link>
           </div>
         </div>
       </section>
 
-      {/* 4. Our Core Solutions */}
+      {/* 4. Our Core Solutions / What We Do */}
       <section className="section-padding bg-light">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">Our Core Solutions</h2>
+            <h2 className="h2">What We Do</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Delivering specialized services through dedicated soft and hard FM teams to ensure your facility operates at peak performance.
+              Main business: Building Construction, Maintenance & Renovation in Qatar.
             </p>
           </div>
           
           <div className="core-solutions-grid">
-            {/* Soft FM Card */}
+            {/* Card 1: Building Maintenance Services */}
             <div className="solution-card">
               <div className="solution-image-container">
-                <img src="/images/soft_fm.jpg" alt="Soft FM" />
+                <img src="/images/preventive_maintenance.jpg" alt="Building Maintenance Services" />
               </div>
               <div className="solution-content">
-                <h3 className="h3">Soft FM Services</h3>
+                <h3 className="h3">Building Maintenance Services</h3>
                 <p className="text-body mb-4">
-                  Maintaining clean, hygienic, and welcoming environments for your staff and visitors.
+                  Expert building maintenance in Qatar including Plumbing fixes, electrical work, painting, and general handyman services. Book easily, track progress, and enjoy professional service with upfront pricing.
                 </p>
                 <div className="solution-tags">
-                  <span>Cleaning</span><span>Housekeeping</span><span>Pest Control</span>
-                  <span>Landscaping</span><span>Pantry</span><span>Reception</span><span>Waste Management</span>
+                  <span>Plumbing Fixes</span><span>Electrical Work</span><span>Painting</span><span>Handyman Services</span><span>Upfront Pricing</span>
                 </div>
-                <Link to="/services/soft-fm" className="btn btn-outline mt-4 w-full">Explore Soft FM</Link>
+                <Link to="/contact" className="btn btn-outline mt-4 w-full">Request Maintenance</Link>
               </div>
             </div>
 
-            {/* Hard FM Card */}
+            {/* Card 2: Construction Services */}
             <div className="solution-card">
               <div className="solution-image-container">
-                <img src="/images/hard_fm.jpg" alt="Hard FM" />
+                <img src="/images/hard_fm.jpg" alt="Construction Services" />
               </div>
               <div className="solution-content">
-                <h3 className="h3">Hard FM Services</h3>
+                <h3 className="h3">Construction Services</h3>
                 <p className="text-body mb-4">
-                  Technical maintenance and infrastructure support to ensure operational continuity.
+                  Complete construction services from MBA Contracting. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.
                 </p>
                 <div className="solution-tags">
-                  <span>HVAC</span><span>Electrical</span><span>Plumbing</span>
-                  <span>Civil</span><span>Painting</span><span>Waterproofing</span><span>PPM</span>
+                  <span>Villa Construction</span><span>Building Construction</span><span>Extension Construction</span><span>Majlis Construction</span>
                 </div>
-                <Link to="/services/hard-fm" className="btn btn-outline mt-4 w-full">Explore Hard FM</Link>
+                <Link to="/services/construction" className="btn btn-outline mt-4 w-full">Explore Construction</Link>
               </div>
             </div>
             
-            {/* Preventive Maintenance Card */}
+            {/* Card 3: General Finishing Works */}
             <div className="solution-card">
               <div className="solution-image-container">
-                <img src="/images/preventive_maintenance.jpg" alt="Preventive Maintenance" />
+                <img src="/images/soft_fm.jpg" alt="General Finishing Works" />
               </div>
               <div className="solution-content">
-                <h3 className="h3">Preventive Maintenance</h3>
+                <h3 className="h3">General Finishing Works</h3>
                 <p className="text-body mb-4">
-                  Scheduled care and regular facility inspections to prevent costly breakdowns.
+                  Complete finishing works for your property. From surface preparation to the final finish, our team manages every detail of your villa, building, or majlis project with skilled workmanship and clean results.
                 </p>
                 <div className="solution-tags">
-                  <span>PPM</span><span>Asset Care</span><span>Inspections</span>
-                  <span>Safety</span><span>Compliance</span>
+                  <span>Tile Installation & Flooring Works</span><span>Painting & Plastering Works</span><span>Gypsum Board & Interior Finishing</span><span>Electrical & Plumbing Works</span>
                 </div>
-                <Link to="/services/hard-fm" className="btn btn-outline mt-4 w-full">Explore PPM</Link>
+                <Link to="/services/finishing-works" className="btn btn-outline mt-4 w-full">Explore Finishing</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. Popular Services Grid */}
+      {/* 5. General Finishing Works Grid */}
       <section className="section-padding">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">Solutions for Every Part of Your Facility</h2>
+            <h2 className="h2">General Finishing Works</h2>
+            <p className="text-body max-w-2xl mx-auto">
+              Precision finishing and craft solutions for villas, buildings, and commercial spaces across Qatar.
+            </p>
           </div>
           <div className="services-grid-8">
-            <Link to="/services/soft-fm" className="service-mini-card">
+            <Link to="/services/finishing-works" className="service-mini-card">
+              <Building2 className="service-icon-sm" />
+              <h4>Tile Installation Works</h4>
+              <p>Floors, walls & custom patterns</p>
+              <ArrowRight className="service-arrow" />
+            </Link>
+            <Link to="/services/finishing-works" className="service-mini-card">
               <Paintbrush className="service-icon-sm" />
-              <h4>Cleaning & Housekeeping</h4>
-              <p>Daily and deep cleaning</p>
+              <h4>Painting Works</h4>
+              <p>Interior & exterior premium coats</p>
               <ArrowRight className="service-arrow" />
             </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
-              <Wind className="service-icon-sm" />
-              <h4>HVAC Maintenance</h4>
-              <p>AC servicing & repair</p>
+            <Link to="/services/finishing-works" className="service-mini-card">
+              <Building2 className="service-icon-sm" />
+              <h4>Gypsum Board Works</h4>
+              <p>Ceilings, partitions & design</p>
               <ArrowRight className="service-arrow" />
             </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
+            <Link to="/services/finishing-works" className="service-mini-card">
+              <Wrench className="service-icon-sm" />
+              <h4>Plastering Works</h4>
+              <p>Surface prep & smooth rendering</p>
+              <ArrowRight className="service-arrow" />
+            </Link>
+            <Link to="/services/finishing-works" className="service-mini-card">
+              <CheckCircle2 className="service-icon-sm" />
+              <h4>Flooring Works</h4>
+              <p>Durable marble & tile flooring</p>
+              <ArrowRight className="service-arrow" />
+            </Link>
+            <Link to="/services/finishing-works" className="service-mini-card">
+              <ShieldCheck className="service-icon-sm" />
+              <h4>Interior Finishing Works</h4>
+              <p>Turnkey interior detailing</p>
+              <ArrowRight className="service-arrow" />
+            </Link>
+            <Link to="/services/finishing-works" className="service-mini-card">
               <Wrench className="service-icon-sm" />
               <h4>Electrical Works</h4>
-              <p>Systems & lighting</p>
+              <p>Safe wiring & fixtures</p>
               <ArrowRight className="service-arrow" />
             </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
+            <Link to="/services/finishing-works" className="service-mini-card">
               <Droplet className="service-icon-sm" />
-              <h4>Plumbing & Drainage</h4>
-              <p>Piping & fixture repair</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
-              <Building2 className="service-icon-sm" />
-              <h4>Civil Maintenance</h4>
-              <p>Repairs & modifications</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/soft-fm" className="service-mini-card">
-              <Sprout className="service-icon-sm" />
-              <h4>Landscaping</h4>
-              <p>Grounds maintenance</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
-              <ShieldCheck className="service-icon-sm" />
-              <h4>Preventive Maintenance</h4>
-              <p>Scheduled asset care</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/hard-fm" className="service-mini-card">
-              <Phone className="service-icon-sm" />
-              <h4>Emergency Maintenance</h4>
-              <p>24/7 reactive support</p>
+              <h4>Plumbing Works</h4>
+              <p>Piping, drainage & sanitary fixes</p>
               <ArrowRight className="service-arrow" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 6. Integrated Facilities Management */}
-      <section className="section-padding integrated-section">
-        <div className="container text-center">
-          <h2 className="h2 text-white">One Facility. One Team. Complete Support.</h2>
-          <div className="integrated-flow">
-            <div className="flow-step">
-              <div className="flow-box">Soft FM</div>
-              <p>Cleaning & Hygiene</p>
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <div className="flow-box">Hard FM</div>
-              <p>Technical Maintenance</p>
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <div className="flow-box">PPM</div>
-              <p>Preventive Care</p>
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step">
-              <div className="flow-box">Reactive Support</div>
-              <p>Urgent Repairs</p>
-            </div>
-            <div className="flow-arrow">↓</div>
-            <div className="flow-step final-step">
-              <div className="flow-box highlight-box">Complete Facilities Management</div>
-            </div>
+      {/* 6. Engineered Solutions */}
+      <section className="section-padding integrated-section engineered-section">
+        <div className="container text-center max-w-4xl">
+          <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>ENGINEERED SOLUTIONS</span>
+          <h2 className="h2 text-white mb-4">Your Property, Built for Reliability</h2>
+          <p className="text-gray-soft mb-6 leading-relaxed" style={{ fontSize: '1.05rem' }}>
+            We go beyond basic repairs to deliver reliable building construction, finishing, maintenance and renovation services in Qatar. Our engineers use proper tools, strong technical expertise, and a preventive approach to build and care for every part of your property. From plastering, tiling and gypsum works to electrical and plumbing systems, we ensure consistent quality and long-term performance.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <span className="floating-tag">Expert analysis</span>
+            <span className="floating-tag">Quality checks at every stage</span>
           </div>
-          <Link to="/contact" className="btn btn-primary mt-5">Discuss Your Requirements</Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="tel:+97431310436" className="btn btn-primary !px-6 !py-3">Call us now</a>
+            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline !px-6 !py-3">Or chat with us on WhatsApp</a>
+          </div>
         </div>
       </section>
 
@@ -468,13 +462,13 @@ const Home = () => {
         <div className="container">
           <div className="final-cta-grid">
             <div className="final-cta-content">
-              <h2 className="h2 text-white">Looking for a Reliable Facilities Management Partner?</h2>
+              <h2 className="h2 text-white">Looking for a Reliable Construction & Maintenance Partner?</h2>
               <p className="text-gray-soft mb-4">
-                Tell us what your facility needs and our team will help build the right service solution.
+                Tell us what your property or project needs and our engineering team will build the right service solution.
               </p>
               <div className="flex gap-4">
-                <Link to="/contact" className="btn btn-primary">Request a Quote</Link>
-                <a href="tel:+971000000000" className="btn btn-outline hero-btn-outline">Contact Us</a>
+                <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
+                <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline">Call us now</a>
               </div>
             </div>
             <div className="final-cta-form">
@@ -495,9 +489,12 @@ const Home = () => {
                 <div className="form-group">
                   <select name="serviceRequired" value={formData.serviceRequired} onChange={handleInputChange} required>
                     <option value="">Service Required</option>
-                    <option value="Soft FM">Soft FM</option>
-                    <option value="Hard FM">Hard FM</option>
-                    <option value="Integrated FM">Integrated FM</option>
+                    <option value="General Finishing Works">General Finishing Works</option>
+                    <option value="Villa Construction">Villa Construction</option>
+                    <option value="Building Construction">Building Construction</option>
+                    <option value="Extension Construction">Extension Construction</option>
+                    <option value="Majlis Construction">Majlis Construction</option>
+                    <option value="Building Maintenance Services">Building Maintenance Services</option>
                   </select>
                 </div>
                 <div className="form-group">

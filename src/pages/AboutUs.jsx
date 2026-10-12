@@ -30,45 +30,53 @@ const AboutUs = () => {
           <div className="breadcrumb animate-fade-in-up mb-4">
             <Link to="/">Home</Link> <span className="mx-2">/</span> <span className="current">About Us</span>
           </div>
-          <h1 className="page-hero-title animate-fade-in-up-delay-1">About NCFM</h1>
-          <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1">
-            Professional Facilities Management Solutions Built Around Reliability, Quality and Performance.
+          <h1 className="page-hero-title animate-fade-in-up-delay-1">Your Trusted Construction Partner</h1>
+          <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
+            Since our founding, MBA Contracting has been dedicated to delivering professional building construction, finishing, maintenance, and renovation services that Doha homeowners and businesses can rely on. With skilled engineers, transparent pricing, and a commitment to excellence, we've become a trusted partner for properties across Qatar.
           </p>
           <div className="page-hero-actions animate-fade-in-up-delay-2">
-            <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">View Our Work</Link>
-            <Link to="/contact" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Get in Touch</Link>
+            <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
+            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Chat with us on WA</a>
           </div>
           <div className="page-hero-highlights animate-fade-in-up-delay-2">
-            <span>Excellence</span>
+            <span>Villa Construction</span>
             <span className="dot">•</span>
-            <span>Reliability</span>
+            <span>Building Construction</span>
             <span className="dot">•</span>
-            <span>Quality</span>
+            <span>Extension & Majlis</span>
             <span className="dot">•</span>
-            <span>Safety</span>
+            <span>General Finishing</span>
+            <span className="dot">•</span>
+            <span>Maintenance</span>
           </div>
         </div>
       </section>
 
-      {/* 2. Company Overview */}
+      {/* 2. Company Overview / About Us */}
       <section className="section-padding">
         <div className="container about-overview-container">
           <div className="overview-image-wrapper">
             <img src="/images/about/about_overview_1790079192293.jpg" alt="Company Overview" />
+            <div className="image-quote-badge">
+              "Delivering practical solutions with attention to detail across Qatar."
+            </div>
           </div>
           <div className="overview-content">
             <span className="section-label">WHO WE ARE</span>
-            <h2 className="h2">A Complete Facilities Management Partner</h2>
+            <h2 className="h2">Built on Quality. Driven by Excellence.</h2>
             <p className="text-body mb-4">
-              NCFM provides professional Soft and Hard Facilities Management solutions for commercial, residential and industrial facilities. Our services are designed to support clean, safe, functional and efficiently maintained environments.
+              MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing comprehensive solutions for residential and commercial properties across all major communities. We specialize in general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
+            </p>
+            <p className="text-body mb-4">
+              Our mission is simple: make building, maintenance, and renovation effortless, transparent, and reliable. Whether you need a new villa, an extension, a majlis, finishing works, or ongoing maintenance support, our team of experienced engineers and skilled professionals delivers exceptional service with integrity and expertise.
             </p>
             <div className="overview-highlights">
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Soft FM Services</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Hard FM Services</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Preventive Maintenance</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Reactive Maintenance</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Villa Construction</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Building Construction</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> General Finishing Works</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Maintenance Services</div>
             </div>
-            <Link to="/services/soft-fm" className="btn btn-primary mt-5">Explore Our Services</Link>
+            <Link to="/contact" className="btn btn-primary mt-5">Request Consultation</Link>
           </div>
         </div>
       </section>
@@ -83,23 +91,23 @@ const AboutUs = () => {
             <span className="section-label">MESSAGE FROM OUR LEADERSHIP</span>
             <h2 className="h2">Eng. Hasan Nazmul</h2>
             <h4 className="h4 text-primary mb-2">General Manager</h4>
-            <p className="text-black font-semibold mb-4">Nawsa Contracting Facilities Management</p>
+            <p className="text-black font-semibold mb-4">MBA Contracting</p>
             
             <div className="gm-quote">
               <p className="text-body mb-4">
-                "At Nawsa Contracting Facilities Management, we believe that successful facilities are built on more than just infrastructure — they depend on reliability, professionalism, and consistent care."
+                "At MBA Contracting, we believe that successful projects are built on more than just construction materials — they depend on engineering reliability, craftsmanship, and consistent care."
               </p>
               <p className="text-body mb-4">
-                "Our commitment is to provide dependable contracting, facilities management, maintenance, and support services that help our clients operate their properties safely, efficiently, and without unnecessary disruption. We understand that every facility has different requirements, which is why we focus on practical, responsive, and tailored solutions."
+                "Our commitment is to provide dependable building construction, finishing, maintenance, and renovation services that help our clients build and maintain their properties safely, efficiently, and to the highest standards. We understand that every project has unique requirements, which is why we focus on practical, responsive, and tailored engineering solutions."
               </p>
               <p className="text-body mb-4">
-                "Our team brings together skilled professionals, strong operational standards, and a customer-focused approach to ensure that every service we deliver meets the expectations of our clients. From routine maintenance and technical support to comprehensive facilities management and contracting solutions, we strive to maintain the highest standards of quality and service."
+                "Our team brings together skilled engineers, experienced site supervisors, and dedicated craftsmen to ensure that every project we deliver meets the expectations of our clients. From villa and majlis construction to general finishing works, we strive to maintain the highest standards of quality and service."
               </p>
               <p className="text-body mb-4">
-                "As General Manager, my priority is to build long-term relationships based on trust, transparency, and performance. We continuously work to improve our processes, develop our people, and adopt better ways of delivering services."
+                "As General Manager, my priority is to build long-term relationships based on trust, transparency, and performance. We continuously work to improve our processes, develop our people, and adopt better ways of delivering construction excellence."
               </p>
               <p className="text-body">
-                "I would like to thank our clients, partners, and dedicated team for their continued trust and support. We look forward to growing together and setting higher standards in the contracting and facilities management industry."
+                "I would like to thank our clients, partners, and dedicated team for their continued trust and support. We look forward to growing together and setting higher standards in the construction and contracting industry across Qatar."
               </p>
             </div>
           </div>
@@ -110,12 +118,12 @@ const AboutUs = () => {
       <section className="section-padding bg-light">
         <div className="container story-container">
           <div className="story-content">
-            <h2 className="h2">Built to Support Better Facilities</h2>
+            <h2 className="h2">Built to Deliver Superior Construction</h2>
             <p className="text-body mb-4">
-              Founded on the principles of trust, transparency, and technical excellence, Nawsa Contracting Facilities Management (NCFM) has rapidly grown into a preferred partner for comprehensive facility support. We understand that every building is a living ecosystem that requires dedicated care to function at its best.
+              Founded on the principles of trust, transparency, and technical excellence, MBA Contracting has established itself as a reliable partner for building construction, maintenance, and renovation in Qatar. We understand that every villa, building, extension, and majlis is a valuable investment requiring precision execution.
             </p>
             <p className="text-body mb-4">
-              NCFM was established with the purpose of delivering high-quality facility management services. Operating across key target markets, we leverage our extensive experience to provide customized, reliable, and professional FM solutions that keep your buildings operating efficiently, safely, and sustainably.
+              MBA Contracting was established with the purpose of delivering high-quality construction and finishing services. Operating across Doha and greater Qatar, our experienced engineers and skilled tradespeople deliver turnkey solutions aligned with each client's vision and timeline.
             </p>
           </div>
           <div className="story-image-wrapper">
@@ -131,14 +139,14 @@ const AboutUs = () => {
             <div className="mv-icon"><Target size={40} /></div>
             <h3 className="h3">Our Mission</h3>
             <p className="text-body">
-              To deliver reliable, efficient and professional facilities management solutions that support safe, clean and high-performing environments.
+              To provide dependable building construction, finishing, maintenance, and renovation services in Qatar. We strive to deliver transparent, high-quality, and reliable solutions that enhance the value and comfort of every property we work on, ensuring total customer satisfaction on every project.
             </p>
           </div>
           <div className="mv-card">
             <div className="mv-icon"><Zap size={40} /></div>
             <h3 className="h3">Our Vision</h3>
             <p className="text-body">
-              To become a trusted facilities management partner known for service quality, technical capability and long-term client relationships.
+              To be the most trusted and sought-after contracting and maintenance partner in Qatar. We aim to set high standards for quality workmanship, safe site practices, and sustainable building methods, building a legacy of quality that lasts for generations.
             </p>
           </div>
         </div>
@@ -147,61 +155,62 @@ const AboutUs = () => {
       {/* 5. What We Do */}
       <section className="section-padding bg-black text-white">
         <div className="container text-center">
-          <h2 className="h2 text-white mb-5">Integrated Solutions for Every Facility Need</h2>
+          <h2 className="h2 text-white mb-5">What We Do</h2>
           <div className="what-we-do-grid">
-            <div className="wwd-block">
-              <h4>Soft FM</h4>
-              <p>Cleaning, housekeeping, hygiene, landscaping, reception, pantry, waste support.</p>
+            <div className="wwd-block text-left">
+              <h4>Building Maintenance Services</h4>
+              <p>Expert building maintenance in Qatar including Plumbing fixes, electrical work, painting, and general handyman services. Book easily, track progress, and enjoy professional service with upfront pricing.</p>
             </div>
-            <div className="wwd-block">
-              <h4>Hard FM</h4>
-              <p>HVAC, electrical, plumbing, civil, painting, carpentry, technical systems.</p>
+            <div className="wwd-block text-left">
+              <h4>Construction Services</h4>
+              <p>Complete construction services from MBA Contracting. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.</p>
             </div>
-            <div className="wwd-block">
-              <h4>Maintenance</h4>
-              <p>PPM, corrective maintenance, reactive support and emergency response.</p>
+            <div className="wwd-block text-left">
+              <h4>General Finishing Works</h4>
+              <p>Complete finishing works for your property. From surface preparation to the final finish, our team manages every detail of your villa, building, or majlis project with skilled workmanship and clean results.</p>
             </div>
           </div>
-          <Link to="/services/soft-fm" className="btn btn-outline hero-btn-outline mt-5">View All Services</Link>
+          <Link to="/contact" className="btn btn-outline hero-btn-outline mt-5">Request Consultation</Link>
         </div>
       </section>
 
-      {/* 6. Our Core Values */}
+      {/* 6. Core Values – The MBA Difference */}
       <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">The Values Behind Our Service</h2>
+            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>CORE VALUES</span>
+            <h2 className="h2">Core Values – The MBA Difference</h2>
           </div>
           <div className="why-choose-grid">
             <div className="why-card">
               <span className="why-number">01</span>
-              <h4>Reliability</h4>
-              <p>Consistent service delivery and dependable facility support.</p>
+              <h4>Professional Workmanship</h4>
+              <p>A focus on quality and attention to finishing details.</p>
             </div>
             <div className="why-card">
               <span className="why-number">02</span>
-              <h4>Quality</h4>
-              <p>High standards in every task, from cleaning to complex repairs.</p>
+              <h4>Complete Solutions</h4>
+              <p>Villa, building, extension and majlis construction, finishing and maintenance services through one contracting partner.</p>
             </div>
             <div className="why-card">
               <span className="why-number">03</span>
-              <h4>Safety</h4>
-              <p>Safe working practices across cleaning, maintenance and technical operations.</p>
+              <h4>Practical Project Execution</h4>
+              <p>Organized execution based on the approved scope and site requirements.</p>
             </div>
             <div className="why-card">
               <span className="why-number">04</span>
-              <h4>Professionalism</h4>
-              <p>Trained, vetted, and respectful teams handling your facility.</p>
+              <h4>Quality-Focused Approach</h4>
+              <p>Attention to workmanship, materials and final appearance.</p>
             </div>
             <div className="why-card">
               <span className="why-number">05</span>
-              <h4>Responsiveness</h4>
-              <p>Quick action for both planned schedules and emergency calls.</p>
+              <h4>Residential & Commercial Support</h4>
+              <p>Solutions can be tailored to different property and project requirements.</p>
             </div>
             <div className="why-card">
               <span className="why-number">06</span>
-              <h4>Continuous Improvement</h4>
-              <p>Always refining our processes to serve you better.</p>
+              <h4>Client-Centered Service</h4>
+              <p>Clear communication and coordination throughout the project.</p>
             </div>
           </div>
         </div>
@@ -210,50 +219,47 @@ const AboutUs = () => {
       {/* 7. Our Approach */}
       <section className="section-padding">
         <div className="container text-center">
-          <h2 className="h2 mb-5">A Structured Approach to Facility Management</h2>
-          <div className="approach-grid">
+          <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>HOW WE WORK</span>
+          <h2 className="h2 mb-5">Our Approach</h2>
+          <div className="approach-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
             <div className="approach-step">
               <div className="step-num">01. Understand</div>
-              <p>Facility assessment and requirement study</p>
+              <p>Understand the client's requirement</p>
             </div>
             <div className="approach-step">
-              <div className="step-num">02. Plan</div>
-              <p>Scope, manpower and maintenance planning</p>
+              <div className="step-num">02. Assess</div>
+              <p>Assess the property or project site</p>
             </div>
             <div className="approach-step">
-              <div className="step-num">03. Mobilize</div>
-              <p>Team and resource deployment</p>
+              <div className="step-num">03. Define Scope</div>
+              <p>Define the scope of work</p>
             </div>
             <div className="approach-step">
-              <div className="step-num">04. Manage</div>
-              <p>Daily service and facility operations</p>
+              <div className="step-num">04. Execute</div>
+              <p>Execute the approved works professionally</p>
             </div>
             <div className="approach-step">
-              <div className="step-num">05. Monitor</div>
-              <p>Inspection, maintenance and quality checks</p>
-            </div>
-            <div className="approach-step">
-              <div className="step-num">06. Improve</div>
-              <p>Reporting and continuous improvement</p>
+              <div className="step-num">05. Inspect & Handover</div>
+              <p>Inspect completed works and coordinate handover</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 8. Why NCFM */}
+      {/* 8. Why MBA Contracting */}
       <section className="section-padding bg-light">
         <div className="container why-ncfm-container">
           <div className="why-ncfm-content">
-            <h2 className="h2">Why Clients Choose NCFM</h2>
+            <h2 className="h2">Why Clients Choose MBA Contracting</h2>
             <ul className="why-ncfm-list">
-              <li><CheckCircle2 className="icon" /> Soft and Hard FM under one service partner</li>
-              <li><CheckCircle2 className="icon" /> Skilled and experienced teams</li>
-              <li><CheckCircle2 className="icon" /> Flexible service packages</li>
-              <li><CheckCircle2 className="icon" /> Preventive maintenance approach</li>
-              <li><CheckCircle2 className="icon" /> Responsive technical support</li>
-              <li><CheckCircle2 className="icon" /> Quality and service monitoring</li>
-              <li><CheckCircle2 className="icon" /> Commercial, residential and industrial capability</li>
-              <li><CheckCircle2 className="icon" /> Customized facility solutions</li>
+              <li><CheckCircle2 className="icon" /> Construction, maintenance & finishing under one trusted partner</li>
+              <li><CheckCircle2 className="icon" /> Dedicated engineers who know your project intimately</li>
+              <li><CheckCircle2 className="icon" /> Experts in Qatar construction standards and approvals</li>
+              <li><CheckCircle2 className="icon" /> Consistent site supervision & quality checks at every stage</li>
+              <li><CheckCircle2 className="icon" /> Transparent pricing & upfront project scope</li>
+              <li><CheckCircle2 className="icon" /> Detailed site inspections and clear project records</li>
+              <li><CheckCircle2 className="icon" /> Villa, building, extension and majlis construction capability</li>
+              <li><CheckCircle2 className="icon" /> Meticulous craftsmanship and dependable handover</li>
             </ul>
           </div>
           <div className="why-ncfm-image-wrapper">
@@ -348,13 +354,13 @@ const AboutUs = () => {
       {/* 13. Final CTA */}
       <section className="section-padding final-cta-section text-center">
         <div className="container">
-          <h2 className="h2 text-white mb-4">Need a Facility Management Partner You Can Rely On?</h2>
+          <h2 className="h2 text-white mb-4">Need a Contracting & Maintenance Partner You Can Rely On?</h2>
           <p className="text-gray-soft mb-5 max-w-2xl mx-auto">
-            From everyday facility operations to technical maintenance, NCFM is ready to support your requirements.
+            From villa and building construction to turnkey general finishing and maintenance, MBA Contracting is ready to support your requirements across Qatar.
           </p>
           <div className="flex justify-center gap-4">
-            <Link to="/contact" className="btn btn-primary">Request a Quote</Link>
-            <a href="tel:+971000000000" className="btn btn-outline hero-btn-outline">Contact Us</a>
+            <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
+            <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline">Call us now</a>
           </div>
         </div>
       </section>

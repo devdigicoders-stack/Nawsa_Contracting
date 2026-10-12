@@ -8,8 +8,8 @@ import FloatingButtons from './components/FloatingButtons';
 // Pages
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
-import SoftFM from './pages/SoftFM';
-import HardFM from './pages/HardFM';
+import FinishingWorks from './pages/FinishingWorks';
+import ConstructionServices from './pages/ConstructionServices';
 import Industries from './pages/Industries';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -27,8 +27,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/services/soft-fm" element={<SoftFM />} />
-            <Route path="/services/hard-fm" element={<HardFM />} />
+            <Route path="/services/construction" element={<ConstructionServices />} />
+            <Route path="/services/construction-services" element={<ConstructionServices />} />
+            <Route path="/services/finishing-works" element={<FinishingWorks />} />
+            <Route path="/services/general-finishing" element={<FinishingWorks />} />
+            {/* Backwards-compatibility routes */}
+            <Route path="/services/soft-fm" element={<FinishingWorks />} />
+            <Route path="/services/hard-fm" element={<ConstructionServices />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} /> 
