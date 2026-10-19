@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle2, ShieldCheck, Settings, Users, Target, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
 import gmImage from '../assets/Hasan Nazmul GM.png';
 import ClientLogos from '../components/ClientLogos';
+import CorporateDocuments from '../components/CorporateDocuments';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -34,9 +35,10 @@ const AboutUs = () => {
           <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
             Since our founding, MBA Contracting has been dedicated to delivering professional building construction, finishing, maintenance, and renovation services that Doha homeowners and businesses can rely on. With skilled engineers, transparent pricing, and a commitment to excellence, we've become a trusted partner for properties across Qatar.
           </p>
-          <div className="page-hero-actions animate-fade-in-up-delay-2">
+          <div className="page-hero-actions animate-fade-in-up-delay-2 flex flex-wrap justify-center gap-3">
             <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
-            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Chat with us on WA</a>
+            <a href="#credentials" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Company Profile & Credentials</a>
+            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Chat on WA</a>
           </div>
           <div className="page-hero-highlights animate-fade-in-up-delay-2">
             <span>Villa Construction</span>
@@ -297,6 +299,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* 9.5 Official Corporate Documents & Company Profile */}
+      <CorporateDocuments />
 
       {/* 10. Industries We Support */}
       <section className="section-padding bg-black text-white">

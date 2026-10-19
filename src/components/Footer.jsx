@@ -21,8 +21,20 @@ const Footer = () => {
           <h4>Company</h4>
           <ul>
             <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/about#credentials">Credentials & Profile</Link></li>
             <li><Link to="/projects">Projects</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div className="footer-links-col">
+          <h4>Official Documents</h4>
+          <ul>
+            <li><a href="/pdf/company-profile.pdf" target="_blank" rel="noopener noreferrer">Company Profile 2027</a></li>
+            <li><a href="/pdf/commercial-registration.pdf" target="_blank" rel="noopener noreferrer">Commercial Registration</a></li>
+            <li><a href="/pdf/commercial-license.pdf" target="_blank" rel="noopener noreferrer">Commercial License</a></li>
+            <li><a href="/pdf/establishment-card.pdf" target="_blank" rel="noopener noreferrer">Establishment Card</a></li>
+            <li><a href="/pdf/tax-card.pdf" target="_blank" rel="noopener noreferrer">Tax Card</a></li>
           </ul>
         </div>
 
