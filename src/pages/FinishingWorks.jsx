@@ -4,9 +4,16 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, 
   Paintbrush, Wrench, Droplet, Zap, Building2, Layers, CheckSquare
 } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 import './SoftFM.css';
 
 const FinishingWorks = () => {
+  useSEO({
+    title: "Building Renovation Qatar | Painting, Tiling & Fit-Out | NAWSA",
+    description: "NAWSA delivers turnkey building renovation Qatar solutions including painting, tiling, fit-out, and premium finishing works for commercial and residential properties.",
+    keywords: "Building renovation Qatar, painting, tiling, fit-out, finishing works, NAWSA"
+  });
+
   const finishingServices = [
     {
       id: '01',
@@ -65,10 +72,10 @@ const FinishingWorks = () => {
       <section className="page-hero soft-hero">
         <div className="page-hero-overlay"></div>
         <div className="container page-hero-content text-center">
-          <span className="section-label text-white border-white">GENERAL FINISHING WORKS</span>
-          <h1 className="h1 text-white mb-4 mt-2">General Finishing Works in Qatar</h1>
+          <span className="section-label text-white border-white">RENOVATION & FINISHING</span>
+          <h1 className="h1 text-white mb-4 mt-2">Building Renovation Qatar – Fit-Out & Finishing Works</h1>
           <p className="hero-subtitle mx-auto max-w-3xl">
-            NCFM provides complete general finishing works for villas, apartments, offices, and commercial buildings across Qatar. Our skilled team delivers clean, precise results at every stage, from surface preparation to the final finish, all under one contracting partner.
+            NAWSA provides complete <strong>building renovation Qatar</strong> solutions including precision <strong>painting</strong>, floor and wall <strong>tiling</strong>, turnkey commercial <strong>fit-out</strong>, and architectural <strong>finishing works</strong> across Doha.
           </p>
           <div className="hero-actions justify-center mt-6 flex gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>

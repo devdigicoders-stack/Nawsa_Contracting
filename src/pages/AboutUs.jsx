@@ -8,6 +8,7 @@ import {
 import gmImage from '../assets/Hasan Nazmul GM.png';
 import ClientLogos from '../components/ClientLogos';
 import CorporateDocuments from '../components/CorporateDocuments';
+import useSEO from '../hooks/useSEO';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -24,6 +25,12 @@ const AboutUs = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  useSEO({
+    title: "Contracting Company in Qatar | About NAWSA",
+    description: "Learn about NAWSA, an established contracting company in Qatar and premier facilities management company Doha offering turnkey property maintenance services.",
+    keywords: "Contracting company in Qatar, facilities management company Doha, property maintenance services, NAWSA"
+  });
 
   const coreValues = [
     {
@@ -82,7 +89,7 @@ const AboutUs = () => {
             About NAWSA Contracting & Facilities Management
           </h1>
           <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            A Qatar-based company providing contracting, building maintenance, renovation and facilities management services for residential, commercial and institutional properties across Doha and greater Qatar.
+            As a premier <strong>contracting company in Qatar</strong> and trusted <strong>facilities management company Doha</strong>, NAWSA delivers integrated building maintenance, renovation and <strong>property maintenance services</strong> for residential, commercial and institutional properties across Qatar.
           </p>
           <div className="page-hero-actions animate-fade-in-up-delay-2 flex flex-wrap justify-center gap-3">
             <Link to="/contact" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Request Consultation</Link>
@@ -116,10 +123,10 @@ const AboutUs = () => {
             <span className="section-label">WHO WE ARE</span>
             <h2 className="h2">Construction Expertise. A Facilities Management Mindset.</h2>
             <p className="text-body mb-4">
-              NAWSA Contracting & Facilities Management is a Qatar-based company providing contracting, building maintenance, renovation and facilities management services for residential, commercial and institutional properties.
+              NAWSA Contracting & Facilities Management is a premier <strong>contracting company in Qatar</strong> providing civil contracting, building maintenance, renovation and integrated facilities management services for residential, commercial and institutional properties.
             </p>
             <p className="text-body mb-4">
-              Based in Doha, Qatar, we bring together construction-related capabilities and property maintenance support to help clients manage their buildings throughout their operational life.
+              Headquartered in Doha, we operate as a client-first <strong>facilities management company Doha</strong> and regional partners rely upon. We bring together engineering capabilities and specialized <strong>property maintenance services</strong> to help clients manage their buildings throughout their operational life.
             </p>
             <p className="text-body mb-4">
               Our services cover civil and building works, fit-out and finishing, painting, tiling, electrical and plumbing maintenance, drainage support, cleaning, housekeeping and landscaping. We also provide maintenance and renovation support for educational facilities, villas and commercial buildings, subject to the agreed project scope.

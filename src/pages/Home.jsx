@@ -9,6 +9,7 @@ import {
 import ClientLogos from '../components/ClientLogos';
 import FeaturedWorks from '../components/FeaturedWorks';
 import GovSchools from '../components/GovSchools';
+import useSEO from '../hooks/useSEO';
 import './Home.css';
 
 const Home = () => {
@@ -80,62 +81,76 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useSEO({
+    title: "Construction and Facilities Management Company in Qatar | NAWSA",
+    description: "NAWSA is a premier construction and facilities management company in Qatar. As a trusted contracting company Doha developers rely on, we provide turnkey civil works, renovation, and building maintenance Qatar.",
+    keywords: "Construction and facilities management company in Qatar, Contracting company Doha, building maintenance Qatar, NAWSA, NCFM"
+  });
+
   const coreServices = [
     {
       id: "01",
       icon: <Building2 className="text-primary w-8 h-8" />,
       title: "Building Construction & Civil Works",
       desc: "Practical building and civil construction solutions, including blockwork, plastering, surface preparation, painting, floor and wall tiling, and selected finishing works, subject to project scope and specifications.",
-      tags: ["Civil Works", "Blockwork", "Plastering", "Tiling & Finishing"]
+      tags: ["Civil Works", "Blockwork", "Plastering", "Tiling & Finishing"],
+      link: "/services/construction"
     },
     {
       id: "02",
       icon: <Wrench className="text-primary w-8 h-8" />,
       title: "Building Maintenance Services",
       desc: "Planned and corrective maintenance for residential, commercial and institutional properties, including civil repairs, electrical accessories, plumbing fixtures, painting and general building upkeep.",
-      tags: ["Planned Maintenance", "Civil Repairs", "Electrical & Plumbing", "General Upkeep"]
+      tags: ["Planned Maintenance", "Civil Repairs", "Electrical & Plumbing", "General Upkeep"],
+      link: "/services/building-maintenance"
     },
     {
       id: "03",
       icon: <Layers className="text-primary w-8 h-8" />,
       title: "Facilities Management Services",
       desc: "Integrated hard and soft facilities management support designed to help maintain building functionality, occupant comfort, cleanliness and operational continuity.",
-      tags: ["Hard FM", "Soft FM", "Operational Continuity", "Asset Care"]
+      tags: ["Hard FM", "Soft FM", "Operational Continuity", "Asset Care"],
+      link: "/services/facilities-management"
     },
     {
       id: "04",
       icon: <GraduationCap className="text-primary w-8 h-8" />,
       title: "School Maintenance & Renovation",
       desc: "Maintenance and refurbishment support for educational facilities, including classroom and facility repairs, painting, tiling, interior finishing and civil maintenance works.",
-      tags: ["Classroom Refurbishment", "Safety Standards", "Educational Facilities", "Civil Repairs"]
+      tags: ["Classroom Refurbishment", "Safety Standards", "Educational Facilities", "Civil Repairs"],
+      link: "/services/school-maintenance"
     },
     {
       id: "05",
       icon: <HomeIcon className="text-primary w-8 h-8" />,
       title: "Villa & Commercial Building Maintenance",
       desc: "Property maintenance and renovation solutions covering interior and exterior repairs, plumbing, electrical maintenance, finishing works and common-area upkeep.",
-      tags: ["Villa Maintenance", "Commercial Properties", "Interior & Exterior", "Common Areas"]
+      tags: ["Villa Maintenance", "Commercial Properties", "Interior & Exterior", "Common Areas"],
+      link: "/services/building-maintenance"
     },
     {
       id: "06",
       icon: <Paintbrush className="text-primary w-8 h-8" />,
       title: "Painting, Fit-Out & Finishing Works",
       desc: "Professional finishing support, including internal painting, surface repairs, ceiling repairs, flooring, tiling, decorative finishes and snagging rectification.",
-      tags: ["Internal Painting", "Ceiling Repairs", "Decorative Finishes", "Snagging Rectification"]
+      tags: ["Internal Painting", "Ceiling Repairs", "Decorative Finishes", "Snagging Rectification"],
+      link: "/services/finishing-works"
     },
     {
       id: "07",
       icon: <Sparkles className="text-primary w-8 h-8" />,
       title: "Cleaning & Housekeeping",
       desc: "Cleaning solutions for offices, commercial spaces and residential properties, including deep cleaning, post-construction cleaning, glass cleaning and floor care.",
-      tags: ["Deep Cleaning", "Commercial Offices", "Post-Construction", "Floor & Glass Care"]
+      tags: ["Deep Cleaning", "Commercial Offices", "Post-Construction", "Floor & Glass Care"],
+      link: "/services/cleaning"
     },
     {
       id: "08",
       icon: <Trees className="text-primary w-8 h-8" />,
       title: "Landscaping & Outdoor Maintenance",
       desc: "Landscaping, gardening, irrigation care and external-area maintenance to help keep outdoor spaces clean, functional and well maintained.",
-      tags: ["Landscape Design", "Gardening", "Irrigation Systems", "External Grounds"]
+      tags: ["Landscape Design", "Gardening", "Irrigation Systems", "External Grounds"],
+      link: "/services/landscaping"
     }
   ];
 
@@ -196,7 +211,7 @@ const Home = () => {
             Reliable Construction & Facilities Management Services in Qatar
           </h1>
           <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            NAWSA Contracting & Facilities Management delivers practical construction, renovation, building maintenance and integrated facilities management solutions across Doha, Qatar. We support residential, commercial and institutional properties through coordinated project execution, technical maintenance and property care.
+            As a leading <strong>construction and facilities management company in Qatar</strong>, NAWSA Contracting & Facilities Management delivers practical construction, renovation, and <strong>building maintenance Qatar</strong> solutions across Doha. We are the trusted <strong>contracting company Doha</strong> developers, institutions, and property managers rely on for coordinated project execution and long-term care.
           </p>
           <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-6 animate-fade-in-up-delay-1">
             From civil construction and finishing works to school maintenance, building renovation, electrical and plumbing maintenance, cleaning and landscaping, our services are tailored to the specific requirements of each property and project.
@@ -293,8 +308,8 @@ const Home = () => {
                       </span>
                     ))}
                   </div>
-                  <Link to="/contact" className="text-primary font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
-                    Enquire Now <ArrowRight size={15} />
+                  <Link to={service.link || "/contact"} className="text-primary font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    Explore Service <ArrowRight size={15} />
                   </Link>
                 </div>
               </div>

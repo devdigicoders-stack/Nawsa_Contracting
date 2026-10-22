@@ -4,9 +4,16 @@ import {
   CheckCircle2, ArrowRight, ShieldCheck, 
   Building2, Home as HomeIcon, PlusCircle, GraduationCap, Compass, HardHat
 } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 import './HardFM.css';
 
 const ConstructionServices = () => {
+  useSEO({
+    title: "Building Construction Company in Qatar | Civil Works | NAWSA",
+    description: "NAWSA is a trusted building construction company in Qatar delivering civil works Qatar standards require, structural extensions, and general contracting Doha.",
+    keywords: "Building construction company in Qatar, civil works Qatar, general contracting Doha, NAWSA"
+  });
+
   const constructionServices = [
     {
       id: '01',
@@ -45,10 +52,10 @@ const ConstructionServices = () => {
       <section className="page-hero hard-hero">
         <div className="page-hero-overlay"></div>
         <div className="container page-hero-content text-center">
-          <span className="section-label text-white border-white">CONSTRUCTION & CIVIL WORKS</span>
-          <h1 className="h1 text-white mb-4 mt-2">Building Construction, Renovation & Civil Works in Qatar</h1>
+          <span className="section-label text-white border-white">GENERAL CONTRACTING DOHA</span>
+          <h1 className="h1 text-white mb-4 mt-2">Building Construction Company in Qatar</h1>
           <p className="hero-subtitle mx-auto max-w-3xl">
-            NAWSA Contracting & Facilities Management delivers practical construction, renovation, building maintenance and civil works across Qatar. From planning the scope to final handover, our team manages the work with organized execution, quality materials, and close site supervision.
+            NAWSA is an engineering-focused <strong>building construction company in Qatar</strong> delivering turnkey <strong>civil works Qatar</strong> standards mandate, from structural framing to comprehensive <strong>general contracting Doha</strong> projects.
           </p>
           <div className="hero-actions justify-center mt-6 flex gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
