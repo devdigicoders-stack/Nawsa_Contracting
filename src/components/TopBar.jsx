@@ -22,7 +22,7 @@ const TopBar = () => {
           </a>
           <div className="topbar-item topbar-clock">
             <Clock size={13} />
-            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+            <span>Sunday to Thursday: 09:30 AM - 05:30 PM</span>
           </div>
         </div>
         <div className="topbar-socials">

@@ -73,7 +73,7 @@ const Footer = () => {
             </li>
             <li><Mail size={16} /> <span><a href="mailto:info@ncfmqa.com" className="hover:text-white">info@ncfmqa.com</a></span></li>
             <li><MapPin size={16} /> <span>Doha, Qatar</span></li>
-            <li><Clock size={16} /> <span>Mon - Sat: 8:00 AM - 6:00 PM</span></li>
+            <li><Clock size={16} /> <span>Sunday to Thursday: 09:30 AM - 05:30 PM</span></li>
           </ul>
           <div className="flex gap-4 mt-6">
             <a href="https://www.facebook.com/profile.php?id=61588099337472" target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80" style={{ color: '#1877F2' }}><FaFacebook size={20} /></a>

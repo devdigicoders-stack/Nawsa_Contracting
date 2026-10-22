@@ -221,8 +221,8 @@ const Contact = () => {
             <div className="c-info-card premium-card">
               <Clock className="text-primary mb-3 mx-auto" size={32} />
               <h4>Working Hours</h4>
-              <p>Mon - Sat</p>
-              <p className="text-sm">08:00 AM - 06:00 PM</p>
+              <p>Sunday to Thursday</p>
+              <p className="text-sm">09:30 AM - 05:30 PM</p>
             </div>
           </div>
         </div>
@@ -393,7 +393,7 @@ const Contact = () => {
               <a href="tel:+97431310436" className="hover:underline">+974 31310436</a>
             </p>
             <p className="text-gray-600 mb-4 flex items-center gap-2"><Mail size={18} /> info@ncfmqa.com</p>
-            <p className="text-gray-600 mb-6 flex items-center gap-2"><Clock size={18} /> Sun – Thu, 08:00 AM - 05:00 PM</p>
+            <p className="text-gray-600 mb-6 flex items-center gap-2"><Clock size={18} /> Sunday to Thursday, 09:30 AM - 05:30 PM</p>
             
             <div className="flex gap-3">
               <button className="btn btn-primary">Get Directions</button>
