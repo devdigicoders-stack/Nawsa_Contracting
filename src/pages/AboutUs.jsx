@@ -33,7 +33,7 @@ const AboutUs = () => {
           </div>
           <h1 className="page-hero-title animate-fade-in-up-delay-1">Your Trusted Construction Partner</h1>
           <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            Since our founding, MBA Contracting has been dedicated to delivering professional building construction, finishing, maintenance, and renovation services that Doha homeowners and businesses can rely on. With skilled engineers, transparent pricing, and a commitment to excellence, we've become a trusted partner for properties across Qatar.
+            Since our founding, NCFM has been dedicated to delivering professional building construction, finishing, maintenance, and renovation services that Doha homeowners and businesses can rely on. With skilled engineers, transparent pricing, and a commitment to excellence, we've become a trusted partner for properties across Qatar.
           </p>
           <div className="page-hero-actions animate-fade-in-up-delay-2 flex flex-wrap justify-center gap-3">
             <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
@@ -67,7 +67,7 @@ const AboutUs = () => {
             <span className="section-label">WHO WE ARE</span>
             <h2 className="h2">Built on Quality. Driven by Excellence.</h2>
             <p className="text-body mb-4">
-              MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing comprehensive solutions for residential and commercial properties across all major communities. We specialize in general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
+              NCFM is a building construction, maintenance and renovation company in Qatar, providing comprehensive solutions for residential and commercial properties across all major communities. We specialize in general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
             </p>
             <p className="text-body mb-4">
               Our mission is simple: make building, maintenance, and renovation effortless, transparent, and reliable. Whether you need a new villa, an extension, a majlis, finishing works, or ongoing maintenance support, our team of experienced engineers and skilled professionals delivers exceptional service with integrity and expertise.
@@ -93,11 +93,11 @@ const AboutUs = () => {
             <span className="section-label">MESSAGE FROM OUR LEADERSHIP</span>
             <h2 className="h2">Eng. Hasan Nazmul</h2>
             <h4 className="h4 text-primary mb-2">General Manager</h4>
-            <p className="text-black font-semibold mb-4">MBA Contracting</p>
+            <p className="text-black font-semibold mb-4">NCFM</p>
             
             <div className="gm-quote">
               <p className="text-body mb-4">
-                "At MBA Contracting, we believe that successful projects are built on more than just construction materials — they depend on engineering reliability, craftsmanship, and consistent care."
+                "At NCFM, we believe that successful projects are built on more than just construction materials — they depend on engineering reliability, craftsmanship, and consistent care."
               </p>
               <p className="text-body mb-4">
                 "Our commitment is to provide dependable building construction, finishing, maintenance, and renovation services that help our clients build and maintain their properties safely, efficiently, and to the highest standards. We understand that every project has unique requirements, which is why we focus on practical, responsive, and tailored engineering solutions."
@@ -122,10 +122,10 @@ const AboutUs = () => {
           <div className="story-content">
             <h2 className="h2">Built to Deliver Superior Construction</h2>
             <p className="text-body mb-4">
-              Founded on the principles of trust, transparency, and technical excellence, MBA Contracting has established itself as a reliable partner for building construction, maintenance, and renovation in Qatar. We understand that every villa, building, extension, and majlis is a valuable investment requiring precision execution.
+              Founded on the principles of trust, transparency, and technical excellence, NCFM has established itself as a reliable partner for building construction, maintenance, and renovation in Qatar. We understand that every villa, building, extension, and majlis is a valuable investment requiring precision execution.
             </p>
             <p className="text-body mb-4">
-              MBA Contracting was established with the purpose of delivering high-quality construction and finishing services. Operating across Doha and greater Qatar, our experienced engineers and skilled tradespeople deliver turnkey solutions aligned with each client's vision and timeline.
+              NCFM was established with the purpose of delivering high-quality construction and finishing services. Operating across Doha and greater Qatar, our experienced engineers and skilled tradespeople deliver turnkey solutions aligned with each client's vision and timeline.
             </p>
           </div>
           <div className="story-image-wrapper">
@@ -165,7 +165,7 @@ const AboutUs = () => {
             </div>
             <div className="wwd-block text-left">
               <h4>Construction Services</h4>
-              <p>Complete construction services from MBA Contracting. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.</p>
+              <p>Complete construction services from NCFM. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.</p>
             </div>
             <div className="wwd-block text-left">
               <h4>General Finishing Works</h4>
@@ -176,12 +176,12 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* 6. Core Values – The MBA Difference */}
+      {/* 6. Core Values – The NCFM Difference */}
       <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
           <div className="section-header text-center">
             <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>CORE VALUES</span>
-            <h2 className="h2">Core Values – The MBA Difference</h2>
+            <h2 className="h2">Core Values – The NCFM Difference</h2>
           </div>
           <div className="why-choose-grid">
             <div className="why-card">
@@ -248,11 +248,11 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* 8. Why MBA Contracting */}
+      {/* 8. Why NCFM */}
       <section className="section-padding bg-light">
         <div className="container why-ncfm-container">
           <div className="why-ncfm-content">
-            <h2 className="h2">Why Clients Choose MBA Contracting</h2>
+            <h2 className="h2">Why Clients Choose NCFM</h2>
             <ul className="why-ncfm-list">
               <li><CheckCircle2 className="icon" /> Construction, maintenance & finishing under one trusted partner</li>
               <li><CheckCircle2 className="icon" /> Dedicated engineers who know your project intimately</li>
@@ -361,7 +361,7 @@ const AboutUs = () => {
         <div className="container">
           <h2 className="h2 text-white mb-4">Need a Contracting & Maintenance Partner You Can Rely On?</h2>
           <p className="text-gray-soft mb-5 max-w-2xl mx-auto">
-            From villa and building construction to turnkey general finishing and maintenance, MBA Contracting is ready to support your requirements across Qatar.
+            From villa and building construction to turnkey general finishing and maintenance, NCFM is ready to support your requirements across Qatar.
           </p>
           <div className="flex justify-center gap-4">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>

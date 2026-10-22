@@ -83,7 +83,7 @@ const Home = () => {
         <div className="container hero-content text-center">
           <h1 className="hero-title animate-fade-in-up">Building Construction, Maintenance & Renovation in Qatar</h1>
           <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, extensions, majlis, and commercial properties. Our services include general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
+            NCFM is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, extensions, majlis, and commercial properties. Our services include general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
           </p>
           <div className="hero-actions justify-center animate-fade-in-up-delay-2">
             <a href="tel:+97431310436" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Call us now</a>
@@ -105,7 +105,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Experience the Difference of MBA */}
+      {/* 3. Experience the Difference of NCFM */}
       <section className="section-padding about-section">
         <div className="container about-container">
           <div className="about-image-wrapper">
@@ -168,7 +168,7 @@ const Home = () => {
               <div className="solution-content">
                 <h3 className="h3">Construction Services</h3>
                 <p className="text-body mb-4">
-                  Complete construction services from MBA Contracting. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.
+                  Complete construction services from NCFM. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.
                 </p>
                 <div className="solution-tags">
                   <span>Villa Construction</span><span>Building Construction</span><span>Extension Construction</span><span>Majlis Construction</span>

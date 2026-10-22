@@ -48,7 +48,7 @@ const ConstructionServices = () => {
           <span className="section-label text-white border-white">CONSTRUCTION SERVICES</span>
           <h1 className="h1 text-white mb-4 mt-2">Villa, Building, Extension & Majlis Construction in Qatar</h1>
           <p className="hero-subtitle mx-auto max-w-3xl">
-            MBA Contracting delivers complete construction services for villas, buildings, extensions, and majlis spaces across Qatar. From planning the scope to final handover, our team manages the work with organized execution, quality materials, and close site supervision.
+            NCFM delivers complete construction services for villas, buildings, extensions, and majlis spaces across Qatar. From planning the scope to final handover, our team manages the work with organized execution, quality materials, and close site supervision.
           </p>
           <div className="hero-actions justify-center mt-6 flex gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
@@ -72,7 +72,7 @@ const ConstructionServices = () => {
             <span className="section-label">ORGANIZED EXECUTION</span>
             <h2 className="h2">Strong Structure. Quality Materials. Clean Finish.</h2>
             <p className="text-body mb-4">
-              From ground-up villa projects to structural extensions and custom majlis architecture, MBA Contracting provides complete construction management tailored to Qatar's climate and building codes.
+              From ground-up villa projects to structural extensions and custom majlis architecture, NCFM provides complete construction management tailored to Qatar's climate and building codes.
             </p>
             <div className="mini-highlights">
               <span>Villa Construction</span>
@@ -133,7 +133,7 @@ const ConstructionServices = () => {
           <div className="section-header text-center">
             <h2 className="h2">Construction Service Scope</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Summary of all construction capabilities provided by MBA Contracting in Qatar.
+              Summary of all construction capabilities provided by NCFM in Qatar.
             </p>
           </div>
 
@@ -201,11 +201,11 @@ const ConstructionServices = () => {
         </div>
       </section>
 
-      {/* 6. Why Choose MBA for Construction */}
+      {/* 6. Why Choose NCFM for Construction */}
       <section className="section-padding">
         <div className="container hygiene-container">
           <div className="hygiene-content">
-            <span className="section-label">THE MBA DIFFERENCE</span>
+            <span className="section-label">THE NCFM DIFFERENCE</span>
             <h2 className="h2">Dedicated Engineers on Every Site</h2>
             <ul className="hygiene-list mt-4">
               <li><CheckCircle2 className="icon" /> Experienced engineers with deep knowledge of Qatar construction</li>
@@ -230,7 +230,7 @@ const ConstructionServices = () => {
         <div className="container max-w-3xl">
           <h2 className="h2 text-white mb-4">Planning a Villa, Building, Extension or Majlis in Qatar?</h2>
           <p className="text-gray-soft mb-6 text-lg">
-            Discuss your project scope with MBA Contracting's engineering team today.
+            Discuss your project scope with NCFM's engineering team today.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Free Quote</Link>

@@ -68,7 +68,7 @@ const FinishingWorks = () => {
           <span className="section-label text-white border-white">GENERAL FINISHING WORKS</span>
           <h1 className="h1 text-white mb-4 mt-2">General Finishing Works in Qatar</h1>
           <p className="hero-subtitle mx-auto max-w-3xl">
-            MBA Contracting provides complete general finishing works for villas, apartments, offices, and commercial buildings across Qatar. Our skilled team delivers clean, precise results at every stage, from surface preparation to the final finish, all under one contracting partner.
+            NCFM provides complete general finishing works for villas, apartments, offices, and commercial buildings across Qatar. Our skilled team delivers clean, precise results at every stage, from surface preparation to the final finish, all under one contracting partner.
           </p>
           <div className="hero-actions justify-center mt-6 flex gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
@@ -92,7 +92,7 @@ const FinishingWorks = () => {
             <span className="section-label">ONE CONTRACTING PARTNER</span>
             <h2 className="h2">From Surface Preparation to the Final Handover</h2>
             <p className="text-body mb-4">
-              MBA Contracting delivers precision craftsmanship across residential villas, high-rise buildings, majlis, and commercial spaces. We understand that finishing defines the aesthetic and longevity of your property.
+              NCFM delivers precision craftsmanship across residential villas, high-rise buildings, majlis, and commercial spaces. We understand that finishing defines the aesthetic and longevity of your property.
             </p>
             <div className="mini-highlights">
               <span>Tile Installation</span>
@@ -150,7 +150,7 @@ const FinishingWorks = () => {
           <div className="section-header text-center">
             <h2 className="h2">Service Scope & Description</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Summary of all general finishing works managed by MBA Contracting.
+              Summary of all general finishing works managed by NCFM.
             </p>
           </div>
 
@@ -218,7 +218,7 @@ const FinishingWorks = () => {
         </div>
       </section>
 
-      {/* 6. Why Choose MBA for Finishing Works */}
+      {/* 6. Why Choose NCFM for Finishing Works */}
       <section className="section-padding">
         <div className="container hygiene-container">
           <div className="hygiene-content">
@@ -237,7 +237,7 @@ const FinishingWorks = () => {
             </div>
           </div>
           <div className="hygiene-image">
-            <img src="/images/about/about_overview_1790079192293.jpg" alt="MBA Finishing Quality" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="NCFM Finishing Quality" />
           </div>
         </div>
       </section>
@@ -247,7 +247,7 @@ const FinishingWorks = () => {
         <div className="container max-w-3xl">
           <h2 className="h2 text-white mb-4">Looking for General Finishing Works in Qatar?</h2>
           <p className="text-gray-soft mb-6 text-lg">
-            Connect with MBA Contracting for dependable tile installation, painting, gypsum, plastering, electrical, and plumbing works.
+            Connect with NCFM for dependable tile installation, painting, gypsum, plastering, electrical, and plumbing works.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Free Quote</Link>

@@ -10,10 +10,10 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-brand">
           <Link to="/" className="footer-logo mb-4 inline-block">
-            <img src="/logo.png" alt="MBA Contracting Logo" style={{ height: '55px', width: 'auto', maxWidth: '250px', objectFit: 'contain' }} />
+            <img src="/logo.png" alt="NCFM Logo" style={{ height: '55px', width: 'auto', maxWidth: '250px', objectFit: 'contain' }} />
           </Link>
           <p className="footer-desc">
-            MBA Contracting is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, and commercial properties.
+            NCFM is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, and commercial properties.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="container footer-bottom-container">
-          <p>&copy; {new Date().getFullYear()} MBA Contracting. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NCFM. All rights reserved.</p>
           <p className="developed-by">
             Designed and Developed by <a href="https://www.worknestconnect.com/" target="_blank" rel="noreferrer">Worknest Connect</a>
           </p>
