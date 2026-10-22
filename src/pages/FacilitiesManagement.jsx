@@ -63,7 +63,7 @@ const FacilitiesManagement = () => {
       <section className="section-padding">
         <div className="container hard-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/hard_fm.jpg" alt="Facilities Management Services Qatar" />
+            <img src="/images/hard_fm.jpg" alt="Facilities management services in Qatar - Hard and soft FM operations" />
           </div>
           <div className="intro-content">
             <span className="section-label">OPERATIONAL CONTINUITY</span>

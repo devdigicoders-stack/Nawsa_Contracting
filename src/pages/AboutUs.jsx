@@ -114,7 +114,7 @@ const AboutUs = () => {
       <section className="section-padding">
         <div className="container about-overview-container">
           <div className="overview-image-wrapper">
-            <img src="/images/about/about_overview_1790079192293.jpg" alt="NAWSA Company Overview" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="NAWSA Contracting & Facilities Management Company in Qatar" />
             <div className="image-quote-badge">
               "Your Property. Our Commitment. Built Around Long-Term Value."
             </div>

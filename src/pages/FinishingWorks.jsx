@@ -93,7 +93,7 @@ const FinishingWorks = () => {
       <section className="section-padding">
         <div className="container soft-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/soft_fm.jpg" alt="Finishing Works in Qatar" />
+            <img src="/images/soft_fm.jpg" alt="Building renovation and finishing works in Qatar" />
           </div>
           <div className="intro-content">
             <span className="section-label">ONE CONTRACTING PARTNER</span>
@@ -244,7 +244,7 @@ const FinishingWorks = () => {
             </div>
           </div>
           <div className="hygiene-image">
-            <img src="/images/about/about_overview_1790079192293.jpg" alt="NCFM Finishing Quality" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="Turnkey fit-out and finishing quality in Doha Qatar" />
           </div>
         </div>
       </section>

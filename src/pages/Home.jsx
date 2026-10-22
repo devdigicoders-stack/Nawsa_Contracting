@@ -82,9 +82,9 @@ const Home = () => {
   }, []);
 
   useSEO({
-    title: "Construction and Facilities Management Company in Qatar | NAWSA",
-    description: "NAWSA is a premier construction and facilities management company in Qatar. As a trusted contracting company Doha developers rely on, we provide turnkey civil works, renovation, and building maintenance Qatar.",
-    keywords: "Construction and facilities management company in Qatar, Contracting company Doha, building maintenance Qatar, NAWSA, NCFM"
+    title: "Construction & Facilities Management Company in Qatar | NAWSA",
+    description: "NAWSA provides construction, building maintenance, renovation, facilities management, school maintenance, landscaping and finishing services in Doha, Qatar.",
+    keywords: "Construction & Facilities Management Company in Qatar, NAWSA, Contracting company Doha, building maintenance Qatar, school maintenance Qatar, Doha, Qatar"
   });
 
   const coreServices = [
@@ -211,7 +211,7 @@ const Home = () => {
             Reliable Construction & Facilities Management Services in Qatar
           </h1>
           <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            As a leading <strong>construction and facilities management company in Qatar</strong>, NAWSA Contracting & Facilities Management delivers practical construction, renovation, and <strong>building maintenance Qatar</strong> solutions across Doha. We are the trusted <strong>contracting company Doha</strong> developers, institutions, and property managers rely on for coordinated project execution and long-term care.
+            NAWSA Contracting & Facilities Management delivers practical construction, renovation, and building maintenance solutions across Doha, Qatar. We provide institutions, commercial clients, and property managers with a dependable partner for coordinated project execution and long-term asset care.
           </p>
           <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-6 animate-fade-in-up-delay-1">
             From civil construction and finishing works to school maintenance, building renovation, electrical and plumbing maintenance, cleaning and landscaping, our services are tailored to the specific requirements of each property and project.
@@ -246,7 +246,7 @@ const Home = () => {
       <section className="section-padding about-section" id="about-overview">
         <div className="container about-container">
           <div className="about-image-wrapper">
-            <img src="/images/about_ncfm.jpg" alt="NAWSA Building Care" className="about-image" />
+            <img src="/images/about_ncfm.jpg" alt="Construction and facilities management company in Qatar" className="about-image" />
             <div className="floating-tags-container">
               <span className="floating-tag">Quality-Focused Workmanship</span>
               <span className="floating-tag">Safety-Conscious Execution</span>

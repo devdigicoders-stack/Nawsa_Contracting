@@ -61,7 +61,7 @@ const CleaningServices = () => {
       <section className="section-padding">
         <div className="container soft-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/soft_fm.jpg" alt="Commercial Cleaning Services Qatar" />
+            <img src="/images/soft_fm.jpg" alt="Commercial cleaning and housekeeping services in Doha Qatar" />
           </div>
           <div className="intro-content">
             <span className="section-label">SPOTLESS STANDARDS</span>

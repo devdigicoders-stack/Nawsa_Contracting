@@ -63,7 +63,7 @@ const BuildingMaintenance = () => {
       <section className="section-padding">
         <div className="container hard-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/preventive_maintenance.jpg" alt="Building Maintenance Company Doha" />
+            <img src="/images/preventive_maintenance.jpg" alt="Building maintenance company in Doha Qatar - Electrical, plumbing, and civil repairs" />
           </div>
           <div className="intro-content">
             <span className="section-label">UPFRONT PRICING & TRUST</span>

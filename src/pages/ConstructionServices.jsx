@@ -73,7 +73,7 @@ const ConstructionServices = () => {
       <section className="section-padding">
         <div className="container hard-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/hard_fm.jpg" alt="Construction in Qatar" />
+            <img src="/images/hard_fm.jpg" alt="Building construction company in Qatar - Civil Works" />
           </div>
           <div className="intro-content">
             <span className="section-label">ORGANIZED EXECUTION</span>

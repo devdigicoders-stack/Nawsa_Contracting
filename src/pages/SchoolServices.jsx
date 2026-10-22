@@ -61,7 +61,7 @@ const SchoolServices = () => {
       <section className="section-padding">
         <div className="container hard-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/educational.jpg" alt="School Maintenance Qatar" />
+            <img src="/images/educational.jpg" alt="School maintenance and educational facility renovation in Doha Qatar" />
           </div>
           <div className="intro-content">
             <span className="section-label">SAFETY & COMPLIANCE</span>

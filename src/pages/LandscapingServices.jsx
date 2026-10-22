@@ -61,7 +61,7 @@ const LandscapingServices = () => {
       <section className="section-padding">
         <div className="container soft-intro-container">
           <div className="intro-image-wrapper">
-            <img src="/images/residential.jpg" alt="Landscaping Services Qatar" />
+            <img src="/images/residential.jpg" alt="Landscaping and garden maintenance services in Doha Qatar" />
           </div>
           <div className="intro-content">
             <span className="section-label">SUSTAINABLE OUTDOOR LIVING</span>
