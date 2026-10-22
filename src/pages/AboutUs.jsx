@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ShieldCheck, Settings, Users, Target, Zap, Clock, Activity, ArrowRight } from 'lucide-react';
+import { 
+  CheckCircle2, ShieldCheck, Target, Compass, 
+  Award, Users, HardHat, FileText, ArrowRight,
+  TrendingUp, Sparkles, Building2, Wrench
+} from 'lucide-react';
 import gmImage from '../assets/Hasan Nazmul GM.png';
 import ClientLogos from '../components/ClientLogos';
 import CorporateDocuments from '../components/CorporateDocuments';
@@ -21,6 +25,48 @@ const AboutUs = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const coreValues = [
+    {
+      title: "Integrity",
+      desc: "We value transparent communication, responsible conduct and realistic commitments.",
+      icon: <ShieldCheck className="text-primary w-8 h-8" />
+    },
+    {
+      title: "Quality",
+      desc: "We pay attention to appropriate materials, workmanship, inspections and agreed project requirements.",
+      icon: <Award className="text-primary w-8 h-8" />
+    },
+    {
+      title: "Safety",
+      desc: "We consider people, property and worksite risks throughout planning and execution.",
+      icon: <HardHat className="text-primary w-8 h-8" />
+    },
+    {
+      title: "Accountability",
+      desc: "We promote clear responsibilities, timely communication and effective issue resolution.",
+      icon: <FileText className="text-primary w-8 h-8" />
+    },
+    {
+      title: "Collaboration",
+      desc: "We coordinate with clients, consultants, suppliers and subcontractors to support efficient project delivery.",
+      icon: <Users className="text-primary w-8 h-8" />
+    },
+    {
+      title: "Continuous Improvement",
+      desc: "We use feedback and site experience to improve our working methods and service delivery.",
+      icon: <TrendingUp className="text-primary w-8 h-8" />
+    }
+  ];
+
+  const clientCommitments = [
+    "Clear communication and defined service scopes.",
+    "Practical planning and coordinated execution.",
+    "Attention to workmanship and finishing quality.",
+    "Safety-conscious site practices.",
+    "Responsible resource use and property care.",
+    "Continuous improvement through site experience and client feedback."
+  ];
+
   return (
     <div className="about-page">
       
@@ -31,25 +77,28 @@ const AboutUs = () => {
           <div className="breadcrumb animate-fade-in-up mb-4">
             <Link to="/">Home</Link> <span className="mx-2">/</span> <span className="current">About Us</span>
           </div>
-          <h1 className="page-hero-title animate-fade-in-up-delay-1">Your Trusted Construction Partner</h1>
+          <span className="section-label text-white border-white mb-2">CONSTRUCTION EXPERTISE. A FACILITIES MANAGEMENT MINDSET.</span>
+          <h1 className="page-hero-title animate-fade-in-up-delay-1">
+            About NAWSA Contracting & Facilities Management
+          </h1>
           <p className="page-hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            Since our founding, NCFM has been dedicated to delivering professional building construction, finishing, maintenance, and renovation services that Doha homeowners and businesses can rely on. With skilled engineers, transparent pricing, and a commitment to excellence, we've become a trusted partner for properties across Qatar.
+            A Qatar-based company providing contracting, building maintenance, renovation and facilities management services for residential, commercial and institutional properties across Doha and greater Qatar.
           </p>
           <div className="page-hero-actions animate-fade-in-up-delay-2 flex flex-wrap justify-center gap-3">
-            <Link to="/projects" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Explore Our Services</Link>
+            <Link to="/contact" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Request Consultation</Link>
             <a href="#credentials" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Company Profile & Credentials</a>
             <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline border-white text-white hover:bg-white hover:text-black transition-colors !px-5 !py-2.5 !text-[0.95rem]">Chat on WA</a>
           </div>
-          <div className="page-hero-highlights animate-fade-in-up-delay-2">
-            <span>Villa Construction</span>
+          <div className="page-hero-highlights animate-fade-in-up-delay-2 mt-6">
+            <span>Civil & Building Works</span>
             <span className="dot">•</span>
-            <span>Building Construction</span>
+            <span>Fit-Out & Finishing</span>
             <span className="dot">•</span>
-            <span>Extension & Majlis</span>
+            <span>Property Maintenance</span>
             <span className="dot">•</span>
-            <span>General Finishing</span>
+            <span>School Refurbishment</span>
             <span className="dot">•</span>
-            <span>Maintenance</span>
+            <span>Facilities Management</span>
           </div>
         </div>
       </section>
@@ -58,25 +107,31 @@ const AboutUs = () => {
       <section className="section-padding">
         <div className="container about-overview-container">
           <div className="overview-image-wrapper">
-            <img src="/images/about/about_overview_1790079192293.jpg" alt="Company Overview" />
+            <img src="/images/about/about_overview_1790079192293.jpg" alt="NAWSA Company Overview" />
             <div className="image-quote-badge">
-              "Delivering practical solutions with attention to detail across Qatar."
+              "Your Property. Our Commitment. Built Around Long-Term Value."
             </div>
           </div>
           <div className="overview-content">
             <span className="section-label">WHO WE ARE</span>
-            <h2 className="h2">Built on Quality. Driven by Excellence.</h2>
+            <h2 className="h2">Construction Expertise. A Facilities Management Mindset.</h2>
             <p className="text-body mb-4">
-              NCFM is a building construction, maintenance and renovation company in Qatar, providing comprehensive solutions for residential and commercial properties across all major communities. We specialize in general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
+              NAWSA Contracting & Facilities Management is a Qatar-based company providing contracting, building maintenance, renovation and facilities management services for residential, commercial and institutional properties.
             </p>
             <p className="text-body mb-4">
-              Our mission is simple: make building, maintenance, and renovation effortless, transparent, and reliable. Whether you need a new villa, an extension, a majlis, finishing works, or ongoing maintenance support, our team of experienced engineers and skilled professionals delivers exceptional service with integrity and expertise.
+              Based in Doha, Qatar, we bring together construction-related capabilities and property maintenance support to help clients manage their buildings throughout their operational life.
+            </p>
+            <p className="text-body mb-4">
+              Our services cover civil and building works, fit-out and finishing, painting, tiling, electrical and plumbing maintenance, drainage support, cleaning, housekeeping and landscaping. We also provide maintenance and renovation support for educational facilities, villas and commercial buildings, subject to the agreed project scope.
+            </p>
+            <p className="text-body mb-4">
+              We believe successful project delivery starts with understanding client requirements, defining responsibilities and coordinating work effectively. Our approach focuses on practical planning, responsible workmanship, site safety, quality checks and clear communication.
             </p>
             <div className="overview-highlights">
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Villa Construction</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Building Construction</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> General Finishing Works</div>
-              <div className="highlight-item"><CheckCircle2 className="icon" /> Maintenance Services</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Building Construction & Civil Works</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Building Maintenance Services</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> Integrated Hard & Soft FM</div>
+              <div className="highlight-item"><CheckCircle2 className="icon" /> School Maintenance & Renovation</div>
             </div>
             <Link to="/contact" className="btn btn-primary mt-5">Request Consultation</Link>
           </div>
@@ -93,279 +148,151 @@ const AboutUs = () => {
             <span className="section-label">MESSAGE FROM OUR LEADERSHIP</span>
             <h2 className="h2">Eng. Hasan Nazmul</h2>
             <h4 className="h4 text-primary mb-2">General Manager</h4>
-            <p className="text-black font-semibold mb-4">NCFM</p>
+            <p className="text-black font-semibold mb-4">NAWSA Contracting Facilities Management W.L.L.</p>
             
             <div className="gm-quote">
               <p className="text-body mb-4">
-                "At NCFM, we believe that successful projects are built on more than just construction materials — they depend on engineering reliability, craftsmanship, and consistent care."
+                "At NAWSA, we believe that successful projects are built on more than just construction materials — they depend on engineering reliability, craftsmanship, and consistent property care."
               </p>
               <p className="text-body mb-4">
-                "Our commitment is to provide dependable building construction, finishing, maintenance, and renovation services that help our clients build and maintain their properties safely, efficiently, and to the highest standards. We understand that every project has unique requirements, which is why we focus on practical, responsive, and tailored engineering solutions."
+                "Our commitment is to provide dependable building construction, finishing, maintenance, and facilities management services that help our clients maintain their properties safely, efficiently, and to the highest standards. We understand that every project has unique requirements, which is why we focus on practical, responsive, and tailored engineering solutions."
               </p>
               <p className="text-body mb-4">
-                "Our team brings together skilled engineers, experienced site supervisors, and dedicated craftsmen to ensure that every project we deliver meets the expectations of our clients. From villa and majlis construction to general finishing works, we strive to maintain the highest standards of quality and service."
-              </p>
-              <p className="text-body mb-4">
-                "As General Manager, my priority is to build long-term relationships based on trust, transparency, and performance. We continuously work to improve our processes, develop our people, and adopt better ways of delivering construction excellence."
+                "Our team brings together skilled engineers, experienced site supervisors, and dedicated craftsmen to ensure that every project we deliver meets the expectations of our clients. From institutional and educational maintenance to general finishing and civil works, we strive to maintain the highest standards of quality and service."
               </p>
               <p className="text-body">
-                "I would like to thank our clients, partners, and dedicated team for their continued trust and support. We look forward to growing together and setting higher standards in the construction and contracting industry across Qatar."
+                "As General Manager, my priority is to build long-term relationships based on trust, transparency, and performance. We continuously work to improve our processes, develop our people, and adopt better ways of delivering property excellence across Qatar."
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Our Story / Company Background */}
+      {/* 3. Our Mission & Vision */}
       <section className="section-padding bg-light">
-        <div className="container story-container">
-          <div className="story-content">
-            <h2 className="h2">Built to Deliver Superior Construction</h2>
-            <p className="text-body mb-4">
-              Founded on the principles of trust, transparency, and technical excellence, NCFM has established itself as a reliable partner for building construction, maintenance, and renovation in Qatar. We understand that every villa, building, extension, and majlis is a valuable investment requiring precision execution.
-            </p>
-            <p className="text-body mb-4">
-              NCFM was established with the purpose of delivering high-quality construction and finishing services. Operating across Doha and greater Qatar, our experienced engineers and skilled tradespeople deliver turnkey solutions aligned with each client's vision and timeline.
-            </p>
-          </div>
-          <div className="story-image-wrapper">
-            <img src="/images/about/about_story_1790079206968.jpg" alt="Our Story" />
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Mission & Vision */}
-      <section className="section-padding">
-        <div className="container mission-vision-grid">
-          <div className="mv-card">
-            <div className="mv-icon"><Target size={40} /></div>
-            <h3 className="h3">Our Mission</h3>
-            <p className="text-body">
-              To provide dependable building construction, finishing, maintenance, and renovation services in Qatar. We strive to deliver transparent, high-quality, and reliable solutions that enhance the value and comfort of every property we work on, ensuring total customer satisfaction on every project.
-            </p>
-          </div>
-          <div className="mv-card">
-            <div className="mv-icon"><Zap size={40} /></div>
-            <h3 className="h3">Our Vision</h3>
-            <p className="text-body">
-              To be the most trusted and sought-after contracting and maintenance partner in Qatar. We aim to set high standards for quality workmanship, safe site practices, and sustainable building methods, building a legacy of quality that lasts for generations.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. What We Do */}
-      <section className="section-padding bg-black text-white">
-        <div className="container text-center">
-          <h2 className="h2 text-white mb-5">What We Do</h2>
-          <div className="what-we-do-grid">
-            <div className="wwd-block text-left">
-              <h4>Building Maintenance Services</h4>
-              <p>Expert building maintenance in Qatar including Plumbing fixes, electrical work, painting, and general handyman services. Book easily, track progress, and enjoy professional service with upfront pricing.</p>
-            </div>
-            <div className="wwd-block text-left">
-              <h4>Construction Services</h4>
-              <p>Complete construction services from NCFM. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.</p>
-            </div>
-            <div className="wwd-block text-left">
-              <h4>General Finishing Works</h4>
-              <p>Complete finishing works for your property. From surface preparation to the final finish, our team manages every detail of your villa, building, or majlis project with skilled workmanship and clean results.</p>
-            </div>
-          </div>
-          <Link to="/contact" className="btn btn-outline hero-btn-outline mt-5">Request Consultation</Link>
-        </div>
-      </section>
-
-      {/* 6. Core Values – The NCFM Difference */}
-      <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
         <div className="container">
-          <div className="section-header text-center">
-            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>CORE VALUES</span>
-            <h2 className="h2">Core Values – The NCFM Difference</h2>
+          <div className="section-header text-center mb-8">
+            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>GUIDING PRINCIPLES</span>
+            <h2 className="h2">Our Mission & Vision</h2>
           </div>
-          <div className="why-choose-grid">
-            <div className="why-card">
-              <span className="why-number">01</span>
-              <h4>Professional Workmanship</h4>
-              <p>A focus on quality and attention to finishing details.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Mission */}
+            <div className="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                  <Target size={32} />
+                </div>
+                <span className="text-xs font-bold text-primary tracking-widest uppercase">Our Mission</span>
+                <h3 className="h3 font-bold text-gray-900 mt-1 mb-4">Quality from Planning to Handover</h3>
+                <p className="text-body leading-relaxed mb-4">
+                  Our mission is to deliver dependable construction, renovation and facilities management solutions through clear planning, practical scheduling, appropriate resource coordination and consistent quality checks.
+                </p>
+                <p className="text-body leading-relaxed mb-4">
+                  We strive to understand each client’s requirements, communicate progress effectively, manage site risks responsibly and complete work with attention to safety, functionality and value.
+                </p>
+                <p className="text-body leading-relaxed">
+                  Through professional service delivery and a commitment to continuous improvement, we aim to build lasting client relationships and contribute to the reliable operation and upkeep of properties across Qatar.
+                </p>
+              </div>
             </div>
-            <div className="why-card">
-              <span className="why-number">02</span>
-              <h4>Complete Solutions</h4>
-              <p>Villa, building, extension and majlis construction, finishing and maintenance services through one contracting partner.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">03</span>
-              <h4>Practical Project Execution</h4>
-              <p>Organized execution based on the approved scope and site requirements.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">04</span>
-              <h4>Quality-Focused Approach</h4>
-              <p>Attention to workmanship, materials and final appearance.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">05</span>
-              <h4>Residential & Commercial Support</h4>
-              <p>Solutions can be tailored to different property and project requirements.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">06</span>
-              <h4>Client-Centered Service</h4>
-              <p>Clear communication and coordination throughout the project.</p>
+
+            {/* Vision */}
+            <div className="p-8 bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+                  <Compass size={32} />
+                </div>
+                <span className="text-xs font-bold text-primary tracking-widest uppercase">Our Vision</span>
+                <h3 className="h3 font-bold text-gray-900 mt-1 mb-4">Built Around Long-Term Value</h3>
+                <p className="text-body leading-relaxed mb-4">
+                  Our vision is to become a trusted contracting and facilities management partner in Qatar, recognised for dependable service delivery, quality workmanship, technical care and strong client relationships.
+                </p>
+                <p className="text-body leading-relaxed mb-4">
+                  We aspire to contribute to safer, better-maintained and more resource-efficient built environments by supporting the long-term usability of residential, commercial and institutional properties.
+                </p>
+                <p className="text-body leading-relaxed">
+                  Through responsible execution, effective coordination and continuous improvement, we aim to create lasting value for our clients, building occupants and the wider communities we serve.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 7. Our Approach */}
-      <section className="section-padding">
-        <div className="container text-center">
-          <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>HOW WE WORK</span>
-          <h2 className="h2 mb-5">Our Approach</h2>
-          <div className="approach-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
-            <div className="approach-step">
-              <div className="step-num">01. Understand</div>
-              <p>Understand the client's requirement</p>
-            </div>
-            <div className="approach-step">
-              <div className="step-num">02. Assess</div>
-              <p>Assess the property or project site</p>
-            </div>
-            <div className="approach-step">
-              <div className="step-num">03. Define Scope</div>
-              <p>Define the scope of work</p>
-            </div>
-            <div className="approach-step">
-              <div className="step-num">04. Execute</div>
-              <p>Execute the approved works professionally</p>
-            </div>
-            <div className="approach-step">
-              <div className="step-num">05. Inspect & Handover</div>
-              <p>Inspect completed works and coordinate handover</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Why NCFM */}
-      <section className="section-padding bg-light">
-        <div className="container why-ncfm-container">
-          <div className="why-ncfm-content">
-            <h2 className="h2">Why Clients Choose NCFM</h2>
-            <ul className="why-ncfm-list">
-              <li><CheckCircle2 className="icon" /> Construction, maintenance & finishing under one trusted partner</li>
-              <li><CheckCircle2 className="icon" /> Dedicated engineers who know your project intimately</li>
-              <li><CheckCircle2 className="icon" /> Experts in Qatar construction standards and approvals</li>
-              <li><CheckCircle2 className="icon" /> Consistent site supervision & quality checks at every stage</li>
-              <li><CheckCircle2 className="icon" /> Transparent pricing & upfront project scope</li>
-              <li><CheckCircle2 className="icon" /> Detailed site inspections and clear project records</li>
-              <li><CheckCircle2 className="icon" /> Villa, building, extension and majlis construction capability</li>
-              <li><CheckCircle2 className="icon" /> Meticulous craftsmanship and dependable handover</li>
-            </ul>
-          </div>
-          <div className="why-ncfm-image-wrapper">
-            <img src="/images/about/about_why_us_1790079241863.jpg" alt="Why Choose Us" />
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Quality, Health & Safety */}
-      <section className="section-padding">
-        <div className="container text-center">
-          <div className="section-header">
-            <ShieldCheck size={48} className="text-primary mx-auto mb-4" />
-            <h2 className="h2">Committed to Quality & Safe Operations</h2>
-          </div>
-          <div className="qhse-grid">
-            <div className="qhse-card">
-              <h4>Routine Quality Inspections</h4>
-            </div>
-            <div className="qhse-card">
-              <h4>Safe Work Procedures</h4>
-            </div>
-            <div className="qhse-card">
-              <h4>Maintenance Checklists</h4>
-            </div>
-            <div className="qhse-card">
-              <h4>Team Supervision</h4>
-            </div>
-            <div className="qhse-card">
-              <h4>Equipment & Tool Safety</h4>
-            </div>
-            <div className="qhse-card">
-              <h4>Service Reporting</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9.5 Official Corporate Documents & Company Profile */}
-      <CorporateDocuments />
-
-      {/* 10. Industries We Support */}
-      <section className="section-padding bg-black text-white">
+      {/* 4. Our Core Values */}
+      <section className="section-padding bg-white">
         <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2 text-white">Supporting Facilities Across Multiple Sectors</h2>
+          <div className="section-header text-center mb-8">
+            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>WHAT DRIVES US</span>
+            <h2 className="h2">Our Core Values</h2>
+            <p className="text-body max-w-2xl mx-auto mt-2">
+              The fundamental standards and ethical commitments guiding every engagement across Qatar.
+            </p>
           </div>
-          <div className="industries-compact-grid">
-            <div className="ind-pill">Commercial</div>
-            <div className="ind-pill">Residential</div>
-            <div className="ind-pill">Hospitality</div>
-            <div className="ind-pill">Retail</div>
-            <div className="ind-pill">Industrial</div>
-            <div className="ind-pill">Warehousing</div>
-            <div className="ind-pill">Healthcare</div>
-            <div className="ind-pill">Education</div>
-          </div>
-          <div className="text-center mt-5">
-            <Link to="/industries" className="btn btn-outline hero-btn-outline">Explore Industries</Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreValues.map((val, idx) => (
+              <div key={idx} className="p-6 rounded-xl bg-gray-50 border border-gray-100 hover:bg-white hover:shadow-md transition-all">
+                <div className="mb-4">{val.icon}</div>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">{val.title}</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 11. Impact & Leadership */}
+      {/* 5. Our Approach & Commitment to Clients */}
       <section className="section-padding bg-light">
-        <div className="container text-center">
-          <h2 className="h2">Our Impact & Leadership</h2>
-          <p className="text-body max-w-2xl mx-auto mb-5">
-            Driven by a team of industry veterans, our leadership ensures that every project meets the highest standards of quality, safety, and operational efficiency across the region.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
-            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-              <h3 className="h1 text-primary mb-2">50+</h3>
-              <p className="text-body font-medium">Projects Completed</p>
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <span className="section-label">PARTNERSHIP & TRUST</span>
+              <h2 className="h2 mb-4">Our Approach</h2>
+              <p className="text-body mb-4">
+                We aim to be more than a service provider. We work to establish dependable working relationships by understanding the specific requirements of every site and proposing solutions aligned with its operational needs.
+              </p>
+              <p className="text-body mb-6">
+                From individual repair assignments to coordinated maintenance programmes, our focus remains on functionality, quality, safety and long-term property value.
+              </p>
+              <Link to="/contact" className="btn btn-primary">Start a Conversation</Link>
             </div>
-            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-              <h3 className="h1 text-primary mb-2">100%</h3>
-              <p className="text-body font-medium">Client Satisfaction</p>
-            </div>
-            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-              <h3 className="h1 text-primary mb-2">24/7</h3>
-              <p className="text-body font-medium">Support Available</p>
-            </div>
-            <div className="p-4 bg-white rounded-lg shadow-sm border border-gray-100">
-              <h3 className="h1 text-primary mb-2">10+</h3>
-              <p className="text-body font-medium">Years of Expertise</p>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <h3 className="h3 font-bold text-gray-900 mb-4">Our Commitment to Clients</h3>
+              <ul className="space-y-3">
+                {clientCommitments.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle2 size={18} className="text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 pt-6 border-t border-gray-100 text-xs text-gray-500 italic">
+                NAWSA is committed to supporting better-maintained buildings and more functional environments across Qatar through reliable contracting and facilities management solutions.
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 12.5 Client Logos */}
+      {/* 6. Official Corporate Documents & Company Profile */}
+      <div id="credentials">
+        <CorporateDocuments />
+      </div>
+
+      {/* 7. Client Logos */}
       <ClientLogos />
 
-      {/* 13. Final CTA */}
+      {/* 8. Final CTA */}
       <section className="section-padding final-cta-section text-center">
         <div className="container">
-          <h2 className="h2 text-white mb-4">Need a Contracting & Maintenance Partner You Can Rely On?</h2>
-          <p className="text-gray-soft mb-5 max-w-2xl mx-auto">
-            From villa and building construction to turnkey general finishing and maintenance, NCFM is ready to support your requirements across Qatar.
+          <h2 className="h2 text-white mb-4">Need a Contracting & Facilities Management Partner You Can Rely On?</h2>
+          <p className="text-gray-soft mb-6 max-w-2xl mx-auto">
+            From civil construction and renovation to ongoing facilities management and school maintenance, NAWSA is ready to support your requirements across Qatar.
           </p>
-          <div className="flex justify-center gap-4">
-            <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
-            <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline">Call us now</a>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Consultation</Link>
+            <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline !px-6 !py-3">Call +974 31310436</a>
           </div>
         </div>
       </section>

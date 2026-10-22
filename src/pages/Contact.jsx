@@ -206,7 +206,7 @@ const Contact = () => {
             <div className="c-info-card premium-card">
               <Phone className="text-primary mb-3 mx-auto" size={32} />
               <h4>Call Us</h4>
-              <p>+974 31310436</p>
+              <p>+974 31483658 / +974 31310436</p>
             </div>
             <div className="c-info-card premium-card">
               <Mail className="text-primary mb-3 mx-auto" size={32} />
@@ -386,7 +386,12 @@ const Contact = () => {
             <h2 className="h2 mb-4">Find Us</h2>
             <h4 className="font-bold text-lg mb-2">Nawsa Contracting Facilities Management</h4>
             <p className="text-gray-600 mb-4 flex items-start gap-2"><MapPin size={18} className="mt-1 flex-shrink-0" /> Doha, Qatar</p>
-            <p className="text-gray-600 mb-2 flex items-center gap-2"><Phone size={18} /> +974 31310436</p>
+            <p className="text-gray-600 mb-2 flex items-center gap-2">
+              <Phone size={18} /> 
+              <a href="tel:+97431483658" className="hover:underline">+974 31483658</a> 
+              <span>|</span> 
+              <a href="tel:+97431310436" className="hover:underline">+974 31310436</a>
+            </p>
             <p className="text-gray-600 mb-4 flex items-center gap-2"><Mail size={18} /> info@ncfmqa.com</p>
             <p className="text-gray-600 mb-6 flex items-center gap-2"><Clock size={18} /> Sun – Thu, 08:00 AM - 05:00 PM</p>
             

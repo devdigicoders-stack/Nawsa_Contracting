@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ArrowRight, ShieldCheck, 
-  Building2, Home as HomeIcon, PlusCircle, Coffee, Compass, HardHat
+  Building2, Home as HomeIcon, PlusCircle, GraduationCap, Compass, HardHat
 } from 'lucide-react';
 import './HardFM.css';
 
@@ -10,31 +10,31 @@ const ConstructionServices = () => {
   const constructionServices = [
     {
       id: '01',
-      title: 'Villa Construction',
-      desc: 'Construction of new villas built to the approved plan, with strong structure, quality materials, and a clean finish.',
-      icon: <HomeIcon className="text-primary" size={36} />,
-      image: '/images/residential.jpg'
-    },
-    {
-      id: '02',
-      title: 'Building Construction',
-      desc: 'Residential and commercial building construction, executed with organized planning, safe site practices, and steady progress.',
+      title: 'Building Construction & Civil Works',
+      desc: 'Practical building and civil construction solutions, including blockwork, plastering, surface preparation, painting, floor and wall tiling, and selected finishing works, subject to project scope and specifications.',
       icon: <Building2 className="text-primary" size={36} />,
       image: '/images/commercial.jpg'
     },
     {
+      id: '02',
+      title: 'Villa & Property Construction',
+      desc: 'Construction of new residential properties built to approved plans, with strong structural integrity, quality materials, and clean execution.',
+      icon: <HomeIcon className="text-primary" size={36} />,
+      image: '/images/residential.jpg'
+    },
+    {
       id: '03',
-      title: 'Extension Construction',
-      desc: 'Additional rooms, floors, and extensions built to blend with your existing property.',
+      title: 'Building Extensions & Structural Additions',
+      desc: 'Additional rooms, structural extensions, and property expansions built to seamlessly integrate with existing buildings and approved codes.',
       icon: <PlusCircle className="text-primary" size={36} />,
       image: '/images/hard_fm.jpg'
     },
     {
       id: '04',
-      title: 'Majlis Construction',
-      desc: 'Majlis construction designed for comfort and hospitality, with careful attention to layout and finishing details.',
-      icon: <Coffee className="text-primary" size={36} />,
-      image: '/images/hospitality.jpg'
+      title: 'School Maintenance & Renovation',
+      desc: 'Maintenance and refurbishment support for educational and institutional facilities, including classroom repairs, painting, tiling, interior finishing and civil works.',
+      icon: <GraduationCap className="text-primary" size={36} />,
+      image: '/images/educational.jpg'
     }
   ];
 
@@ -45,10 +45,10 @@ const ConstructionServices = () => {
       <section className="page-hero hard-hero">
         <div className="page-hero-overlay"></div>
         <div className="container page-hero-content text-center">
-          <span className="section-label text-white border-white">CONSTRUCTION SERVICES</span>
-          <h1 className="h1 text-white mb-4 mt-2">Villa, Building, Extension & Majlis Construction in Qatar</h1>
+          <span className="section-label text-white border-white">CONSTRUCTION & CIVIL WORKS</span>
+          <h1 className="h1 text-white mb-4 mt-2">Building Construction, Renovation & Civil Works in Qatar</h1>
           <p className="hero-subtitle mx-auto max-w-3xl">
-            NCFM delivers complete construction services for villas, buildings, extensions, and majlis spaces across Qatar. From planning the scope to final handover, our team manages the work with organized execution, quality materials, and close site supervision.
+            NAWSA Contracting & Facilities Management delivers practical construction, renovation, building maintenance and civil works across Qatar. From planning the scope to final handover, our team manages the work with organized execution, quality materials, and close site supervision.
           </p>
           <div className="hero-actions justify-center mt-6 flex gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
@@ -72,18 +72,19 @@ const ConstructionServices = () => {
             <span className="section-label">ORGANIZED EXECUTION</span>
             <h2 className="h2">Strong Structure. Quality Materials. Clean Finish.</h2>
             <p className="text-body mb-4">
-              From ground-up villa projects to structural extensions and custom majlis architecture, NCFM provides complete construction management tailored to Qatar's climate and building codes.
+              From ground-up civil projects to structural extensions and educational refurbishments, NAWSA provides complete construction and project management tailored to Qatar's climate and building standards.
             </p>
             <div className="mini-highlights">
-              <span>Villa Construction</span>
+              <span>Civil Works</span>
               <span>Commercial & Residential Buildings</span>
-              <span>Extensions & Room Additions</span>
-              <span>Traditional & Modern Majlis</span>
+              <span>Extensions & Additions</span>
+              <span>School Refurbishment</span>
               <span>Approved Engineering Plans</span>
               <span>Site Safety & Supervision</span>
             </div>
-            <div className="mt-6">
-              <a href="tel:+97431310436" className="btn btn-primary">Call +974 31310436</a>
+            <div className="mt-6 flex gap-3 flex-wrap">
+              <a href="tel:+97431483658" className="btn btn-primary">Call +974 31483658</a>
+              <a href="tel:+97431310436" className="btn btn-outline">Call +974 31310436</a>
             </div>
           </div>
         </div>
@@ -127,13 +128,13 @@ const ConstructionServices = () => {
         </div>
       </section>
 
-      {/* 4. Complete Service Table (Matches Scope Document) */}
+      {/* 4. Complete Service Table */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="section-header text-center">
             <h2 className="h2">Construction Service Scope</h2>
             <p className="text-body max-w-2xl mx-auto">
-              Summary of all construction capabilities provided by NCFM in Qatar.
+              Summary of construction and civil capabilities provided by NAWSA in Qatar.
             </p>
           </div>
 
@@ -201,11 +202,11 @@ const ConstructionServices = () => {
         </div>
       </section>
 
-      {/* 6. Why Choose NCFM for Construction */}
+      {/* 6. Why Choose NAWSA for Construction */}
       <section className="section-padding">
         <div className="container hygiene-container">
           <div className="hygiene-content">
-            <span className="section-label">THE NCFM DIFFERENCE</span>
+            <span className="section-label">THE NAWSA ADVANTAGE</span>
             <h2 className="h2">Dedicated Engineers on Every Site</h2>
             <ul className="hygiene-list mt-4">
               <li><CheckCircle2 className="icon" /> Experienced engineers with deep knowledge of Qatar construction</li>
@@ -228,13 +229,13 @@ const ConstructionServices = () => {
       {/* 7. Final CTA */}
       <section className="section-padding bg-black text-white text-center">
         <div className="container max-w-3xl">
-          <h2 className="h2 text-white mb-4">Planning a Villa, Building, Extension or Majlis in Qatar?</h2>
+          <h2 className="h2 text-white mb-4">Planning a Building, Villa Extension or Refurbishment in Qatar?</h2>
           <p className="text-gray-soft mb-6 text-lg">
-            Discuss your project scope with NCFM's engineering team today.
+            Discuss your project scope with NAWSA Contracting & Facilities Management's engineering team today.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Free Quote</Link>
-            <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline !px-6 !py-3">Call +974 31310436</a>
+            <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Tailored Proposal</Link>
+            <a href="tel:+97431483658" className="btn btn-outline hero-btn-outline !px-6 !py-3">Call +974 31483658</a>
           </div>
         </div>
       </section>

@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Building2, Wrench, Sprout, Wind, Droplet, Paintbrush, ShieldCheck, Phone, MapPin } from 'lucide-react';
+import { 
+  ArrowRight, CheckCircle2, Building2, Wrench, ShieldCheck, 
+  Phone, Mail, MapPin, Paintbrush, Trees, 
+  GraduationCap, Home as HomeIcon, Sparkles, Layers,
+  Compass, ClipboardCheck, Users, HardHat, Check, Award
+} from 'lucide-react';
 import ClientLogos from '../components/ClientLogos';
 import FeaturedWorks from '../components/FeaturedWorks';
+import GovSchools from '../components/GovSchools';
 import './Home.css';
 
 const Home = () => {
@@ -44,7 +50,7 @@ const Home = () => {
         },
         body: JSON.stringify({
           ...formData,
-          facilityType: 'Unspecified', // Required by backend
+          facilityType: 'Unspecified',
           preferredContactMethod: 'Email'
         }),
       });
@@ -74,355 +80,312 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const coreServices = [
+    {
+      id: "01",
+      icon: <Building2 className="text-primary w-8 h-8" />,
+      title: "Building Construction & Civil Works",
+      desc: "Practical building and civil construction solutions, including blockwork, plastering, surface preparation, painting, floor and wall tiling, and selected finishing works, subject to project scope and specifications.",
+      tags: ["Civil Works", "Blockwork", "Plastering", "Tiling & Finishing"]
+    },
+    {
+      id: "02",
+      icon: <Wrench className="text-primary w-8 h-8" />,
+      title: "Building Maintenance Services",
+      desc: "Planned and corrective maintenance for residential, commercial and institutional properties, including civil repairs, electrical accessories, plumbing fixtures, painting and general building upkeep.",
+      tags: ["Planned Maintenance", "Civil Repairs", "Electrical & Plumbing", "General Upkeep"]
+    },
+    {
+      id: "03",
+      icon: <Layers className="text-primary w-8 h-8" />,
+      title: "Facilities Management Services",
+      desc: "Integrated hard and soft facilities management support designed to help maintain building functionality, occupant comfort, cleanliness and operational continuity.",
+      tags: ["Hard FM", "Soft FM", "Operational Continuity", "Asset Care"]
+    },
+    {
+      id: "04",
+      icon: <GraduationCap className="text-primary w-8 h-8" />,
+      title: "School Maintenance & Renovation",
+      desc: "Maintenance and refurbishment support for educational facilities, including classroom and facility repairs, painting, tiling, interior finishing and civil maintenance works.",
+      tags: ["Classroom Refurbishment", "Safety Standards", "Educational Facilities", "Civil Repairs"]
+    },
+    {
+      id: "05",
+      icon: <HomeIcon className="text-primary w-8 h-8" />,
+      title: "Villa & Commercial Building Maintenance",
+      desc: "Property maintenance and renovation solutions covering interior and exterior repairs, plumbing, electrical maintenance, finishing works and common-area upkeep.",
+      tags: ["Villa Maintenance", "Commercial Properties", "Interior & Exterior", "Common Areas"]
+    },
+    {
+      id: "06",
+      icon: <Paintbrush className="text-primary w-8 h-8" />,
+      title: "Painting, Fit-Out & Finishing Works",
+      desc: "Professional finishing support, including internal painting, surface repairs, ceiling repairs, flooring, tiling, decorative finishes and snagging rectification.",
+      tags: ["Internal Painting", "Ceiling Repairs", "Decorative Finishes", "Snagging Rectification"]
+    },
+    {
+      id: "07",
+      icon: <Sparkles className="text-primary w-8 h-8" />,
+      title: "Cleaning & Housekeeping",
+      desc: "Cleaning solutions for offices, commercial spaces and residential properties, including deep cleaning, post-construction cleaning, glass cleaning and floor care.",
+      tags: ["Deep Cleaning", "Commercial Offices", "Post-Construction", "Floor & Glass Care"]
+    },
+    {
+      id: "08",
+      icon: <Trees className="text-primary w-8 h-8" />,
+      title: "Landscaping & Outdoor Maintenance",
+      desc: "Landscaping, gardening, irrigation care and external-area maintenance to help keep outdoor spaces clean, functional and well maintained.",
+      tags: ["Landscape Design", "Gardening", "Irrigation Systems", "External Grounds"]
+    }
+  ];
+
+  const whyChoosePoints = [
+    {
+      num: "01",
+      title: "Integrated Service Capabilities",
+      desc: "Construction, renovation, maintenance and property support through a coordinated service approach."
+    },
+    {
+      num: "02",
+      title: "Practical Project Planning",
+      desc: "Clear scopes, realistic scheduling, site assessment and resource coordination."
+    },
+    {
+      num: "03",
+      title: "Quality-Focused Workmanship",
+      desc: "Attention to materials, finishing details, inspections and agreed handover requirements."
+    },
+    {
+      num: "04",
+      title: "Safety-Conscious Execution",
+      desc: "Consideration of site hazards, work methods, access requirements and applicable safety procedures."
+    },
+    {
+      num: "05",
+      title: "Client-Focused Communication",
+      desc: "Coordination with clients and relevant project stakeholders throughout the agreed service process."
+    },
+    {
+      num: "06",
+      title: "Solutions for Different Property Types",
+      desc: "Service capabilities for educational, residential, commercial and institutional environments."
+    }
+  ];
+
+  const approachSteps = [
+    { num: "01", title: "Enquiry & Assessment", desc: "Enquiry and requirement assessment" },
+    { num: "02", title: "Site Survey", desc: "Site survey and condition review" },
+    { num: "03", title: "Scope & Proposal", desc: "Scope definition and proposal" },
+    { num: "04", title: "Mobilisation", desc: "Resource planning and mobilisation" },
+    { num: "05", title: "Work Execution", desc: "Work execution and coordination" },
+    { num: "06", title: "Quality Inspection", desc: "Quality inspection and rectification" },
+    { num: "07", title: "Handover", desc: "Handover and agreed follow-up" }
+  ];
+
   return (
     <div className="home-page">
       
-      {/* 2. Hero Section */}
+      {/* 1. Hero Section */}
       <section className="hero" style={{ backgroundImage: `url(${heroImages[currentImage]})` }}>
         <div className="hero-overlay"></div>
         <div className="container hero-content text-center">
-          <h1 className="hero-title animate-fade-in-up">Building Construction, Maintenance & Renovation in Qatar</h1>
-          <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
-            NCFM is a building construction, maintenance and renovation company in Qatar, providing reliable construction and finishing solutions for villas, buildings, extensions, majlis, and commercial properties. Our services include general finishing works, villa construction, building construction, extension construction, majlis construction, and building maintenance services.
-          </p>
-          <div className="hero-actions justify-center animate-fade-in-up-delay-2">
-            <a href="tel:+97431310436" className="btn btn-primary !px-5 !py-2.5 !text-[0.95rem]">Call us now</a>
-            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline !px-5 !py-2.5 !text-[0.95rem]">Or chat with us on WhatsApp</a>
+          <div className="inline-block px-4 py-1.5 mb-3 rounded-full bg-primary/90 text-white text-xs font-bold tracking-widest uppercase animate-fade-in-up">
+            Build. Maintain. Sustain.
           </div>
-          <div className="hero-highlights animate-fade-in-up-delay-2">
-            <span>General Finishing Works</span>
-            <span className="dot">•</span>
-            <span>Villa Construction</span>
-            <span className="dot">•</span>
-            <span>Building Construction</span>
-            <span className="dot">•</span>
-            <span>Extension Construction</span>
-            <span className="dot">•</span>
-            <span>Majlis Construction</span>
+          <h1 className="hero-title animate-fade-in-up">
+            Reliable Construction & Facilities Management Services in Qatar
+          </h1>
+          <p className="hero-subtitle mx-auto animate-fade-in-up-delay-1 max-w-3xl">
+            NAWSA Contracting & Facilities Management delivers practical construction, renovation, building maintenance and integrated facilities management solutions across Doha, Qatar. We support residential, commercial and institutional properties through coordinated project execution, technical maintenance and property care.
+          </p>
+          <p className="text-white/80 text-sm md:text-base max-w-2xl mx-auto mb-6 animate-fade-in-up-delay-1">
+            From civil construction and finishing works to school maintenance, building renovation, electrical and plumbing maintenance, cleaning and landscaping, our services are tailored to the specific requirements of each property and project.
+          </p>
+
+          <div className="hero-motto italic text-white/95 font-medium mb-6 animate-fade-in-up-delay-2 text-sm md:text-base">
+            "Your Property. Our Commitment. Built Around Long-Term Value."
+          </div>
+
+          <div className="hero-actions justify-center animate-fade-in-up-delay-2 flex flex-wrap gap-3">
+            <Link to="/contact" className="btn btn-primary !px-6 !py-3 !text-[0.95rem]">Request a Consultation</Link>
+            <a href="#services" className="btn btn-outline hero-btn-outline !px-6 !py-3 !text-[0.95rem]">Explore Our Services</a>
+          </div>
+
+          <div className="hero-highlights animate-fade-in-up-delay-2 mt-8">
+            <span>Civil Construction</span>
             <span className="dot">•</span>
             <span>Building Maintenance</span>
+            <span className="dot">•</span>
+            <span>Facilities Management</span>
+            <span className="dot">•</span>
+            <span>School Maintenance</span>
+            <span className="dot">•</span>
+            <span>Finishing Works</span>
+            <span className="dot">•</span>
+            <span>Landscaping</span>
           </div>
         </div>
       </section>
 
-      {/* 3. Experience the Difference of NCFM */}
-      <section className="section-padding about-section">
+      {/* 2. Comprehensive Contracting & Property Maintenance Solutions */}
+      <section className="section-padding about-section" id="about-overview">
         <div className="container about-container">
           <div className="about-image-wrapper">
-            <img src="/images/about_ncfm.jpg" alt="Dedicated Engineers" className="about-image" />
+            <img src="/images/about_ncfm.jpg" alt="NAWSA Building Care" className="about-image" />
             <div className="floating-tags-container">
-              <span className="floating-tag">Experts in Qatar construction</span>
-              <span className="floating-tag">Consistent site supervision</span>
+              <span className="floating-tag">Quality-Focused Workmanship</span>
+              <span className="floating-tag">Safety-Conscious Execution</span>
             </div>
           </div>
           <div className="about-content">
-            <span className="section-label">SUPERIOR QUALITY</span>
-            <h2 className="h2">Dedicated Engineers Who Know Your Project</h2>
+            <span className="section-label">COMPREHENSIVE SOLUTIONS</span>
+            <h2 className="h2">Comprehensive Contracting & Property Maintenance Solutions</h2>
             <p className="text-body mb-4">
-              Our experienced engineers understand the unique needs of every project, from villa and building construction to finishing, electrical and plumbing works. Through detailed site inspections and clear project records, every stage is planned, precise, and efficient. Your property is never just another job. It is a carefully managed project built around quality and reliability.
+              At NAWSA, we understand that every property requires dependable construction, regular maintenance and professional care to remain safe, functional and presentable.
+            </p>
+            <p className="text-body mb-4">
+              Our service portfolio covers general construction, civil works, painting, tiling, fit-out and finishing, hard and soft facilities management, school maintenance, villa maintenance, commercial building maintenance, drainage support and landscaping.
+            </p>
+            <p className="text-body mb-4">
+              Whether you require a specific maintenance service or coordinated support across a larger property, we work to understand your requirements, define the scope and deliver an appropriate service solution.
             </p>
             <ul className="about-features">
-              <li><CheckCircle2 className="feature-icon" /> Experts in Qatar construction</li>
-              <li><CheckCircle2 className="feature-icon" /> Consistent site supervision</li>
-              <li><CheckCircle2 className="feature-icon" /> Detailed site inspections & clear project records</li>
-              <li><CheckCircle2 className="feature-icon" /> Planned, precise, and efficient execution</li>
+              <li><CheckCircle2 className="feature-icon" /> Dependable construction & civil works</li>
+              <li><CheckCircle2 className="feature-icon" /> Regular & planned property maintenance</li>
+              <li><CheckCircle2 className="feature-icon" /> Integrated hard & soft facilities management</li>
+              <li><CheckCircle2 className="feature-icon" /> Tailored solutions for residential, commercial & educational properties</li>
             </ul>
-            <Link to="/contact" className="btn btn-primary mt-4">Request Consultation</Link>
+            <div className="mt-5 flex gap-3 flex-wrap">
+              <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
+              <Link to="/about" className="btn btn-outline">Learn About NAWSA</Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Our Core Solutions / What We Do */}
-      <section className="section-padding bg-light">
+      {/* 3. Our Core Services (The 8 Services) */}
+      <section className="section-padding bg-light" id="services">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">What We Do</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Main business: Building Construction, Maintenance & Renovation in Qatar.
+            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>SERVICE PORTFOLIO</span>
+            <h2 className="h2">Our Core Services</h2>
+            <p className="text-body max-w-3xl mx-auto mt-2">
+              Comprehensive contracting, renovation and property maintenance capabilities designed to support every phase of your facility's operational lifecycle.
             </p>
           </div>
           
-          <div className="core-solutions-grid">
-            {/* Card 1: Building Maintenance Services */}
-            <div className="solution-card">
-              <div className="solution-image-container">
-                <img src="/images/preventive_maintenance.jpg" alt="Building Maintenance Services" />
-              </div>
-              <div className="solution-content">
-                <h3 className="h3">Building Maintenance Services</h3>
-                <p className="text-body mb-4">
-                  Expert building maintenance in Qatar including Plumbing fixes, electrical work, painting, and general handyman services. Book easily, track progress, and enjoy professional service with upfront pricing.
-                </p>
-                <div className="solution-tags">
-                  <span>Plumbing Fixes</span><span>Electrical Work</span><span>Painting</span><span>Handyman Services</span><span>Upfront Pricing</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            {coreServices.map((service) => (
+              <div key={service.id} className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold text-gray-400 bg-gray-50 px-2 py-1 rounded">{service.id}</span>
+                    {service.icon}
+                  </div>
+                  <h3 className="h4 font-bold text-black mb-3">{service.title}</h3>
+                  <p className="text-body text-sm leading-relaxed mb-4">{service.desc}</p>
                 </div>
-                <Link to="/contact" className="btn btn-outline mt-4 w-full">Request Maintenance</Link>
-              </div>
-            </div>
-
-            {/* Card 2: Construction Services */}
-            <div className="solution-card">
-              <div className="solution-image-container">
-                <img src="/images/hard_fm.jpg" alt="Construction Services" />
-              </div>
-              <div className="solution-content">
-                <h3 className="h3">Construction Services</h3>
-                <p className="text-body mb-4">
-                  Complete construction services from NCFM. From site preparation to final handover, we deliver villa, building, extension and majlis construction with organized execution, quality materials, and close site supervision.
-                </p>
-                <div className="solution-tags">
-                  <span>Villa Construction</span><span>Building Construction</span><span>Extension Construction</span><span>Majlis Construction</span>
+                <div>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {service.tags.map((tag, tIdx) => (
+                      <span key={tIdx} className="text-[11px] bg-gray-50 text-gray-600 px-2 py-0.5 rounded border border-gray-100 font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <Link to="/contact" className="text-primary font-semibold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                    Enquire Now <ArrowRight size={15} />
+                  </Link>
                 </div>
-                <Link to="/services/construction" className="btn btn-outline mt-4 w-full">Explore Construction</Link>
               </div>
-            </div>
-            
-            {/* Card 3: General Finishing Works */}
-            <div className="solution-card">
-              <div className="solution-image-container">
-                <img src="/images/soft_fm.jpg" alt="General Finishing Works" />
-              </div>
-              <div className="solution-content">
-                <h3 className="h3">General Finishing Works</h3>
-                <p className="text-body mb-4">
-                  Complete finishing works for your property. From surface preparation to the final finish, our team manages every detail of your villa, building, or majlis project with skilled workmanship and clean results.
-                </p>
-                <div className="solution-tags">
-                  <span>Tile Installation & Flooring Works</span><span>Painting & Plastering Works</span><span>Gypsum Board & Interior Finishing</span><span>Electrical & Plumbing Works</span>
-                </div>
-                <Link to="/services/finishing-works" className="btn btn-outline mt-4 w-full">Explore Finishing</Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 5. General Finishing Works Grid */}
-      <section className="section-padding">
+      {/* 4. Supporting Educational & Government-Sector Projects */}
+      <section className="section-padding bg-white">
         <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2">General Finishing Works</h2>
-            <p className="text-body max-w-2xl mx-auto">
-              Precision finishing and craft solutions for villas, buildings, and commercial spaces across Qatar.
+          <div className="max-w-4xl mx-auto text-center mb-8">
+            <span className="section-label">PUBLIC & INSTITUTIONAL EXPERTISE</span>
+            <h2 className="h2 mt-2">Supporting Educational & Government-Sector Projects</h2>
+            <p className="text-body mt-4 leading-relaxed">
+              NAWSA has experience delivering maintenance and renovation-related works on government-sector projects in Qatar. Our educational property service capabilities include school maintenance, classroom refurbishment, civil repairs, painting, tiling and finishing works.
+            </p>
+            <p className="text-body mt-2 leading-relaxed">
+              We approach each assignment with attention to the agreed scope, site coordination, workmanship, safety and project requirements.
             </p>
           </div>
-          <div className="services-grid-8">
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Building2 className="service-icon-sm" />
-              <h4>Tile Installation Works</h4>
-              <p>Floors, walls & custom patterns</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Paintbrush className="service-icon-sm" />
-              <h4>Painting Works</h4>
-              <p>Interior & exterior premium coats</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Building2 className="service-icon-sm" />
-              <h4>Gypsum Board Works</h4>
-              <p>Ceilings, partitions & design</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Wrench className="service-icon-sm" />
-              <h4>Plastering Works</h4>
-              <p>Surface prep & smooth rendering</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <CheckCircle2 className="service-icon-sm" />
-              <h4>Flooring Works</h4>
-              <p>Durable marble & tile flooring</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <ShieldCheck className="service-icon-sm" />
-              <h4>Interior Finishing Works</h4>
-              <p>Turnkey interior detailing</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Wrench className="service-icon-sm" />
-              <h4>Electrical Works</h4>
-              <p>Safe wiring & fixtures</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-            <Link to="/services/finishing-works" className="service-mini-card">
-              <Droplet className="service-icon-sm" />
-              <h4>Plumbing Works</h4>
-              <p>Piping, drainage & sanitary fixes</p>
-              <ArrowRight className="service-arrow" />
-            </Link>
-          </div>
+          
+          {/* Government educational projects interactive school list */}
+          <GovSchools />
         </div>
       </section>
 
-      {/* 6. Engineered Solutions */}
-      <section className="section-padding integrated-section engineered-section">
-        <div className="container text-center max-w-4xl">
-          <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>ENGINEERED SOLUTIONS</span>
-          <h2 className="h2 text-white mb-4">Your Property, Built for Reliability</h2>
-          <p className="text-gray-soft mb-6 leading-relaxed" style={{ fontSize: '1.05rem' }}>
-            We go beyond basic repairs to deliver reliable building construction, finishing, maintenance and renovation services in Qatar. Our engineers use proper tools, strong technical expertise, and a preventive approach to build and care for every part of your property. From plastering, tiling and gypsum works to electrical and plumbing systems, we ensure consistent quality and long-term performance.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <span className="floating-tag">Expert analysis</span>
-            <span className="floating-tag">Quality checks at every stage</span>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+97431310436" className="btn btn-primary !px-6 !py-3">Call us now</a>
-            <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline !px-6 !py-3">Or chat with us on WhatsApp</a>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Industries We Serve */}
-      <section className="section-padding" style={{ paddingBottom: '2rem' }}>
+      {/* 5. Why Choose NAWSA? */}
+      <section className="section-padding bg-light">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="h2">Industries We Serve</h2>
+            <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>KEY ADVANTAGES</span>
+            <h2 className="h2">Why Choose NAWSA?</h2>
+            <p className="text-body max-w-2xl mx-auto mt-2">
+              Structured execution, verified workmanship, and dependable maintenance solutions built around long-term value.
+            </p>
           </div>
-          <div className="industries-grid">
-            <div className="industry-card">
-              <img src="/images/commercial.jpg" alt="Commercial" />
-              <div className="industry-overlay">
-                <h4>Commercial Buildings</h4>
+          <div className="why-choose-grid mt-8">
+            {whyChoosePoints.map((item, idx) => (
+              <div key={idx} className="why-card">
+                <span className="why-number">{item.num}</span>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
               </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/residential.jpg" alt="Residential" />
-              <div className="industry-overlay">
-                <h4>Residential Properties</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/hospitality.jpg" alt="Hospitality" />
-              <div className="industry-overlay">
-                <h4>Hospitality</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/retail.jpg" alt="Retail" />
-              <div className="industry-overlay">
-                <h4>Retail</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/industrial.jpg" alt="Industrial" />
-              <div className="industry-overlay">
-                <h4>Industrial Facilities</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/warehouses.jpg" alt="Warehouses" />
-              <div className="industry-overlay">
-                <h4>Warehouses</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/healthcare.jpg" alt="Healthcare" />
-              <div className="industry-overlay">
-                <h4>Healthcare</h4>
-              </div>
-            </div>
-            <div className="industry-card">
-              <img src="/images/educational.jpg" alt="Educational" />
-              <div className="industry-overlay">
-                <h4>Educational Facilities</h4>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-5">
-            <Link to="/industries" className="btn btn-outline">Explore Industries</Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 8. Why Choose NCFM */}
-      <section className="section-padding bg-light" style={{ paddingTop: '2.5rem' }}>
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="h2">Built Around Reliability, Quality & Service</h2>
-          </div>
-          <div className="why-choose-grid">
-            <div className="why-card">
-              <span className="why-number">01</span>
-              <h4>Skilled Teams</h4>
-              <p>Professionally trained and vetted staff for all technical and soft services.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">02</span>
-              <h4>Integrated Solutions</h4>
-              <p>A single point of contact for all your facility management needs.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">03</span>
-              <h4>Preventive Approach</h4>
-              <p>Proactive maintenance to prevent costly breakdowns and extend asset life.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">04</span>
-              <h4>Responsive Support</h4>
-              <p>Quick mobilization and 24/7 emergency response capabilities.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">05</span>
-              <h4>Quality Control</h4>
-              <p>Strict adherence to safety and quality standards across all operations.</p>
-            </div>
-            <div className="why-card">
-              <span className="why-number">06</span>
-              <h4>Flexible Service Plans</h4>
-              <p>Customized SLAs tailored to your specific facility requirements.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Our Approach / Process */}
-      <section className="section-padding">
+      {/* 6. Our Approach: From Enquiry to Handover */}
+      <section className="section-padding bg-white">
         <div className="container text-center">
-          <h2 className="h2 mb-5">How We Manage Your Facility</h2>
-          <div className="process-flow">
-            <div className="process-step">
-              <div className="process-circle">01</div>
-              <h4>Facility Assessment</h4>
-            </div>
-            <div className="process-line"></div>
-            <div className="process-step">
-              <div className="process-circle">02</div>
-              <h4>Service Planning</h4>
-            </div>
-            <div className="process-line"></div>
-            <div className="process-step">
-              <div className="process-circle">03</div>
-              <h4>Team Deployment</h4>
-            </div>
-            <div className="process-line"></div>
-            <div className="process-step">
-              <div className="process-circle">04</div>
-              <h4>Daily Operations</h4>
-            </div>
-            <div className="process-line"></div>
-            <div className="process-step">
-              <div className="process-circle">05</div>
-              <h4>Inspection & Maintenance</h4>
-            </div>
-            <div className="process-line"></div>
-            <div className="process-step">
-              <div className="process-circle">06</div>
-              <h4>Reporting & Improvement</h4>
-            </div>
+          <span className="section-label" style={{ color: 'var(--color-primary)', fontWeight: '700', letterSpacing: '1px' }}>METHODOLOGY</span>
+          <h2 className="h2 mb-4">Our Approach: From Enquiry to Handover</h2>
+          <p className="text-body max-w-2xl mx-auto mb-8">
+            A transparent 7-step process ensuring quality control and smooth coordination at every milestone.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            {approachSteps.map((step, idx) => (
+              <div key={idx} className="p-4 bg-gray-50 rounded-xl border border-gray-100 flex flex-col items-center text-center hover:bg-white hover:shadow-sm transition-all">
+                <div className="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm mb-3">
+                  {step.num}
+                </div>
+                <h4 className="text-sm font-bold text-gray-900 mb-1.5">{step.title}</h4>
+                <p className="text-xs text-gray-600 leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 10. Featured Works (Real Photos) */}
+      {/* 7. Our Commitment */}
+      <section className="section-padding bg-black text-white text-center">
+        <div className="container max-w-3xl">
+          <span className="section-label text-white border-white mb-3">OUR CORE COMMITMENT</span>
+          <h2 className="h2 text-white mb-4">Your Property. Our Commitment. Built Around Long-Term Value.</h2>
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+            At NAWSA, we aim to create long-term value through dependable construction, responsive maintenance and responsible facilities management. Our focus is on helping clients maintain functional properties, manage maintenance requirements and support the long-term usability of their buildings.
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Consultation</Link>
+            <Link to="/about" className="btn btn-outline hero-btn-outline !px-6 !py-3">Read Our Mission & Vision</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Featured Works (Real Photos) */}
       <FeaturedWorks />
 
-      {/* 10.5 Our Valued Clients */}
+      {/* 9. Valued Clients & Logos */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="section-header text-center">
@@ -431,7 +394,7 @@ const Home = () => {
               Trusted by leading organizations across Qatar for facilities management, renovation, maintenance, and contracting services.
             </p>
           </div>
-          <div className="clients-grid mt-5">
+          <div className="clients-grid mt-6">
             {[
               "Darwish Interserve",
               "Qatari Diar",
@@ -454,51 +417,69 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 10.6 Client Logos */}
       <ClientLogos />
 
-      {/* 11. Final CTA + Contact */}
-      <section className="section-padding final-cta-section">
+      {/* 10. Let's Discuss Your Project / Contact CTA */}
+      <section className="section-padding final-cta-section" id="contact-cta">
         <div className="container">
           <div className="final-cta-grid">
             <div className="final-cta-content">
-              <h2 className="h2 text-white">Looking for a Reliable Construction & Maintenance Partner?</h2>
+              <span className="section-label text-white border-white mb-2">LET'S DISCUSS YOUR PROJECT</span>
+              <h2 className="h2 text-white">Looking for a Construction, Renovation or FM Partner in Qatar?</h2>
               <p className="text-gray-soft mb-4">
-                Tell us what your property or project needs and our engineering team will build the right service solution.
+                Contact NAWSA Contracting & Facilities Management to discuss your project requirements and receive a tailored service proposal.
               </p>
-              <div className="flex gap-4">
-                <Link to="/contact" className="btn btn-primary">Request Consultation</Link>
-                <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline">Call us now</a>
+              
+              <div className="space-y-2 mb-6 text-sm text-gray-200">
+                <p className="font-semibold text-white">NAWSA Contracting & Facilities Management W.L.L.</p>
+                <p className="flex items-center gap-2"><MapPin size={16} className="text-primary flex-shrink-0" /> Doha, Qatar</p>
+                <p className="flex items-center gap-2">
+                  <Phone size={16} className="text-primary flex-shrink-0" /> 
+                  <a href="tel:+97431483658" className="hover:text-white underline">+974 31483658</a> 
+                  <span className="mx-1">|</span> 
+                  <a href="tel:+97431310436" className="hover:text-white underline">+974 31310436</a>
+                </p>
+                <p className="flex items-center gap-2"><Mail size={16} className="text-primary flex-shrink-0" /> info@ncfmqa.com</p>
+              </div>
+
+              <div className="flex gap-4 flex-wrap">
+                <Link to="/contact" className="btn btn-primary">Contact Our Team</Link>
+                <a href="https://wa.me/97431310436" target="_blank" rel="noopener noreferrer" className="btn btn-outline hero-btn-outline">
+                  WhatsApp Us
+                </a>
               </div>
             </div>
+
             <div className="final-cta-form">
               <form className="quick-enquiry-form" onSubmit={handleSubmit}>
-                <h3>Quick Enquiry</h3>
+                <h3>Request a Tailored Proposal</h3>
                 {successMsg && <div className="bg-green-100 text-green-700 p-2 mb-3 rounded text-sm">{successMsg}</div>}
                 {errorMsg && <div className="bg-red-100 text-red-700 p-2 mb-3 rounded text-sm">{errorMsg}</div>}
                 <div className="form-group">
-                  <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Name" required />
+                  <input type="text" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Your Name" required />
                 </div>
                 <div className="form-group">
-                  <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} placeholder="Company (Optional)" />
+                  <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} placeholder="Company / Organization" />
                 </div>
                 <div className="form-group flex gap-2">
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone" required />
-                  <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email" required />
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone Number" required />
+                  <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Email Address" required />
                 </div>
                 <div className="form-group">
                   <select name="serviceRequired" value={formData.serviceRequired} onChange={handleInputChange} required>
-                    <option value="">Service Required</option>
-                    <option value="General Finishing Works">General Finishing Works</option>
-                    <option value="Villa Construction">Villa Construction</option>
-                    <option value="Building Construction">Building Construction</option>
-                    <option value="Extension Construction">Extension Construction</option>
-                    <option value="Majlis Construction">Majlis Construction</option>
+                    <option value="">Select Service Required</option>
+                    <option value="Building Construction & Civil Works">Building Construction & Civil Works</option>
                     <option value="Building Maintenance Services">Building Maintenance Services</option>
+                    <option value="Facilities Management Services">Facilities Management Services</option>
+                    <option value="School Maintenance & Renovation">School Maintenance & Renovation</option>
+                    <option value="Villa & Commercial Building Maintenance">Villa & Commercial Building Maintenance</option>
+                    <option value="Painting, Fit-Out & Finishing Works">Painting, Fit-Out & Finishing Works</option>
+                    <option value="Cleaning & Housekeeping">Cleaning & Housekeeping</option>
+                    <option value="Landscaping & Outdoor Maintenance">Landscaping & Outdoor Maintenance</option>
                   </select>
                 </div>
                 <div className="form-group">
-                  <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Message" rows="3" required></textarea>
+                  <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Project Scope or Requirements" rows="3" required></textarea>
                 </div>
                 <button type="submit" disabled={loading} className="btn btn-primary w-full flex justify-center items-center gap-2">
                   {loading ? (
@@ -506,7 +487,7 @@ const Home = () => {
                       <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
                       Submitting...
                     </>
-                  ) : 'Submit Request'}
+                  ) : 'Request a Proposal'}
                 </button>
               </form>
             </div>

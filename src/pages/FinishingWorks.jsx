@@ -92,7 +92,7 @@ const FinishingWorks = () => {
             <span className="section-label">ONE CONTRACTING PARTNER</span>
             <h2 className="h2">From Surface Preparation to the Final Handover</h2>
             <p className="text-body mb-4">
-              NCFM delivers precision craftsmanship across residential villas, high-rise buildings, majlis, and commercial spaces. We understand that finishing defines the aesthetic and longevity of your property.
+              NAWSA Contracting & Facilities Management delivers precision craftsmanship across residential villas, high-rise buildings, educational facilities, and commercial spaces. We understand that finishing defines the aesthetic and longevity of your property.
             </p>
             <div className="mini-highlights">
               <span>Tile Installation</span>
@@ -247,10 +247,11 @@ const FinishingWorks = () => {
         <div className="container max-w-3xl">
           <h2 className="h2 text-white mb-4">Looking for General Finishing Works in Qatar?</h2>
           <p className="text-gray-soft mb-6 text-lg">
-            Connect with NCFM for dependable tile installation, painting, gypsum, plastering, electrical, and plumbing works.
+            Connect with NAWSA Contracting & Facilities Management for dependable tile installation, painting, gypsum, plastering, electrical, and plumbing works.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Link to="/contact" className="btn btn-primary !px-6 !py-3">Request a Free Quote</Link>
+            <a href="tel:+97431483658" className="btn btn-outline hero-btn-outline !px-6 !py-3">Call +974 31483658</a>
             <a href="tel:+97431310436" className="btn btn-outline hero-btn-outline !px-6 !py-3">Call +974 31310436</a>
           </div>
         </div>

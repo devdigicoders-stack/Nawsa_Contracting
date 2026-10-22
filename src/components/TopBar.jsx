@@ -8,7 +8,11 @@ const TopBar = () => {
     <div className="topbar">
       <div className="container topbar-container">
         <div className="topbar-left">
-          <a href="tel:+97431310436" className="topbar-item">
+          <a href="tel:+97431483658" className="topbar-item">
+            <Phone size={13} />
+            <span>+974 31483658</span>
+          </a>
+          <a href="tel:+97431310436" className="topbar-item hidden sm:flex">
             <Phone size={13} />
             <span>+974 31310436</span>
           </a>
